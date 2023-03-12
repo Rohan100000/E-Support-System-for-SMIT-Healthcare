@@ -1,0 +1,126 @@
+body {
+    background-color: #ffbdde2d;
+}
+
+#header {
+    background-color: rgb(255, 244, 253);
+    margin: 2rem 0px;
+    position: relative;
+    display: flex;
+    margin-left: 7rem;
+
+}
+#header .logo {
+    font-size: 2.5rem;
+    color: var(--color-dark-grey);
+    position: relative;
+    top: 0.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    --color-dark-grey: rgb(107, 107, 107);
+    --color-pink: rgb(231, 3, 144);
+}
+#header span span {
+    color: var(--color-pink);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+#content .right{
+    width: 50vw;
+    height: 50vh;
+}
+#content .left{
+    width: 50vw;
+    height: 50vh;
+    margin-left: 7rem;
+}
+#content .left .div1 .text{
+    padding-top: 65px;
+    font-size: 76px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+#content .right .container-box{
+    border-color: white;
+    background-color: white;
+    height: 75vh;
+    width: 37vw;
+    border-radius: 30px;
+    margin-left: 45px;
+    margin-top: 10px;
+    
+}
+#content .right .container-box .container{
+    color: gray;
+    padding-top: 95px;
+}
+#content .right .container-box .container .text{
+    font-size: 25px;
+}
+#content .right .container-box .container .form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+#content .right .container-box .container .form .input{
+    border-color: gray;
+    height: 45px;
+    width: 63%;
+    border-radius: 30px;
+    padding: 0 20px 0 20px;
+    margin-top: 40px;
+    border-width: 1px;
+}
+#content .right .container-box .container .form .div3{
+    font-size: 11px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 100px;
+}
+#content .right .container-box .container .form .div4 .check{
+    width: 18px;
+    height: 18px;
+}
+#content .right .container-box .container .form .div4{
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#content .right .container-box .container .form .main-btn{
+    border-color: gray;
+    height: 45px;
+    width: 70%;
+    border-radius: 30px;
+    margin-top: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+#content .right .container-box .container .form .div7{
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+#btn{
+    background-color: #DA237F;
+    color: white;
+}
+#pink{
+    color: #DA237F;
+}
+#center{
+    text-align: center;
+}
+
+
+
