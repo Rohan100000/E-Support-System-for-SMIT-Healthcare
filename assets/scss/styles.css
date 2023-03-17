@@ -1,3 +1,7 @@
+*{
+    font-family: sans-serif !important;  /* Remove this section once the font is set */
+}
+
 #abt-us-section{
     height: 100vh;
 }
@@ -61,7 +65,7 @@
 }
 
 #abt-part-2{
-    padding: 15vh 10vw 0 0;
+    padding: 15vh 10vw 0 5vw;
     display: block;
 }
 
@@ -70,11 +74,13 @@
     text-align: left;
     padding-bottom: 2vh;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 #abt-us-main-text{
     padding: 3vh 0;
     font-weight: 700;
+    color: black;
 }
 
 
