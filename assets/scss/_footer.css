@@ -1,0 +1,33 @@
+
+.footer-heading{
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+    color: #204ea5;
+    margin-top: 80px;
+}
+
+
+
+.description{
+    margin: 40px 15vw;
+    line-height: 20px;
+    text-align: center;
+    color: #737373;
+   
+}
+
+.two
+{
+    text-align: center;
+}
+
+.circles{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second-div{
+   
+    background-color: #fff6fb;
+}
