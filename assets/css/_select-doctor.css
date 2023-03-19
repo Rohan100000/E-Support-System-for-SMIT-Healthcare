@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif; 
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #fff6fb;
+}
+
+h3{
+    font-weight: 800;
+    margin-bottom: 5vh;
+}
+
+#doc-selection{
+    margin: 5vh 7.5vw;
+    border-radius: 35px;
+    background-color: white;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 25px 5px rgb(237, 237, 237);
+}
+
+.select-about-text{
+    color: rgb(136, 136, 136);
+}
+
+
+.doc-id{
+    display: flex;
+    flex-direction: row;
+}
+
+.image{
+    border-radius: 50%;
+    width: 100px;
+    height:100px;
+}
+
+.doc-select{
+    margin:auto 3vw auto 0;
+}
+
+.seperation-doc{
+    background-color: rgb(229, 229, 229);
+    min-height: 4px;
+    width:100%;
+    margin: 3vh 0;
+}
+
+.doc-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 20px;
+    margin-left:4vw;
+}
+
+.doc-info h3{
+    font-weight: 500;
+}
+
+#show-more-doc{
+    margin-top: 5vh;
+}
+
+#show-more-doc-text{
+    color:rgb(221, 54, 138);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+input[type='radio']:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 0.5px solid black;
+}
+
+input[type='radio']:checked:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(218, 35, 127);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+#select-doc-header-text{
+    margin:20vh 7.5vw 1vh 7.5vw;
+}
+
+#select-header-1{
+    display:flex;
+    flex-direction:row;
+}
+
+#select-header-line{
+    width: 35px;
+    height: 3px;
+    margin:auto 1vw auto 0;
+}
+
+#select-header-text{
+    margin:0;
+}
+
+#select-header-2{
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 2vh;
+}
