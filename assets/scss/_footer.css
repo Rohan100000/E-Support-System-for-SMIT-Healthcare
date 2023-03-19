@@ -1,14 +1,20 @@
+*{
+    margin:0;
+}
 
-.footer-heading{
+footer{
+    font-size: 16px;
+    background-color: rgb(255,244,253);
+}
+
+#footer-heading{
     text-align: center;
     font-family:'Roboto', sans-serif;
     color: #204ea5;
-    margin-top: 80px;
+    padding-top: 7.5vh;
 }
 
-
-
-.description{
+#description{
     margin: 40px 15vw;
     line-height: 20px;
     text-align: center;
@@ -16,18 +22,24 @@
    
 }
 
-.two
+#copyright
 {
     text-align: center;
+    color: #737373;
 }
 
-.circles{
+#circles{
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: row;
 }
-.second-div{
-   
-    background-color: #fff6fb;
+
+.footer-links-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0 1vw 5vh 1vw;
 }

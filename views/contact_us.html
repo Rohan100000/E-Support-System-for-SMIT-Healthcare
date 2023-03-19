@@ -10,31 +10,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/scss/contact_us.css">
 </head>
 <body>
-    <div class="booking">
-        <div class="header">
-            <div class="1 head">
-                <h1>Get in touch to book your <br>first appointment</h1>
+    <div id="booking">
+        <div id="header">
+            <div id ="head1" >
+                <h1>Get in touch to book your first appointment</h1>
             </div>
-            <div class ="2 head">
+            <div id="head2">
                 <h4>Booking an appointment is quick and simple</h4>
             </div>
         </div>
         <div>
-            <form  id="form" class = "forms" action="/action_page.php" target="_blank">
+            <form  id="form" action="#">
                
-                <input type="text" id="fname"  class="name" name="fname" placeholder="First name">
+                <input type="text" id="name"  class="input-bar"  placeholder="Enter your name" required>
                 
-                <input type="text" id="lname" class="name" name="lname" placeholder="last name">
+                <input type="text" id="Email" class="input-bar" placeholder="Enter your Email" required>
 
-                <input type="submit" value="Submit" id="submit" class="submit ">
-              </form> 
+                <input type="submit" value="Submit" id="submit">
+              </form>
               
         </div>
     </div>
-
+    
+    
     
 </body>
 </html>
