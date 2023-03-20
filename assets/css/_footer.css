@@ -1,0 +1,36 @@
+* {
+  margin: 0; }
+
+footer {
+  font-size: 16px;
+  background-color: #fff4fd; }
+
+#footer-heading {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #204ea5;
+  padding-top: 7.5vh; }
+
+#description {
+  margin: 40px 15vw;
+  line-height: 20px;
+  text-align: center;
+  color: #737373; }
+
+#copyright {
+  text-align: center;
+  color: #737373; }
+
+#circles {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row; }
+
+.footer-links-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  margin: 0 1vw 5vh 1vw; }
