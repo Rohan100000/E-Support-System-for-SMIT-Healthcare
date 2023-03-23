@@ -3,6 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
 const port = 8000;
+const bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 const sassMiddleware = require('node-sass-middleware');
@@ -16,7 +17,7 @@ app.use(sassMiddleware({
     prefix: '/css'
 }));
 
-app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //tell our server to use the layout library before the routes
