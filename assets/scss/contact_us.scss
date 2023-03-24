@@ -1,65 +1,60 @@
-#head1{
-    margin-left: 32.5vw ;
-    margin-right: 32.5vw;
-    line-height: 2.5rem;
-}
+$color_1: #2B2929;
+$color_2: azure;
+$color_3: #204ea5;
+$background-color_1: #a9c4fd;
+$background-color_2: #204ea5;
+$background-color_3: azure;
 
-#head2{
-    line-height: 2.5rem;
-    margin: 5vh 0 7.5vh 0;
+#head1 {
+	margin-left: 32.5vw;
+	margin-right: 32.5vw;
+	line-height: 2.5rem;
 }
-
-body{
-    margin: 0;
+#head2 {
+	line-height: 2.5rem;
+	margin: 5vh 0 7.5vh 0;
 }
-
-#booking{
-    background-color: #a9c4fd;
-    padding: 2vh;
-   
+body {
+	margin: 0;
 }
-
-#header{
-   line-height: 60px;
-   margin: 20px;
-   text-align: center;
-   font-family: 'Roboto', sans-serif;
-   color: #2B2929 ;
+#booking {
+	background-color: $background-color_1;
+	padding: 2vh;
 }
-
-#form
-{
-    margin-left: 20%;
-    margin-bottom: 10vh;
-    width: 70%;    
+#header {
+	line-height: 60px;
+	margin: 20px;
+	text-align: center;
+	color: $color_1;
 }
-
-.input-bar{
-    font-size: 16px;
-    padding: 20px 30px;
-    margin: 5px;
-    width:26%;
-    border-radius: 30px;
-    border: none;
+#form {
+	margin-left: 20%;
+	margin-bottom: 10vh;
+	width: 70%;
 }
-
-.input-bar:focus{
-    outline: 0;
+.input-bar {
+	font-size: 16px;
+	padding: 20px 30px;
+	margin: 5px;
+	width: 26%;
+	border-radius: 30px;
+	border: none;
+	&:focus {
+		outline: 0;
+	}
 }
-
-#submit{
-    font-size: 16px;
-    padding: 20px 10px;
-    margin: 5px;
-    width: 19%;
-    border-radius: 30px;
-    border: none;
-    background-color: #204ea5;
-    color: azure;
-}
-
-#submit:hover{
-    color: #204ea5;
-    background-color: azure;
-    cursor: pointer;
+#submit {
+	font-size: 16px;
+	padding: 20px 10px;
+	margin: 5px;
+	width: 19%;
+	border-radius: 30px;
+	border: none;
+	background-color: $background-color_2;
+	color: $color_2;
+	&:hover {
+		color: $color_3;
+		background-color: $background-color_3;
+		cursor: pointer;
+	}
 }

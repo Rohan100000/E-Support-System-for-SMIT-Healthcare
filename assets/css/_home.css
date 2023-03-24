@@ -1,6 +1,58 @@
 body {
   background-color: #ffbdde2d; }
 
+/*Intro Section Starts Here*/
+#intro {
+  background-color: #fff4fd;
+  margin-top: 2rem;
+  width: 100%;
+  position: relative; }
+  #intro .main-content {
+    display: inline-block;
+    width: 45%;
+    padding-top: 3rem; }
+  #intro .image {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top; }
+    #intro .image img {
+      margin: 0px 2rem;
+      height: 650px; }
+
+.main-content .div1 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.3rem;
+  color: var(--color-dark-grey);
+  font-weight: bolder;
+  margin: 2rem 0px; }
+  .main-content .div1 img {
+    position: relative;
+    bottom: 4px; }
+
+.main-content .div2 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 4.5rem;
+  line-height: 5.2rem; }
+
+.main-content .div3 {
+  margin: 2rem 0px 3rem 0px;
+  color: var(--color-light-grey);
+  font-size: 2rem;
+  line-height: 2.5rem; }
+
+.main-content a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  background-color: var(--color-blue);
+  padding: 0.7rem 2rem;
+  border-radius: 1rem;
+  transition: 0.5s ease-in-out; }
+  .main-content a:hover {
+    box-shadow: 1px 1px 30px var(--color-blue); }
+
+/*Intro Section Ends Here*/
+/*Services Styling Starts Here*/
 .services {
   width: 80%;
   margin: auto;
@@ -33,6 +85,8 @@ p {
   padding: 20px 12px;
   box-sizing: border-box;
   transition: 0.5s; }
+  .service-col-1:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); }
 
 .service-col-2 {
   flex-basis: 31%;
@@ -42,9 +96,8 @@ p {
   padding: 20px 12px;
   box-sizing: border-box;
   transition: 0.5s; }
-
-.service-col-1:hover, .service-col-2:hover {
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); }
+  .service-col-2:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); }
 
 .tooth-image {
   padding-top: 10px;
@@ -56,3 +109,5 @@ h3 {
   margin: 10px 0;
   font-family: Abel;
   color: #204EA5; }
+
+/* Services Styling Ends here*/
