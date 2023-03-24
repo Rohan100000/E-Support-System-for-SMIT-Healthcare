@@ -1,125 +1,128 @@
-*{
-    font-family: sans-serif !important;  /* Remove this section once the font is set */
+$color_1: rgb(117, 117, 116);
+$color_2: black;
+$color_3: white;
+$color_4: rgb(32, 78, 165);
+$background-color_1: white;
+$background-color_2: rgb(0, 208, 90);
+$background-color_3: rgb(32, 78, 165);
+
+#abt-us-section {
+	height: 100vh;
+}
+#abt-img {
+	height: 337.5px;
+	width: 600px;
+}
+.center-alignment {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.abt-part-1 {
+	margin: auto;
+	height: 100vh;
+	padding: 0;
+}
+#about-us-postcard {
+	width: 200px;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 0 10px 5px gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 20px 20px 20px;
+	position: relative;
+	bottom: 275px;
+	left: 150px;
+	background-color: $background-color_1;
+	text-align: center;
+}
+#abt-doc {
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+	margin: 15px auto;
+}
+#status-adjustment {
+	width: 100%;
+	height: 20px;
+}
+.abt-text-color {
+	color: $color_1;
+}
+#status-color {
+	background-color: $background-color_2;
+	margin: 15px 15px 0 auto;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+#abt-part-2 {
+	padding: 15vh 10vw 0 5vw;
+	display: block;
+}
+#abt-us-abt-us-text {
+	width: 100%;
+	text-align: left;
+	padding-bottom: 2vh;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+#abt-us-main-text {
+	padding: 3vh 0;
+	font-weight: 700;
+	color: $color_2;
+}
+.abt-us-sub-text {
+	padding: 1vh 0;
+	font-weight: 500;
+}
+#abt-us-btn {
+	margin-top: 4vh;
+	width: 100%;
+	display: flex;
+	font-size: 16px;
+	justify-content: space-between;
+}
+.a-tag-adjustment {
+	text-decoration: none;
+}
+#apt-btn {
+	padding: 2vh 3vw;
+	background-color: $background-color_3;
+	border-radius: 15px;
+	&:hover {
+		padding: 2vh 3vw;
+		background-color: $background-color_1;
+		border: 1px solid rgb(32, 78, 165);
+		border-radius: 15px;
+	}
+}
+#abt-btn {
+	&:hover {
+		padding: 2vh 3vw;
+		background-color: $background-color_3;
+		border-radius: 15px;
+	}
+	padding: 2vh 3vw;
+	background-color: $background-color_1;
+	border: 1px solid rgb(32, 78, 165);
+	border-radius: 15px;
+}
+#apt-btn-text {
+	color: $color_3;
+	&:hover {
+		color: $color_4;
+	}
+}
+#abt-btn-text {
+	&:hover {
+		color: $color_3;
+	}
+	color: $color_4;
 }
 
-#abt-us-section{
-    height: 100vh;
-}
-
-#abt-img{
-    height: 337.5px;
-    width: 600px;
-}
-
-.center-alignment{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.abt-part-1{
-    margin: auto;
-    height: 100vh;
-    padding: 0;
-}
-
-#about-us-postcard{
-    width: 200px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 5px gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 20px 20px 20px;
-    position: relative;
-    bottom: 275px;
-    left: 150px;
-    background-color: white;
-    text-align: center;
-}
-
-#abt-doc{
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-    margin: 15px auto;
-}
-#status-adjustment{
-    width: 100%;
-    height: 20px;
-}
-
-.abt-text-color{
-    color: rgb(117, 117, 116);
-}
-
-#status-color{
-    background-color: rgb(0, 208, 90);
-    margin: 15px 15px 0 auto;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
-
-#abt-part-2{
-    padding: 15vh 10vw 0 5vw;
-    display: block;
-}
-
-#abt-us-abt-us-text{
-    width: 100%;
-    text-align: left;
-    padding-bottom: 2vh;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-#abt-us-main-text{
-    padding: 3vh 0;
-    font-weight: 700;
-    color: black;
-}
-
-
-.abt-us-sub-text{
-    padding: 1vh 0;
-    font-weight: 500;
-}
-
-#abt-us-btn{
-    margin-top: 4vh;
-    width: 100%;
-    display: flex;
-    font-size: 16px;
-    justify-content: space-between;
-}
-
-
-.a-tag-adjustment{
-    text-decoration: none;
-}
-
-#apt-btn,#abt-btn:hover{
-    padding: 2vh 3vw;
-    background-color: rgb(32, 78, 165);
-    border-radius: 15px;
-}
-
-#apt-btn-text,#abt-btn-text:hover{
-    color:white;
-}
-
-#abt-btn,#apt-btn:hover{
-    padding: 2vh 3vw;
-    background-color: white;
-    border: 1px solid rgb(32, 78, 165);
-    border-radius: 15px;
-}
-
-#abt-btn-text,#apt-btn-text:hover{
-    color:rgb(32, 78, 165);
-}
 

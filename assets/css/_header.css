@@ -1,115 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap");
+/* header */
 body {
   margin: 0;
   padding: 0;
-  margin-left: 7rem;
-  font-family: 'Noto Sans JP', sans-serif;
-  --color-light-grey: rgb(117, 117, 117);
-  --color-dark-grey: rgb(107, 107, 107);
-  --color-pink: rgb(231, 3, 144);
-  --color-blue: rgb(37, 37, 147); }
+  margin-left: 7rem; }
 
-/* header */
 #header {
   background-color: #fff4fd;
   margin: 2rem 0px;
   position: relative;
   display: flex; }
-
-#header .logo {
-  font-size: 2.5rem;
-  color: var(--color-dark-grey);
-  position: relative;
-  top: 0.5rem; }
-
-#header span span {
-  color: var(--color-pink); }
+  #header .logo {
+    font-size: 2.5rem;
+    color: #6b6b6b;
+    position: relative;
+    top: 0.5rem; }
+    #header .logo:hover {
+      font-size: 2.5rem;
+      color: #e70390;
+      position: relative;
+      top: 0.5rem;
+      cursor: pointer; }
+  #header span span {
+    color: #e70390; }
 
 .horizontal-list {
   list-style: none;
   font-size: 1.3rem;
   display: flex;
   justify-content: space-around; }
-
-.horizontal-list li {
-  margin: 1rem 1.5rem;
-  text-decoration: none; }
-
-.horizontal-list li a {
-  color: var(--color-light-grey);
-  text-decoration: none; }
+  .horizontal-list li {
+    margin: 1rem 1.5rem;
+    text-decoration: none; }
+    .horizontal-list li a {
+      color: #757575;
+      text-decoration: none; }
+      .horizontal-list li a:hover {
+        color: #e70390;
+        text-decoration: none; }
 
 /* signin register buttons */
 .button {
   position: relative;
   left: 10rem; }
-
-.button .sign a {
-  border: 1px solid var(--color-light-grey);
-  padding: 0.75rem 2.25rem;
-  border-radius: 2rem;
-  background-color: white; }
-
-.button .reg a {
-  padding: 0.75rem 2.25rem;
-  border-radius: 2rem;
-  background-color: var(--color-pink); }
-
-.button .reg a {
-  color: white; }
-
-/* intro box */
-#intro {
-  background-color: #fff4fd;
-  margin-top: 2rem;
-  width: 100%;
-  position: relative; }
-
-#intro .main-content {
-  display: inline-block;
-  width: 45%;
-  padding-top: 3rem; }
-
-#intro .image {
-  display: inline-block;
-  width: 40%;
-  vertical-align: top; }
-
-.main-content .div1 img {
-  position: relative;
-  bottom: 4px; }
-
-.main-content .div1 {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 1.3rem;
-  color: var(--color-dark-grey);
-  font-weight: bolder;
-  margin: 2rem 0px; }
-
-.main-content .div2 {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 4.5rem;
-  line-height: 5.2rem; }
-
-.main-content .div3 {
-  margin: 2rem 0px 3rem 0px;
-  color: var(--color-light-grey);
-  font-size: 2rem;
-  line-height: 2.5rem; }
-
-.main-content a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.3rem;
-  background-color: var(--color-blue);
-  padding: 0.7rem 2rem;
-  border-radius: 1rem;
-  transition: 0.5s ease-in-out; }
-
-.main-content a:hover {
-  box-shadow: 1px 1px 30px var(--color-blue); }
-
-#intro .image img {
-  margin: 0px 2rem;
-  height: 650px; }
+  .button .sign a {
+    border: 1px solid #757575;
+    padding: 0.75rem 2.25rem;
+    border-radius: 2rem;
+    background-color: white; }
+    .button .sign a:hover {
+      border-color: transparent;
+      padding: 0.75rem 2.25rem;
+      border-radius: 2rem;
+      background-color: #e70390;
+      color: white; }
+  .button .reg a {
+    padding: 0.75rem 2.25rem;
+    border-radius: 2rem;
+    background-color: #e70390;
+    color: white; }
+    .button .reg a:hover {
+      border: 1px solid #e70390;
+      padding: 0.75rem 2.25rem;
+      border-radius: 2rem;
+      background-color: white;
+      color: #e70390; }

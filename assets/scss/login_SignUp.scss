@@ -1,143 +1,151 @@
-body {
-    background-color: #ffbdde2d;
-}
+$color_1: var(--color-dark-grey);
+$color_2: var(--color-pink);
+$color_3: gray;
+$color_4: white;
+$color_5: #DA237F;
+$background-color_1: #ffbdde2d;
+$background-color_2: rgb(255, 244, 253);
+$background-color_3: white;
+$background-color_4: #DA237F;
+$border-color_1: white;
+$border-color_2: gray;
 
+body {
+	background-color: $background-color_1;
+	margin: 0;
+	padding: 0;
+}
 #header {
-    background-color: rgb(255, 244, 253);
-    margin-top: 2rem;
-    margin-left: 7rem;
-    position: relative;
-    display: flex;
+	background-color: $background-color_2;
+	margin-top: 2rem;
+	margin-left: 7rem;
+	position: relative;
+	display: flex;
+	.logo {
+		font-size: 2.5rem;
+		color: $color_1;
+		position: relative;
+		top: 0.5rem;
+		--color-dark-grey: rgb(107, 107, 107);
+		--color-pink: rgb(231, 3, 144);
+	}
+	span {
+		span {
+			color: $color_2;
+		}
+	}
 }
-#header .logo {
-    font-size: 2.5rem;
-    color: var(--color-dark-grey);
-    position: relative;
-    top: 0.5rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    --color-dark-grey: rgb(107, 107, 107);
-    --color-pink: rgb(231, 3, 144);
+#content {
+	display: flex;
+	flex-direction: row;
+	margin: 0px 0px 0px 7rem;
+	.form-section {
+		width: 50vw;
+		height: 50vh;
+		.container-box {
+			border-color: $border-color_1;
+			background-color: $background-color_3;
+			height: 75vh;
+			width: 37vw;
+			border-radius: 30px;
+			margin-top: 10px 0px 0px 45px;
+			.container {
+				color: $color_3;
+				padding-top: 80px;
+				.text {
+					font-size: 25px;
+					margin: 0px 0px 20px 0px;
+				}
+				.form {
+					display: flex;
+					flex-direction: column;
+					align-content: center;
+					text-align: center;
+					.input {
+						border-color: $border-color_2;
+						height: 45px;
+						width: 63%;
+						border-radius: 30px;
+						padding: 0 20px 0 20px;
+						margin: 20px 0px 0px 0px;
+						border-width: 1px;
+					}
+					.input-s {
+						border-color: $border-color_2;
+						height: 45px;
+						width: 37%;
+						border-radius: 30px;
+						padding: 0 20px 0 20px;
+						margin: 20px 5px 0px 5px;
+						border-width: 1px;
+					}
+					.div3 {
+						font-size: 11px;
+						text-align: right;
+						margin: 15px 100px 0px 0px;
+					}
+					.div8 {
+						font-size: 16px;
+						margin: 15px 0px 0px 0px;
+						.gt {
+							margin: 0px 30px 0px 0px;
+						}
+					}
+					.check {
+						width: 18px;
+						height: 18px;
+						margin: 0px 10px 0px 0px;
+					}
+					.div4 {
+						font-size: 11px;
+						text-align: center;
+						margin: 20px 0px;
+					}
+					.main-btn {
+						border-color: $border-color_2;
+						height: 45px;
+						width: 70%;
+						border-radius: 30px;
+						margin: 10px 0px 0px 0px;
+						border-width: 1px;
+						text-align: center;
+					}
+					.div7 {
+						font-size: 11px;
+						text-align: center;
+						margin: 20px 0px 0px 0px;
+					}
+				}
+			}
+		}
+	}
+	.image-section {
+		width: 50vw;
+		height: 50vh;
+		.div1 {
+			.text {
+				padding-top: 65px;
+				font-size: 55px;
+				font-weight: bold;
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
 }
-#header span span {
-    color: var(--color-pink);
+#btn {
+	background-color: $background-color_4;
+	color: $color_4;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#pink {
+	color: $color_5;
+}
+#center {
+	text-align: center;
+}
+#mr {
+	margin-right: 30px;
 }
 
-#content{
-    display: flex;
-    flex-direction: row;
-    margin: 0px 0px 0px 7rem;
-}
-#content .form-section{
-    width: 50vw;
-    height: 50vh;
-}
-#content .image-section{
-    width: 50vw;
-    height: 50vh;
-    /* text-align:center; */
-}
-#content .image-section .div1 .text{
-    padding-top: 65px;
-    font-size: 55px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px 0px 20px 0px;
-}
-#content .form-section .container-box{
-    border-color: white;
-    background-color: white;
-    height: 75vh;
-    width: 37vw;
-    border-radius: 30px;
-    margin-top: 10px 0px 0px 45px;
-    
-}
-#content .form-section .container-box .container{
-    color: gray;
-    padding-top: 80px;
-}
-#content .form-section .container-box .container .text{
-    font-size: 25px;
-    margin: 0px 0px 20px 0px;
-}
-#content .form-section .container-box .container .form{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-}
-#content .form-section .container-box .container .form .input{
-    border-color: gray;
-    height: 45px;
-    width: 63%;
-    border-radius: 30px;
-    padding: 0 20px 0 20px;
-    margin: 20px 0px 0px 0px;
-    border-width: 1px;
-}
-#content .form-section .container-box .container .form .input-s{
-    border-color: gray;
-    height: 45px;
-    width: 37%;
-    border-radius: 30px;
-    padding: 0 20px 0 20px;
-    margin: 20px 5px 0px 5px;
-    border-width: 1px;
-}
-#content .form-section .container-box .container .form .div3{
-    font-size: 11px;
-    text-align: right;
-    margin: 15px 100px 0px 0px;
-}
-#content .form-section .container-box .container .form .div8{
-    font-size: 16px;
-    margin: 15px 0px 0px 0px;
-}
-#content .form-section .container-box .container .form .div8 .gt{
-    margin: 0px 30px 0px 0px;
-}
-#content .form-section .container-box .container .form .check{
-    width: 18px;
-    height: 18px;
-    margin: 0px 10px 0px 0px;
-}
-#content .form-section .container-box .container .form .div4{
-    font-size: 11px;
-    text-align: center;
-    margin: 20px 0px;
-}
-#content .form-section .container-box .container .form .main-btn{
-    border-color: gray;
-    height: 45px;
-    width: 70%;
-    border-radius: 30px;
-    margin: 10px 0px 0px 0px;
-    border-width: 1px;
-    text-align: center;
-}
-#content .form-section .container-box .container .form .div7{
-    font-size: 11px;
-    text-align: center;
-    margin: 20px 0px 0px 0px;
-}
-#btn{
-    background-color: #DA237F;
-    color: white;
-}
-#pink{
-    color: #DA237F;
-}
-#center{
-    text-align: center;
-}
-#mr{
-    margin-right: 30px;
-}
 
 
 

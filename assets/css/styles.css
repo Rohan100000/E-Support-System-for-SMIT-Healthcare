@@ -1,7 +1,3 @@
-* {
-  font-family: sans-serif !important;
-  /* Remove this section once the font is set */ }
-
 #abt-us-section {
   height: 100vh; }
 
@@ -86,19 +82,32 @@
 .a-tag-adjustment {
   text-decoration: none; }
 
-#apt-btn, #abt-btn:hover {
+#apt-btn {
   padding: 2vh 3vw;
   background-color: #204ea5;
   border-radius: 15px; }
+  #apt-btn:hover {
+    padding: 2vh 3vw;
+    background-color: white;
+    border: 1px solid #204ea5;
+    border-radius: 15px; }
 
-#apt-btn-text, #abt-btn-text:hover {
-  color: white; }
-
-#abt-btn, #apt-btn:hover {
+#abt-btn {
   padding: 2vh 3vw;
   background-color: white;
   border: 1px solid #204ea5;
   border-radius: 15px; }
+  #abt-btn:hover {
+    padding: 2vh 3vw;
+    background-color: #204ea5;
+    border-radius: 15px; }
 
-#abt-btn-text, #apt-btn-text:hover {
+#apt-btn-text {
+  color: white; }
+  #apt-btn-text:hover {
+    color: #204ea5; }
+
+#abt-btn-text {
   color: #204ea5; }
+  #abt-btn-text:hover {
+    color: white; }
