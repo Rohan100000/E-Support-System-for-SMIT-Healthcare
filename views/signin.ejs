@@ -1,30 +1,27 @@
 <link href="/css/login_SignUp.css" rel="stylesheet">
-    <div id="content">
-        <div class="image-section">
-            <div class="div1">
-                <div class="text">Welcome Back</div>
-                <img src="/images/Group 20.png" alt="image failed to load" width="63%">
-            </div>
+<div id="content">
+    <div class="image-section">
+        <div class="div1">
+            <div class="text">Welcome Back</div>
+            <img src="/images/Group 20.png" alt="image failed to load" width="63%">
         </div>
-        <div class="form-section">
-            <div class="container-box">
-                <div class="container">
-                    <div id="center" class="text">Please Enter Your Details</div>
-                    <div class="form">
-                        <form action="/users/create-session" method="POST">
-                            <div class="div1"><input class="input" type="email" name="email" id="Email" placeholder="Email"></div>
-                            <div class="div2"><input class="input" type="password" name="password" id="Password" placeholder="Password"></div>
-                            <div class="div3" id="pink">Forgot Password?</div>
-                            <div class="div4"><input class="check" type="checkbox" required placeholder="checkbox">Please accept to our.<span id="pink">Terms and Condition</span>, for problem click <span id="pink">help?</span></div>
-                            <div class="div5"><input class="main-btn" id="btn" type="submit" name="submit" value="Sign In"></div>
-                            <div class="div6"><input class="main-btn" type="button" name="submit" value="Sign In with Google"></div>
-                            <div class="div7">Don't have an account <span id="pink">Create a new Account?</span></div>
-                        </form>
-                    </div>
-                </div>
+    </div>
+    <div class="form-section">
+        <div class="container-box">
+            <div class="container">
+                <div id="center" class="text">Please Enter Your Details</div>
+                <div class="form">
+                    <form action="/users/create-session" method="POST">
+                        <div class="div1"><input class="input" type="email" name="email" id="Email" placeholder="Email"></div>
+                        <div class="div2"><input class="input" type="password" name="password" id="Password" placeholder="Password"></div>
+                        <div class="div3" id="pink">Forgot Password?</div>
+                        <div class="div4"><input class="check" type="checkbox" required placeholder="checkbox">Please accept to our.<span id="pink">Terms and Condition</span>, for problem click <span id="pink">help?</span></div>
+                        <div class="div5"><input class="main-btn" id="btn" type="submit" name="submit" value="Sign In"></div>
+                        <div class="div6"><a href="/users/auth/google"><input class="main-btn" type="button" name="submit" value="Sign In with Google"></a></div>
+                        <div class="div7">Don't have an account <span id="pink">Create a new Account?</span></div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-    </body>
-</html>
+    </div>
+</div>
