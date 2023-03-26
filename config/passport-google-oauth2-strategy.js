@@ -11,7 +11,7 @@ passport.use(new googleStrategy({
 },async function(accessToken, refreshToken,profile,done){
     let user = await User.findOne({email: profile.emails[0].value}).exec();
     if(!user){
-        console.log("error in google strategy passport: ",error);
+        console.log("error in google strategy passport");
         return;
     }
     console.log(accessToken,refreshToken);
