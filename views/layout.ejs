@@ -14,12 +14,16 @@
 </head>
 
 <body>
+    <% if(!(title == "Sign up" || title == "Sign in")){ %>
     <%- include('_header'); %>
+    <% } %>
 
     <!-- this body will contain the variable part for every page -->
     <%- body %>
 
+    <% if(!(title == "Sign up" || title == "Sign in")){ %>
     <%- include('_footer'); %>
+    <% } %>
 
     <%- script %>
 </body>
