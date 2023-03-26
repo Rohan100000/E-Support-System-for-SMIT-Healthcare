@@ -1,7 +1,7 @@
 $color_1: #204ea5;
 $color_2: #737373;
 $font-family_1: 'Roboto', sans-serif;
-$background-color_1: rgb(255,244,253);
+$background-color_1: #ffdaed2d;
 $background-color_2: white;
 
 * {
@@ -9,7 +9,8 @@ $background-color_2: white;
 }
 footer {
 	font-size: 16px;
-	background-color: $background-color_1;
+	margin-right: 100px;
+	// background-color: $background-color_1;
 }
 #footer-heading {
 	text-align: center;

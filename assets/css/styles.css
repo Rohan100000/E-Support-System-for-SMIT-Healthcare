@@ -1,8 +1,8 @@
 #abt-us-section {
-  height: 100vh; }
+  padding-top: 100px; }
 
 #abt-img {
-  height: 337.5px;
+  height: 380px;
   width: 600px; }
 
 .center-alignment {
@@ -12,8 +12,6 @@
   flex-direction: column; }
 
 .abt-part-1 {
-  margin: auto;
-  height: 100vh;
   padding: 0; }
 
 #about-us-postcard {
@@ -27,15 +25,15 @@
   flex-direction: column;
   padding: 0 20px 20px 20px;
   position: relative;
-  bottom: 275px;
+  bottom: 175px;
   left: 150px;
   background-color: white;
   text-align: center; }
 
 #abt-doc {
-  width: 50px;
+  width: 65px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 100%;
   margin: 15px auto; }
 
 #status-adjustment {
@@ -47,19 +45,19 @@
 
 #status-color {
   background-color: #00d05a;
-  margin: 15px 15px 0 auto;
+  margin: 20px 5px auto auto;
   width: 20px;
   height: 20px;
   border-radius: 50%; }
 
 #abt-part-2 {
-  padding: 15vh 10vw 0 5vw;
+  padding: 0 10vw 0 5vh;
   display: block; }
 
 #abt-us-abt-us-text {
   width: 100%;
   text-align: left;
-  padding-bottom: 2vh;
+  padding-bottom: 20px;
   font-weight: 700;
   font-size: 1.5rem; }
 
@@ -76,38 +74,29 @@
   margin-top: 4vh;
   width: 100%;
   display: flex;
-  font-size: 16px;
-  justify-content: space-between; }
-
-.a-tag-adjustment {
-  text-decoration: none; }
+  font-size: 16px; }
 
 #apt-btn {
   padding: 2vh 3vw;
+  margin-right: 40px;
   background-color: #204ea5;
-  border-radius: 15px; }
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  border: 1px solid #204ea5; }
   #apt-btn:hover {
-    padding: 2vh 3vw;
     background-color: white;
-    border: 1px solid #204ea5;
-    border-radius: 15px; }
+    color: #204ea5; }
 
 #abt-btn {
+  cursor: pointer;
+  color: #204ea5;
   padding: 2vh 3vw;
   background-color: white;
   border: 1px solid #204ea5;
   border-radius: 15px; }
   #abt-btn:hover {
-    padding: 2vh 3vw;
+    justify-content: center;
     background-color: #204ea5;
-    border-radius: 15px; }
-
-#apt-btn-text {
-  color: white; }
-  #apt-btn-text:hover {
-    color: #204ea5; }
-
-#abt-btn-text {
-  color: #204ea5; }
-  #abt-btn-text:hover {
     color: white; }
