@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-left: 7rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    --color-light-grey: rgb(117, 117, 117);
+    --color-dark-grey: rgb(107, 107, 107);
+    --color-pink: rgb(231, 3, 144);
+    --color-blue: rgb(37, 37, 147);
+}
+
+/* header */
+#header {
+    background-color: rgb(255, 244, 253);
+    margin: 2rem 0px;
+    position: relative;
+    display: flex;
+}
+
+#header .logo {
+    font-size: 2.5rem;
+    color: var(--color-dark-grey);
+    position: relative;
+    top: 0.5rem;
+}
+
+#header span span {
+    color: var(--color-pink);
+}
+
+.horizontal-list {
+    list-style: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal-list li {
+    margin: 0px 1.5rem;
+    text-decoration: none;
+}
+
+.horizontal-list li a {
+    color: var(--color-light-grey);
+    text-decoration: none;
+}
+
+.header-icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 570px;
+}
+  
+.header-icons li {
+    margin-left: 1.5rem;
+}
+  
+.material-icons {
+    font-size: 2rem;
+    color: var(--color-light-grey);
+}
+  
+.material-icons:hover{
+    color: var(--color-pink);
+}
+
+/* Hide the toggle menu by default */
+.toggle-menu {
+    display: none;
+}
+  
+/* Show the toggle menu when the user hovers over the account_circle icon */
+.header-icons li:hover .toggle-menu {
+    display: block;
+}
+  
+/* Styles for the toggle menu */
+.toggle-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-left: -150px;
+    transition: opacity 0.9s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.toggle-menu li {
+    list-style: none;
+    margin: auto;
+}
+  
+.toggle-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.toggle-menu li a i {
+    margin-right: 10px;
+}
+
+.toggle-menu li a:hover {
+    background-color: #eee;
+}
+  
+
+/* signin register buttons */
+.button {
+    position: relative;
+    left: 10rem;
+}
+
+.button .sign a{
+    border: 1px solid var(--color-light-grey);
+    padding: 0.75rem 2.25rem;
+    border-radius: 2rem;
+    background-color: white;
+}
+
+.button .reg a{
+    padding: 0.75rem 2.25rem;
+    border-radius: 2rem;
+    background-color: var(--color-pink);
+}
+
+.button .reg a {
+    color: white;
+}
+
+/* intro box */
+#intro {
+    background-color: rgb(255, 244, 253);
+    margin-top: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+#intro .main-content {
+    display: inline-block;
+    width: 45%;
+    padding-top: 3rem;
+}
+
+#intro .image {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+.main-content .div1 img{
+    position: relative;
+    bottom: 4px;
+}
+.main-content .div1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-dark-grey);
+    font-weight: bolder;
+    margin: 2rem 0px;
+}
+
+.main-content .div2 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 4.5rem;
+    line-height: 5.2rem;
+}
+.main-content .div3{
+    margin: 2rem 0px 3rem 0px;
+    color: var(--color-light-grey);
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+.main-content a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    background-color: var(--color-blue);
+    padding: 0.7rem 2rem;
+    border-radius: 1rem;
+    transition: 0.5s ease-in-out;
+} 
+.main-content a:hover{
+    box-shadow: 1px 1px 30px var(--color-blue);
+
+}
+
+#intro .image img{
+    margin: 0px 2rem;
+    height: 650px;
+}
+
