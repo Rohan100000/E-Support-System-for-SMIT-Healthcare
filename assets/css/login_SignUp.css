@@ -1,5 +1,7 @@
 body {
-  background-color: #ffbdde2d; }
+  background-color: #ffbdde2d;
+  margin: 0;
+  padding: 0; }
 
 #header {
   background-color: #fff4fd;
@@ -7,120 +9,94 @@ body {
   margin-left: 7rem;
   position: relative;
   display: flex; }
-
-#header .logo {
-  font-size: 2.5rem;
-  color: var(--color-dark-grey);
-  position: relative;
-  top: 0.5rem;
-  font-family: 'Noto Sans JP', sans-serif;
-  --color-dark-grey: rgb(107, 107, 107);
-  --color-pink: rgb(231, 3, 144); }
-
-#header span span {
-  color: var(--color-pink); }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  #header .logo {
+    font-size: 2.5rem;
+    color: var(--color-dark-grey);
+    position: relative;
+    top: 0.5rem;
+    --color-dark-grey: rgb(107, 107, 107);
+    --color-pink: rgb(231, 3, 144); }
+  #header span span {
+    color: var(--color-pink); }
 
 #content {
   display: flex;
   flex-direction: row;
   margin: 0px 0px 0px 7rem; }
-
-#content .form-section {
-  width: 50vw;
-  height: 50vh; }
-
-#content .image-section {
-  width: 50vw;
-  height: 50vh;
-  /* text-align:center; */ }
-
-#content .image-section .div1 .text {
-  padding-top: 65px;
-  font-size: 55px;
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0px 0px 20px 0px; }
-
-#content .form-section .container-box {
-  border-color: white;
-  background-color: white;
-  height: 75vh;
-  width: 37vw;
-  border-radius: 30px;
-  margin-top: 10px 0px 0px 45px; }
-
-#content .form-section .container-box .container {
-  color: gray;
-  padding-top: 80px; }
-
-#content .form-section .container-box .container .text {
-  font-size: 25px;
-  margin: 0px 0px 20px 0px; }
-
-#content .form-section .container-box .container .form {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  text-align: center; }
-
-#content .form-section .container-box .container .form .input {
-  border-color: gray;
-  height: 45px;
-  width: 63%;
-  border-radius: 30px;
-  padding: 0 20px 0 20px;
-  margin: 20px 0px 0px 0px;
-  border-width: 1px; }
-
-#content .form-section .container-box .container .form .input-s {
-  border-color: gray;
-  height: 45px;
-  width: 37%;
-  border-radius: 30px;
-  padding: 0 20px 0 20px;
-  margin: 20px 5px 0px 5px;
-  border-width: 1px; }
-
-#content .form-section .container-box .container .form .div3 {
-  font-size: 11px;
-  text-align: right;
-  margin: 15px 100px 0px 0px; }
-
-#content .form-section .container-box .container .form .div8 {
-  font-size: 16px;
-  margin: 15px 0px 0px 0px; }
-
-#content .form-section .container-box .container .form .div8 .gt {
-  margin: 0px 30px 0px 0px; }
-
-#content .form-section .container-box .container .form .check {
-  width: 18px;
-  height: 18px;
-  margin: 0px 10px 0px 0px; }
-
-#content .form-section .container-box .container .form .div4 {
-  font-size: 11px;
-  text-align: center;
-  margin: 20px 0px; }
-
-#content .form-section .container-box .container .form .main-btn {
-  border-color: gray;
-  height: 45px;
-  width: 70%;
-  border-radius: 30px;
-  margin: 10px 0px 0px 0px;
-  border-width: 1px;
-  text-align: center; }
-
-#content .form-section .container-box .container .form .div7 {
-  font-size: 11px;
-  text-align: center;
-  margin: 20px 0px 0px 0px; }
+  #content .form-section {
+    width: 50vw;
+    height: 50vh; }
+    #content .form-section .container-box {
+      border-color: white;
+      background-color: white;
+      height: 75vh;
+      width: 37vw;
+      border-radius: 30px;
+      margin-top: 10px 0px 0px 45px; }
+      #content .form-section .container-box .container {
+        color: gray;
+        padding-top: 80px; }
+        #content .form-section .container-box .container .text {
+          font-size: 25px;
+          margin: 0px 0px 20px 0px; }
+        #content .form-section .container-box .container .form {
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          text-align: center; }
+          #content .form-section .container-box .container .form .input {
+            border-color: gray;
+            height: 45px;
+            width: 63%;
+            border-radius: 30px;
+            padding: 0 20px 0 20px;
+            margin: 20px 0px 0px 0px;
+            border-width: 1px; }
+          #content .form-section .container-box .container .form .input-s {
+            border-color: gray;
+            height: 45px;
+            width: 37%;
+            border-radius: 30px;
+            padding: 0 20px 0 20px;
+            margin: 20px 5px 0px 5px;
+            border-width: 1px; }
+          #content .form-section .container-box .container .form .div3 {
+            font-size: 11px;
+            text-align: right;
+            margin: 15px 100px 0px 0px; }
+          #content .form-section .container-box .container .form .div8 {
+            font-size: 16px;
+            margin: 15px 0px 0px 0px; }
+            #content .form-section .container-box .container .form .div8 .gt {
+              margin: 0px 30px 0px 0px; }
+          #content .form-section .container-box .container .form .check {
+            width: 18px;
+            height: 18px;
+            margin: 0px 10px 0px 0px; }
+          #content .form-section .container-box .container .form .div4 {
+            font-size: 11px;
+            text-align: center;
+            margin: 20px 0px; }
+          #content .form-section .container-box .container .form .main-btn {
+            border-color: gray;
+            height: 45px;
+            width: 70%;
+            border-radius: 30px;
+            margin: 10px 0px 0px 0px;
+            border-width: 1px;
+            text-align: center; }
+          #content .form-section .container-box .container .form .div7 {
+            font-size: 11px;
+            text-align: center;
+            margin: 20px 0px 0px 0px; }
+  #content .image-section {
+    width: 50vw;
+    height: 50vh; }
+    #content .image-section .div1 .text {
+      padding-top: 65px;
+      font-size: 55px;
+      font-weight: bold;
+      margin: 0px 0px 20px 0px; }
 
 #btn {
   background-color: #DA237F;

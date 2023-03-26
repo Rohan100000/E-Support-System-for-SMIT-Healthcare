@@ -9,7 +9,7 @@ $font-family_3: Livvic;
 $font-family_4: Abel;
 $background-color_1: #ffbdde2d;
 $background-color_2: rgb(255, 244, 253);
-$background-color_3: var(--color-blue);
+$background-color_3: #204EA5;
 
 
 body {
@@ -21,14 +21,13 @@ body {
 #intro {
 	background-color: $background-color_2;
 	margin-top: 2rem;
-	width: 100%;
 	position: relative;
 	.main-content {
 		display: inline-block;
 		width: 45%;
 		padding-top: 3rem;
 	}
-	.image {
+	.home-image {
 		display: inline-block;
 		width: 40%;
 		vertical-align: top;
@@ -39,7 +38,7 @@ body {
 	}
 }
 .main-content {
-	.div1 {
+	.header-division {
 		img {
 			position: relative;
 			bottom: 4px;
@@ -50,12 +49,12 @@ body {
 		font-weight: bolder;
 		margin: 2rem 0px;
 	}
-	.div2 {
+	.heading-bold {
 		font-family: $font-family_1;
 		font-size: 4.5rem;
 		line-height: 5.2rem;
 	}
-	.div3 {
+	.content-heading {
 		margin: 2rem 0px 3rem 0px;
 		color: $color_2;
 		font-size: 2rem;
@@ -70,7 +69,7 @@ body {
 		border-radius: 1rem;
 		transition: 0.5s ease-in-out;
 		&:hover {
-			box-shadow: 1px 1px 30px var(--color-blue);
+			box-shadow: 1px 1px 30px #204EA5;
 		}
 	}
 }
@@ -80,10 +79,9 @@ body {
 /*Services Styling Starts Here*/
 
 .services {
-	width: 80%;
-	margin: auto;
+	margin-right: 160px;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 100px;
 }
 h1 {
 	font-size: 36px;
