@@ -32,12 +32,15 @@ ul{
     border: solid rgb(171,171,171) 1px;
     padding: 2vh 3.5vw;
     border-radius: 10px;
-    
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    background-color: white;
 }
 
 .time:hover{
     background-color: rgb(218,35,127);
     color: rgb(255,255,255);
+}
+.hidden-date-object{
+    visibility: hidden;
 }
