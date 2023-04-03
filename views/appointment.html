@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Appointment</title>
-    <link rel="stylesheet" href="../assets/css/appointment.css" />
+    <title>Time Slot Selection</title>
+    <link rel="stylesheet" href="../assets/scss/appointment.css" />
   </head>
   <body>
-    <form>
+    <form method="post">
       <div class="slot_picker">
         <h4 id="title">SELECT TIME SLOT</h4>
         <div class="day">
           <h4 class="date">MARCH 2O</h4>
           <div class="select">
             <ul>
-              <li><div class="time">11 AM</div></li>
-              <li><div class="time">1 AM</div></li>
-              <li><div class="time">3 AM</div></li>
-              <li><div class="time">5 AM</div></li>
-              <li><div class="time">7 AM</div></li>
+              <li><div><button type="button" class="time" id="b11" onclick="clicked(this.id)" value="11">11:00</button></div></li>
+              <li><div><button type="button" class="time" id="b12" onclick="clicked(this.id)" value="13">13:00</button></div></li>
+              <li><div><button type="button" class="time" id="b13" onclick="clicked(this.id)" value="15">15:00</button></div></li>
+              <li><div><button type="button" class="time" id="b14" onclick="clicked(this.id)" value="17">17:00</button></div></li>
+              <li><div><button type="button" class="time" id="b15" onclick="clicked(this.id)" value="19">19:00</button></div></li>
             </ul>
           </div>
         </div>
@@ -27,11 +27,11 @@
           <h4 class="date">MARCH 21</h4>
           <div class="select">
             <ul>
-              <li><div class="time">11 AM</div></li>
-              <li><div class="time">1 AM</div></li>
-              <li><div class="time">3 AM</div></li>
-              <li><div class="time">5 AM</div></li>
-              <li><div class="time">7 AM</div></li>
+                <li><div><button type="button" class="time" id="b21" onclick="clicked(this.id)" value="11">11:00</button></div></li>
+                <li><div><button type="button" class="time" id="b22" onclick="clicked(this.id)" value="13">13:00</button></div></li>
+                <li><div><button type="button" class="time" id="b23" onclick="clicked(this.id)" value="15">15:00</button></div></li>
+                <li><div><button type="button" class="time" id="b24" onclick="clicked(this.id)" value="17">17:00</button></div></li>
+                <li><div><button type="button" class="time" id="b25" onclick="clicked(this.id)" value="19">19:00</button></div></li>
             </ul>
           </div>
         </div>
@@ -39,16 +39,20 @@
           <h4 class="date">MARCH 22</h4>
           <div class="select">
             <ul>
-              <li><div class="time">11 AM</div></li>
-              <li><div class="time">1 AM</div></li>
-              <li><div class="time">3 AM</div></li>
-              <li><div class="time">5 AM</div></li>
-              <li><div class="time">7 AM</div></li>
+                <li><div><button type="button" class="time" id="b31" onclick="clicked(this.id)" value="11">11:00</button></div></li>
+                <li><div><button type="button" class="time" id="b32" onclick="clicked(this.id)" value="13">13:00</button></div></li>
+                <li><div><button type="button" class="time" id="b33" onclick="clicked(this.id)" value="15">15:00</button></div></li>
+                <li><div><button type="button" class="time" id="b34" onclick="clicked(this.id)" value="17">17:00</button></div></li>
+                <li><div><button type="button" class="time" id="b35" onclick="clicked(this.id)" value="19">19:00</button></div></li>
             </ul>
           </div>
         </div>
         <h4 id="calendar">SHOW CALENDAR</h4>
       </div>
+      <div class="hidden-date-object">
+        <input type="text" value="" id="hdo" placeholder="dateobject">
+      </div>
     </form>
   </body>
+  <script src="../assets/javascript/appointment.js"></script>
 </html>
