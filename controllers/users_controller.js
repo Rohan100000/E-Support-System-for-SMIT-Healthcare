@@ -43,3 +43,14 @@ module.exports.create = async function (req, res) {
 module.exports.createSession = function (req, res) {
     return res.redirect('/');
 }
+
+module.exports.destroySession = function (req, res) {
+    // logout has been upgraded as an asynchronous function so it requires a callback function to handle error now
+    req.logout(function (error) {
+      if (error) {
+        return next(error);
+      }
+      return res.redirect("/");
+    });
+  };
+  

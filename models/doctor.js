@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const doctorSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -20,7 +20,10 @@ const userSchema = new mongoose.Schema({
     gender: {
         type: String,
     },
-    // include the array of ids of all appointments in this user schema itself
+    qualification: {
+        type: String
+    },
+    // include the array of ids of all appointments in this doctor schema itself
     appointments:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Appointment"
@@ -29,6 +32,6 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 });
 
-const User = mongoose.model('User', userSchema);
+const Doctor = mongoose.model('Doctor', doctorSchema);
 
-module.exports = User;
+module.exports = Doctor;

@@ -2,7 +2,12 @@
 body {
   margin: 0;
   padding: 0;
-  margin-left: 7rem; }
+  margin-left: 7rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  --color-light-grey: rgb(117, 117, 117);
+  --color-dark-grey: rgb(107, 107, 107);
+  --color-pink: rgb(231, 3, 144);
+  --color-blue: rgb(37, 37, 147); }
 
 #header {
   background-color: #fff4fd;
@@ -41,7 +46,7 @@ body {
 /* signin register buttons */
 .button {
   position: relative;
-  left: 10rem; }
+  left: 20vw; }
   .button .sign a {
     border: 1px solid #757575;
     padding: 0.75rem 2.25rem;

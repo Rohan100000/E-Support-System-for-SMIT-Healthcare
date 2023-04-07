@@ -14,7 +14,9 @@
 </head>
 
 <body>
-    <% if(!(title == "Sign up" || title == "Sign in")){ %>
+    <% if(locals.user){ %>
+    <%- include('_header2'); %>
+    <% }else if(!(title == "Sign up" || title == "Sign in")){ %>
     <%- include('_header'); %>
     <% } %>
 
