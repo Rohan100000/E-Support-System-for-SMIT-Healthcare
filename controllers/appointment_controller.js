@@ -28,13 +28,14 @@ module.exports.create_appointment = async function(req,res){
         if(!appointment){
             let user = await User.findById(req.user._id).populate({path: "appointments"})
             // in the appointments array of the user find if there exists an appointment with the same timing
-            for(appointment of user.appointments){
-                if(appointment.timing == newAppointment.timing){
+            for(let ap of user.appointments){
+                if(ap.timing == newAppointment.timing){
                     console.log("The user already has an appointment booked at this particular slot");
                     return res.redirect("back");
                 }
             }
-            let appointment = await Appointment.create(newAppointment);
+            let appointment = await new Appointment(newAppointment);
+            Appointment.create(appointment);
             user.appointments.push(appointment);
             user.save();
             doc.appointments.push(appointment);

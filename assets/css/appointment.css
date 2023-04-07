@@ -1,0 +1,39 @@
+body {
+  background-color: #fff4fd;
+  color: #ababab;
+  font-family: Arial, Helvetica, sans-serif; }
+
+ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none; }
+
+#calendar {
+  color: #da237f; }
+
+.slot_picker {
+  background-color: white;
+  margin: 8vh 10vw;
+  padding: 5vh 3vw;
+  border-radius: 30px; }
+
+.select {
+  display: flex;
+  justify-content: space-between; }
+
+.time {
+  border: solid #ababab 1px;
+  padding: 2vh 3.5vw;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  background-color: white; }
+
+.time:hover {
+  background-color: #da237f;
+  color: white; }
+
+.hidden-date-object {
+  visibility: hidden; }
