@@ -26,10 +26,14 @@ video {
 	-webkit-user-select: none;
 	cursor: pointer;
 }
-body {
+.video-body {
 	background-color: $background-color_1;
+	padding-top: 50px;
+	padding-bottom: 70px;
+	width: 100%;
 }
-section {
+
+.video-section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -90,8 +94,8 @@ section {
 			left: 0;
 			height: 50px;
 			width: 100%;
-			background: rgb(0 0 0 / 29%);
-			box-shadow: 0 0 40px 10px rgb(0 0 0 / 25%);
+			background: rgba(0, 0, 0, 0.29);
+			box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.25);
 			z-index: 3;
 			transform: translateY(180%);
 			transition: 0.3s;
@@ -132,7 +136,7 @@ section {
 		position: absolute;
 		right: 25px;
 		bottom: 62px;
-		background: rgb(28 28 28 / 90%);
+		background: rgba(28, 28, 28, 0.90);
 		width: 200px;
 		max-height: 250px;
 		height: auto;
@@ -158,7 +162,7 @@ section {
 		position: absolute;
 		right: 25px;
 		bottom: 62px;
-		background: rgb(28 28 28 / 90%);
+		background: rgba(28, 28, 28, 0.90);
 		width: 200px;
 		max-height: 250px;
 		height: auto;
@@ -204,7 +208,7 @@ section {
 		.progress-bar {
 			position: relative;
 			width: 0%;
-			background: rgba(200,112,160,255);
+			background: rgb(200,112,160);
 			height: inherit;
 			border-radius: inherit;
 			cursor: pointer;
@@ -217,7 +221,7 @@ section {
 				right: -5px;
 				top: 50%;
 				transform: translateY(-50%);
-				background: rgba(200,112,160,255);
+				background: rgb(200,112,160);
 			}
 		}
 		.bufferedBar {
