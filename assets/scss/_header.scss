@@ -25,19 +25,22 @@ body {
 	position: relative;
 	display: flex;
 
-	.logo {
-		font-size: 3rem;
-		margin-right: 1.5rem;
-		color: $color_1;
-		position: relative;
-
-		// top: 0.3rem;
-		&:hover {
+	a{
+		transition: 0.25s ease-in-out 0.1s;
+		text-decoration: none;
+		.logo {
 			font-size: 3rem;
-			color: $color_2;
+			margin-right: 1.5rem;
+			color: $color_1;
 			position: relative;
 			// top: 0.3rem;
-			cursor: pointer;
+			&:hover {
+				font-size: 3rem;
+				color: $color_2;
+				position: relative;
+				// top: 0.3rem;
+				cursor: pointer;
+			}
 		}
 	}
 
@@ -73,7 +76,7 @@ body {
 /* signin register buttons */
 .button {
 	position: relative;
-	left: 20vw;
+	left: 15vw;
 
 	.sign {
 		a {
@@ -114,7 +117,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-left: 570px;
+    margin-left: 28vw;
 }
   
 .header-icons li {

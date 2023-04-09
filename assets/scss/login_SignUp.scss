@@ -12,6 +12,7 @@ $border-color_2: gray;
 
 body {
 	background-color: $background-color_1;
+	font-family: 'Noto Sans JP', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -22,19 +23,35 @@ body {
 	margin-bottom: 2rem;
 	position: relative;
 	display: flex;
-	.logo {
-		font-size: 2.5rem;
-		color: $color_1;
-		position: relative;
-		top: 0.5rem;
-		--color-dark-grey: rgb(107, 107, 107);
-		--color-pink: rgb(231, 3, 144);
-	}
-	span {
+	a{	
+		text-decoration: none;
+		.logo {
+			font-size: 3rem;
+			margin-right: 1.5rem;
+			color: $color_1;
+			position: relative;
+			top: 0.5rem;
+			--color-dark-grey: rgb(107, 107, 107);
+			--color-pink: rgb(231, 3, 144);
+			&:hover {
+				font-size: 3rem;
+				color: $color_2;
+				position: relative;
+				// top: 0.3rem;
+				cursor: pointer;
+			}
+		}
 		span {
-			color: $color_2;
+			span {
+				color: $color_2;
+				font-size: 3rem;
+				position: relative;
+				// top: 0.3rem;
+				cursor: pointer;       
+			}
 		}
 	}
+	
 }
 #content {
 	display: flex;
@@ -110,11 +127,13 @@ body {
 						margin: 10px 0px 0px 0px;
 						border-width: 1px;
 						text-align: center;
+						cursor: pointer;
 					}
 					.div7 {
 						font-size: 11px;
 						text-align: center;
 						margin: 20px 0px 0px 0px;
+						
 					}
 				}
 			}
@@ -139,6 +158,7 @@ body {
 }
 #pink {
 	color: $color_5;
+	text-decoration: none;
 }
 #center {
 	text-align: center;
@@ -146,7 +166,70 @@ body {
 #mr {
 	margin-right: 30px;
 }
-
+#txt-dec-none{
+	text-decoration: none;
+}
+input[type='radio'] {
+	&:after {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		top: -2px;
+		left: -1px;
+		position: relative;
+		background-color: $background-color_2;
+		content: '';
+		display: inline-block;
+		visibility: visible;
+		border: 0.5px solid black;
+	}
+	&:checked {
+		&:after {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			top: -2px;
+			left: -1px;
+			position: relative;
+			background-color: $background-color_4;
+			content: '';
+			display: inline-block;
+			visibility: visible;
+			border: 2px solid white;
+		}
+	}
+}
+input[type='checkbox'] {
+	&:after {
+		width: 20px;
+		height: 20px;
+		// border-radius: 50%;
+		top: -2px;
+		left: -1px;
+		position: relative;
+		background-color: $background-color_2;
+		content: '';
+		display: inline-block;
+		visibility: visible;
+		border: 0.5px solid black;
+	}
+	&:checked {
+		&:after {
+			width: 20px;
+			height: 20px;
+			// border-radius: 50%;
+			top: -2px;
+			left: -1px;
+			position: relative;
+			background-color: $background-color_4;
+			color: white;
+			content: '';
+			display: inline-block;
+			visibility: visible;
+			border: 2px solid white;
+		}
+	}
+}
 
 
 
