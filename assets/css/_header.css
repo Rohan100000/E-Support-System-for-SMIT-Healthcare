@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  margin-left: 7rem;
   font-family: 'Noto Sans JP', sans-serif;
   --color-light-grey: rgb(117, 117, 117);
   --color-dark-grey: rgb(107, 107, 107);
@@ -12,18 +11,18 @@ body {
 #header {
   background-color: #fff4fd;
   margin: 2rem 0px;
+  margin-left: 7rem;
   position: relative;
   display: flex; }
   #header .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-right: 1.5rem;
     color: #6b6b6b;
-    position: relative;
-    top: 0.5rem; }
+    position: relative; }
     #header .logo:hover {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #e70390;
       position: relative;
-      top: 0.5rem;
       cursor: pointer; }
   #header span span {
     color: #e70390; }
@@ -34,7 +33,7 @@ body {
   display: flex;
   justify-content: space-around; }
   .horizontal-list li {
-    margin: 1rem 1.5rem;
+    margin: 1rem 1rem;
     text-decoration: none; }
     .horizontal-list li a {
       color: #757575;
@@ -69,3 +68,56 @@ body {
       border-radius: 2rem;
       background-color: white;
       color: #e70390; }
+
+.header-icons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 570px; }
+
+.header-icons li {
+  margin-left: 1.5rem; }
+
+.material-icons {
+  font-size: 2rem;
+  color: var(--color-light-grey); }
+
+.material-icons:hover {
+  color: var(--color-pink); }
+
+/* Hide the toggle menu by default */
+.toggle-menu {
+  display: none; }
+
+/* Show the toggle menu when the user hovers over the account_circle icon */
+.header-icons li:hover .toggle-menu {
+  display: block; }
+
+/* Styles for the toggle menu */
+.toggle-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-left: -150px;
+  transition: opacity 0.9s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; }
+
+.toggle-menu li {
+  list-style: none;
+  margin: auto; }
+
+.toggle-menu li a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #333; }
+
+.toggle-menu li a i {
+  margin-right: 10px; }
+
+.toggle-menu li a:hover {
+  background-color: #eee; }

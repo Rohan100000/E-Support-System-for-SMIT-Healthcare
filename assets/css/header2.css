@@ -3,7 +3,6 @@
 body {
   margin: 0;
   padding: 0;
-  margin-left: 7rem;
   font-family: 'Noto Sans JP', sans-serif;
   --color-light-grey: rgb(117, 117, 117);
   --color-dark-grey: rgb(107, 107, 107);
@@ -14,6 +13,7 @@ body {
 #header {
   background-color: #fff4fd;
   margin: 2rem 0px;
+  margin-left: 7rem;
   position: relative;
   display: flex; }
 

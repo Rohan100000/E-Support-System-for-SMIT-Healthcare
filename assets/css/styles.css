@@ -3,7 +3,8 @@
 
 #abt-img {
   height: 380px;
-  width: 600px; }
+  width: 600px;
+  margin-left: 7rem; }
 
 .center-alignment {
   display: flex;

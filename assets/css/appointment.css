@@ -1,9 +1,8 @@
 body {
   background-color: #fff4fd;
-  color: #ababab;
   font-family: Arial, Helvetica, sans-serif; }
 
-ul {
+.time-select ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -15,6 +14,7 @@ ul {
 
 .slot_picker {
   background-color: white;
+  color: #ababab;
   margin: 8vh 10vw;
   padding: 5vh 3vw;
   border-radius: 30px; }
