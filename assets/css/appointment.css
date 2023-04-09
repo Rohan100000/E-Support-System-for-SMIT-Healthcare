@@ -10,14 +10,18 @@ body {
   list-style: none; }
 
 #calendar {
-  color: #da237f; }
+  color: #da237f;
+  margin: 30px 0px; }
 
 .slot_picker {
   background-color: white;
   color: #ababab;
-  margin: 8vh 10vw;
-  padding: 5vh 3vw;
+  margin: 8vh 7.5vw;
+  padding: 2vh 15vw 2vh 5vw;
   border-radius: 30px; }
+
+#slot_picker_title {
+  margin: 40px 0px; }
 
 .select {
   display: flex;
@@ -29,11 +33,31 @@ body {
   border-radius: 10px;
   transition-duration: 0.3s;
   transition-timing-function: ease;
-  background-color: white; }
+  background-color: white;
+  font-size: medium; }
+
+.date {
+  margin: 20px 0px; }
 
 .time:hover {
   background-color: #da237f;
   color: white; }
+
+.book-appointment-button {
+  text-align: center; }
+
+.book-appointment-submit {
+  color: white;
+  background-color: #204ea5;
+  width: 17vw;
+  height: 7.5vh;
+  border-radius: 10px;
+  border: 0px;
+  transition: 0.25s ease-in-out 0.1s;
+  font-size: large;
+  cursor: pointer; }
+  .book-appointment-submit:hover {
+    box-shadow: 0px 0px 10px 4px #204ea5; }
 
 .hidden-date-object {
   visibility: hidden; }

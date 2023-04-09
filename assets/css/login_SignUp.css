@@ -1,5 +1,6 @@
 body {
   background-color: #ffbdde2d;
+  font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -10,15 +11,26 @@ body {
   margin-bottom: 2rem;
   position: relative;
   display: flex; }
-  #header .logo {
-    font-size: 2.5rem;
-    color: var(--color-dark-grey);
-    position: relative;
-    top: 0.5rem;
-    --color-dark-grey: rgb(107, 107, 107);
-    --color-pink: rgb(231, 3, 144); }
-  #header span span {
-    color: var(--color-pink); }
+  #header a {
+    text-decoration: none; }
+    #header a .logo {
+      font-size: 3rem;
+      margin-right: 1.5rem;
+      color: var(--color-dark-grey);
+      position: relative;
+      top: 0.5rem;
+      --color-dark-grey: rgb(107, 107, 107);
+      --color-pink: rgb(231, 3, 144); }
+      #header a .logo:hover {
+        font-size: 3rem;
+        color: var(--color-pink);
+        position: relative;
+        cursor: pointer; }
+    #header a span span {
+      color: var(--color-pink);
+      font-size: 3rem;
+      position: relative;
+      cursor: pointer; }
 
 #content {
   display: flex;
@@ -85,7 +97,8 @@ body {
             border-radius: 30px;
             margin: 10px 0px 0px 0px;
             border-width: 1px;
-            text-align: center; }
+            text-align: center;
+            cursor: pointer; }
           #content .form-section .container-box .container .form .div7 {
             font-size: 11px;
             text-align: center;
@@ -104,10 +117,65 @@ body {
   color: white; }
 
 #pink {
-  color: #DA237F; }
+  color: #DA237F;
+  text-decoration: none; }
 
 #center {
   text-align: center; }
 
 #mr {
   margin-right: 30px; }
+
+#txt-dec-none {
+  text-decoration: none; }
+
+input[type='radio']:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #fff4fd;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 0.5px solid black; }
+
+input[type='radio']:checked:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #DA237F;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white; }
+
+input[type='checkbox']:after {
+  width: 20px;
+  height: 20px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #fff4fd;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 0.5px solid black; }
+
+input[type='checkbox']:checked:after {
+  width: 20px;
+  height: 20px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #DA237F;
+  color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white; }

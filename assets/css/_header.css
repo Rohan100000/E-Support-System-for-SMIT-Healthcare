@@ -14,16 +14,19 @@ body {
   margin-left: 7rem;
   position: relative;
   display: flex; }
-  #header .logo {
-    font-size: 3rem;
-    margin-right: 1.5rem;
-    color: #6b6b6b;
-    position: relative; }
-    #header .logo:hover {
+  #header a {
+    transition: 0.25s ease-in-out 0.1s;
+    text-decoration: none; }
+    #header a .logo {
       font-size: 3rem;
-      color: #e70390;
-      position: relative;
-      cursor: pointer; }
+      margin-right: 1.5rem;
+      color: #6b6b6b;
+      position: relative; }
+      #header a .logo:hover {
+        font-size: 3rem;
+        color: #e70390;
+        position: relative;
+        cursor: pointer; }
   #header span span {
     color: #e70390; }
 
@@ -45,7 +48,7 @@ body {
 /* signin register buttons */
 .button {
   position: relative;
-  left: 20vw; }
+  left: 15vw; }
   .button .sign a {
     border: 1px solid #757575;
     padding: 0.75rem 2.25rem;
@@ -73,7 +76,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: 570px; }
+  margin-left: 28vw; }
 
 .header-icons li {
   margin-left: 1.5rem; }

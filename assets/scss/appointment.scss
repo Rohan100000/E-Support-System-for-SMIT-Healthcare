@@ -13,14 +13,19 @@ body{
 
 #calendar{
     color: rgb(218,35,127);
+    margin: 30px 0px;
 }
 
 .slot_picker{
     background-color: rgb(255,255,255);
     color: rgb(171,171,171);
-    margin: 8vh 10vw ;
-    padding: 5vh 3vw ;
+    margin: 8vh 7.5vw ;
+    padding: 2vh 15vw 2vh 5vw;
     border-radius: 30px;
+}
+
+#slot_picker_title{
+    margin: 40px 0px;
 }
 
 .select{
@@ -35,11 +40,37 @@ body{
     transition-duration: 0.3s;
     transition-timing-function: ease;
     background-color: white;
+    font-size: medium;
+}
+.date{
+    margin: 20px 0px;
 }
 
 .time:hover{
     background-color: rgb(218,35,127);
     color: rgb(255,255,255);
+}
+
+.book-appointment-button{
+    text-align: center;
+    
+
+    
+}
+.book-appointment-submit{
+    color: white;
+    background-color: #204ea5;
+    width: 17vw;
+    height: 7.5vh;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.25s ease-in-out 0.1s;
+    font-size: large;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 0px 0px 10px 4px #204ea5;
+    }
 }
 .hidden-date-object{
     visibility: hidden;

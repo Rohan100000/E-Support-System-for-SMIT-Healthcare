@@ -78,6 +78,8 @@
   font-size: 16px; }
 
 #apt-btn {
+  text-decoration: none;
+  transition: 0.25s ease-in-out 0.1s;
   padding: 2vh 3vw;
   margin-right: 40px;
   background-color: #204ea5;
@@ -91,6 +93,7 @@
     color: #204ea5; }
 
 #abt-btn {
+  transition: 0.25s ease-in-out 0.1s;
   cursor: pointer;
   color: #204ea5;
   padding: 2vh 3vw;

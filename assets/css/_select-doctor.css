@@ -9,8 +9,7 @@ body {
   background-color: #fff6fb; }
 
 h3 {
-  font-weight: 800;
-  margin-bottom: 5vh; }
+  font-weight: 800; }
 
 #doc-selection {
   margin: 5vh 7.5vw;
@@ -22,7 +21,8 @@ h3 {
   box-shadow: 0 0 25px 5px #ededed; }
 
 .select-about-text {
-  color: #888888; }
+  color: #888888;
+  margin-bottom: 5vh; }
 
 .doc-id {
   display: flex;
@@ -78,7 +78,6 @@ input[type='radio']:checked:after {
   top: -2px;
   left: -1px;
   position: relative;
-  background-color: #da237f;
   content: '';
   display: inline-block;
   visibility: visible;
