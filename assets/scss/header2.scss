@@ -4,7 +4,6 @@
 body {
     margin: 0;
     padding: 0;
-    margin-left: 7rem;
     font-family: 'Noto Sans JP', sans-serif;
     --color-light-grey: rgb(117, 117, 117);
     --color-dark-grey: rgb(107, 107, 107);
@@ -16,6 +15,7 @@ body {
 #header {
     background-color: rgb(255, 244, 253);
     margin: 2rem 0px;
+    margin-left: 7rem;
     position: relative;
     display: flex;
 }
@@ -134,66 +134,5 @@ body {
 
 .button .reg a {
     color: white;
-}
-
-/* intro box */
-#intro {
-    background-color: rgb(255, 244, 253);
-    margin-top: 2rem;
-    width: 100%;
-    position: relative;
-}
-
-#intro .main-content {
-    display: inline-block;
-    width: 45%;
-    padding-top: 3rem;
-}
-
-#intro .image {
-    display: inline-block;
-    width: 40%;
-    vertical-align: top;
-}
-.main-content .div1 img{
-    position: relative;
-    bottom: 4px;
-}
-.main-content .div1 {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1.3rem;
-    color: var(--color-dark-grey);
-    font-weight: bolder;
-    margin: 2rem 0px;
-}
-
-.main-content .div2 {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 4.5rem;
-    line-height: 5.2rem;
-}
-.main-content .div3{
-    margin: 2rem 0px 3rem 0px;
-    color: var(--color-light-grey);
-    font-size: 2rem;
-    line-height: 2.5rem;
-}
-.main-content a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
-    background-color: var(--color-blue);
-    padding: 0.7rem 2rem;
-    border-radius: 1rem;
-    transition: 0.5s ease-in-out;
-} 
-.main-content a:hover{
-    box-shadow: 1px 1px 30px var(--color-blue);
-
-}
-
-#intro .image img{
-    margin: 0px 2rem;
-    height: 650px;
 }
 

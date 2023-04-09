@@ -25,6 +25,7 @@ body {
 #intro {
 	background-color: $background-color_2;
 	margin-top: 2rem;
+	margin-left: 7rem;
 	position: relative;
 	.main-content {
 		display: inline-block;
@@ -83,23 +84,24 @@ body {
 /*Services Styling Starts Here*/
 
 .services {
-	margin-right: 160px;
+	margin-right: 7rem;
+	margin-left: 7rem;
 	text-align: center;
 	padding-top: 100px;
 }
-h1 {
+.services h1 {
 	font-size: 36px;
 	font-weight: 600;
-	font-family: $font-family_2;
+	// font-family: $font-family_2;
 	color: $color_4;
 }
-p {
+.services p {
 	color: $color_5;
 	font-size: 14px;
 	font-weight: 300;
 	line-height: 22px;
 	padding: 10px;
-	font-family: $font-family_3;
+	// font-family: $font-family_3;
 }
 .row {
 	margin-top: 5%;
@@ -133,11 +135,11 @@ p {
 	padding-top: 10px;
 	width: 60px;
 }
-h3 {
+.services h3 {
 	text-align: center;
 	font-weight: 600;
 	margin: 10px 0;
-	font-family: $font-family_4;
+	// font-family: $font-family_4;
 	color: $color_4;
 }
 

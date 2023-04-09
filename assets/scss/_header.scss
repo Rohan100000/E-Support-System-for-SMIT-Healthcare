@@ -9,50 +9,59 @@ $border-color_1: transparent;
 
 /* header */
 body {
-    margin: 0;
-    padding: 0;
-    margin-left: 7rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    --color-light-grey: rgb(117, 117, 117);
-    --color-dark-grey: rgb(107, 107, 107);
-    --color-pink: rgb(231, 3, 144);
-    --color-blue: rgb(37, 37, 147);
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans JP', sans-serif;
+	--color-light-grey: rgb(117, 117, 117);
+	--color-dark-grey: rgb(107, 107, 107);
+	--color-pink: rgb(231, 3, 144);
+	--color-blue: rgb(37, 37, 147);
 }
+
 #header {
 	background-color: $background-color_1;
 	margin: 2rem 0px;
+	margin-left: 7rem;
 	position: relative;
 	display: flex;
+
 	.logo {
-		font-size: 2.5rem;
+		font-size: 3rem;
+		margin-right: 1.5rem;
 		color: $color_1;
 		position: relative;
-		top: 0.5rem;
+
+		// top: 0.3rem;
 		&:hover {
-			font-size: 2.5rem;
+			font-size: 3rem;
 			color: $color_2;
 			position: relative;
-			top: 0.5rem;
+			// top: 0.3rem;
 			cursor: pointer;
 		}
 	}
+
 	span {
 		span {
 			color: $color_2;
 		}
 	}
 }
+
 .horizontal-list {
 	list-style: none;
 	font-size: 1.3rem;
 	display: flex;
 	justify-content: space-around;
+
 	li {
-		margin: 1rem 1.5rem;
+		margin: 1rem 1rem;
 		text-decoration: none;
+
 		a {
 			color: $color_3;
 			text-decoration: none;
+
 			&:hover {
 				color: $color_2;
 				text-decoration: none;
@@ -60,16 +69,19 @@ body {
 		}
 	}
 }
+
 /* signin register buttons */
 .button {
 	position: relative;
 	left: 20vw;
+
 	.sign {
 		a {
 			border: 1px solid rgb(117, 117, 117);
 			padding: 0.75rem 2.25rem;
 			border-radius: 2rem;
 			background-color: $background-color_2;
+
 			&:hover {
 				border-color: $border-color_1;
 				padding: 0.75rem 2.25rem;
@@ -79,12 +91,14 @@ body {
 			}
 		}
 	}
+
 	.reg {
 		a {
 			padding: 0.75rem 2.25rem;
 			border-radius: 2rem;
 			background-color: $background-color_3;
 			color: $color_4;
+
 			&:hover {
 				border: 1px solid rgb(231, 3, 144);
 				padding: 0.75rem 2.25rem;
@@ -94,4 +108,68 @@ body {
 			}
 		}
 	}
+}
+
+.header-icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 570px;
+}
+  
+.header-icons li {
+    margin-left: 1.5rem;
+}
+
+.material-icons {
+	font-size: 2rem;
+	color: var(--color-light-grey);
+}
+
+.material-icons:hover {
+	color: var(--color-pink);
+}
+
+/* Hide the toggle menu by default */
+.toggle-menu {
+	display: none;
+}
+
+/* Show the toggle menu when the user hovers over the account_circle icon */
+.header-icons li:hover .toggle-menu {
+	display: block;
+}
+
+/* Styles for the toggle menu */
+.toggle-menu {
+	position: absolute;
+	background-color: white;
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin-left: -150px;
+	transition: opacity 0.9s ease-in-out;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+}
+
+.toggle-menu li {
+	list-style: none;
+	margin: auto;
+}
+
+.toggle-menu li a {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	font-size: 14px;
+	color: #333;
+}
+
+.toggle-menu li a i {
+	margin-right: 10px;
+}
+
+.toggle-menu li a:hover {
+	background-color: #eee;
 }
