@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/css/_home.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/video.css" />
+<link rel="stylesheet" href="/css/autotyping.css">
 <!-- Intro Section -->
 <section id="intro">
     <div class="main-content">
@@ -8,7 +9,10 @@
         <!-- This section contains the grey header division -->
         <div class="header-division">
             <img src="/images/Line_1.png">
-              EXPERT MEDICAL TREATMENT
+            <span class="division-text-container">
+              <span class="division-text first-text"></span>
+              <span class="division-text sec-text">EXPERT MEDICAL TREATMENT</span>
+            </span>
         </div>
 
         <!-- This section contains the bold black header of the main page -->
@@ -217,5 +221,14 @@
 </div>
 
 <!-- About Us Section Ends here -->
-
+<script>
+  const text = document.querySelector(".sec-text");
+  const textLoad = () => {
+      setTimeout(() => {
+          text.textContent = "EXPERT MEDICAL TREATMENT";
+      }, 0);
+  }
+  textLoad();
+  setInterval(textLoad, 12000);
+</script>
 <script src="/javascript/video.js"></script>
