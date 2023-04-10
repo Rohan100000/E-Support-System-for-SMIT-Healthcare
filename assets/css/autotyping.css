@@ -1,0 +1,28 @@
+.division-text-container {
+  width: auto;
+  overflow: hidden; }
+
+.division-text-container .division-text {
+  position: relative;
+  color: var(--color-dark-grey);
+  font-weight: 600; }
+
+.division-text-container .division-text.first-text {
+  color: #FFF; }
+
+.division-text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff4fd;
+  border-left: 2px solid var(--color-dark-grey);
+  animation: animate 7s steps(21) infinite; }
+
+@keyframes animate {
+  40%, 60% {
+    left: calc(100% + 4px); }
+  100% {
+    left: 0%; } }
