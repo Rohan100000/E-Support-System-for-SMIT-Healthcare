@@ -9,7 +9,8 @@ body {
   background-color: #fff6fb; }
 
 h3 {
-  font-weight: 800; }
+  font-weight: 800;
+  font-size: 16px; }
 
 #doc-selection {
   margin: 5vh 7.5vw;
@@ -30,8 +31,8 @@ h3 {
 
 .image {
   border-radius: 50%;
-  width: 100px;
-  height: 100px; }
+  width: 75px;
+  height: 75px; }
 
 .doc-select {
   margin: auto 3vw auto 0; }
@@ -47,7 +48,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 4vw; }
   .doc-info h3 {
     font-weight: 500; }
@@ -59,8 +60,8 @@ h3 {
   color: #dd368a; }
 
 input[type='radio']:after {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   top: -2px;
   left: -1px;
@@ -72,8 +73,8 @@ input[type='radio']:after {
   border: 0.5px solid black; }
 
 input[type='radio']:checked:after {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   top: -2px;
   left: -1px;

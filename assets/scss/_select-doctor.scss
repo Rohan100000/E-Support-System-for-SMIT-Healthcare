@@ -17,6 +17,7 @@ body {
 }
 h3 {
 	font-weight: 800;
+	font-size: 16px;
 	// margin-bottom: 5vh;
 }
 #doc-selection {
@@ -38,8 +39,8 @@ h3 {
 }
 .image {
 	border-radius: 50%;
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 }
 .doc-select {
 	margin: auto 3vw auto 0;
@@ -55,7 +56,7 @@ h3 {
 	flex-direction: column;
 	justify-content: center;
 	text-align: left;
-	font-size: 20px;
+	font-size: 15px;
 	margin-left: 4vw;
 	h3 {
 		font-weight: 500;
@@ -69,8 +70,8 @@ h3 {
 }
 input[type='radio'] {
 	&:after {
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 		border-radius: 50%;
 		top: -2px;
 		left: -1px;
@@ -83,8 +84,8 @@ input[type='radio'] {
 	}
 	&:checked {
 		&:after {
-			width: 20px;
-			height: 20px;
+			width: 15px;
+			height: 15px;
 			border-radius: 50%;
 			top: -2px;
 			left: -1px;
