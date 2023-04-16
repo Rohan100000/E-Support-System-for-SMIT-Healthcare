@@ -24,6 +24,7 @@
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.3",
     "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3",
     "node-sass": "^8.0.0",
     "node-sass-middleware": "^1.0.1",
     "nodemon": "^2.0.22",
