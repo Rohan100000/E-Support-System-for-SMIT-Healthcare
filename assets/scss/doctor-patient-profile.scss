@@ -7,19 +7,18 @@ body{
     padding: 0;
     background-color: rgb(255, 244, 253);
 }
-
 .main-div{
     display: flex;
 
 }
-.patient-list-div{
+.main-div .patient-list-div{
     width: 32vw;
     height: 100vh;
     padding-left: 3vw;
     margin-right: 1vw;
     /* background-color: red; */
 }
-.patient-detail-div{
+.main-div .patient-detail-div{
     width: 65.5vw;
     /* height: 91vh; */
     background-color: white;
@@ -27,12 +26,9 @@ body{
     padding-top: 35px;
     padding-bottom: 35px;
     box-shadow: 0 0 20px 5px rgb(180, 180, 180);
-    
-    
-    
     /* height: 100vh; */
 }
-.patient-detail-div-content{
+.main-div .patient-detail-div .patient-detail-div-content{
     height: 91vh;
     /* overflow-y: hidden; */
     overflow: auto;
@@ -42,27 +38,14 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }   
-.patient-detail-div-content::-webkit-scrollbar{
+.main-div .patient-detail-div .patient-detail-div-content::-webkit-scrollbar{
     display: none;
 }
-.pl-heading{
+.main-div .patient-list-div .pl-heading{
     padding-left:4.5vw;
     padding-top:9.5vh;
     font-size: medium;
     padding-bottom: 1.5vh;
-}
-
-/* .patient-n-list{
-    padding: 25px 45px;
-    border-color: black;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    /* display: flex; */
-    /* flex-direction: row; */
-/* } */ 
-
-.patient-list-image{
-    width:80px;
 }
 .seperation-doc {
 	background-color: rgb(229, 229, 229);
@@ -140,8 +123,6 @@ body{
     border:0;
     background-color: lightgray;
     box-shadow: none;
-
-
 }
 .vertical-division{
     border:0.25px solid rgba(80,80,80,0.5);
