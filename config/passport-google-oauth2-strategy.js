@@ -2,6 +2,7 @@ const passport = require("passport");
 const googleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const crypto = require("crypto");
 const User = require("../models/user");
+const Doctor = require("../models/doctor");
 
 // tell passport to use a new strategy for google login
 passport.use(new googleStrategy({
@@ -9,30 +10,6 @@ passport.use(new googleStrategy({
     clientSecret: "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",
     callbackURL: "http://localhost:8000/users/auth/google/callback",
 },function(accessToken, refreshToken,profile,done){
-    // let user = await User.findOne({email: profile.emails[0].value}).exec();
-    // if(!user){
-    //     console.log("error in google strategy passport");
-    //     return;
-    // }
-    // console.log(accessToken,refreshToken);
-    // console.log(profile);
-    // if(user){
-    //     // if found, set this user as req.user
-    //     return done(null,user);
-    // }else{
-    //     // if not found, create the user and set it as req.user
-    //     User.create({
-    //         username: profile.displayName,
-    //         email: profile.emails[0].value,
-    //         password: crypto.randomBytes(20).toString("hex"),
-    //     }, function(error,user){
-    //         if(error){
-    //             console.log("error in creating user google strategy passport: ",error);
-    //             return;
-    //         }
-    //         return done(null,user);
-    //     })
-    // }
     User.findOne({email: profile.emails[0].value}).exec(function(error,user){
         if(error){
             console.log("error in google strategy passport: ",error);
@@ -45,20 +22,30 @@ passport.use(new googleStrategy({
             return done(null,user);
         }else{
             // if not found, create the user and set it as req.user
-            User.create({
-                username: profile.displayName,
-                email: profile.emails[0].value,
-                password: crypto.randomBytes(20).toString("hex"),
-            }, function(error,user){
+            Doctor.findOne({email: profile.emails[0].value}).exec(function(error,doctor){
                 if(error){
-                    console.log("error in creating user google strategy passport: ",error);
+                    console.log("error in google strategy passport: ",error);
                     return;
                 }
-                return done(null,user);
-            })
+                let is_a_doctor = false;
+                if(doctor){
+                    is_a_doctor = true;
+                }
+                User.create({
+                    username: profile.displayName,
+                    email: profile.emails[0].value,
+                    password: crypto.randomBytes(20).toString("hex"),
+                    is_doctor: is_a_doctor
+                }, function(error,user){
+                    if(error){
+                        console.log("error in creating user google strategy passport: ",error);
+                        return;
+                    }
+                    return done(null,user);
+                })
+            });
         }
     })
-    
 }));
 
 module.exports = passport;

@@ -5,5 +5,6 @@ const appointmentController = require('../controllers/appointment_controller');
 
 router.get('/book-appointment',appointmentController.book_appointment);
 router.post('/create-appointment',passport.checkAuthentication,appointmentController.create_appointment);
+router.get('/list-appointments',passport.checkAuthentication,appointmentController.list_appointments);
 
 module.exports = router;

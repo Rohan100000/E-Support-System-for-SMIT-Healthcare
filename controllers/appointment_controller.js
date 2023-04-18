@@ -17,12 +17,18 @@ module.exports.create_appointment = async function(req,res){
             console.log("Doctor does not exist in the database.");
             return res.redirect('back');
         }
-        let timing = new Date(req.body.timing);
+
+        let timing = new Date(req.body.timing).toISOString();
+        timing = new Date(timing);
+        console.log(typeof(timing));
+
         let newAppointment = {
             doctor: doc._id,
             patient: req.user._id,
             timing: timing,
         }
+        console.log(newAppointment);
+
         let appointment = await Appointment.findOne(newAppointment);
         // find the appointment, if found, return else continue.
         if(!appointment){
@@ -45,6 +51,16 @@ module.exports.create_appointment = async function(req,res){
         
     }catch(error){
         console.log('error in booking an appointment');
+        return;
+    }
+}
+
+module.exports.list_appointments = async function(req,res){
+    try{
+        let appointments = await Appointment.find({patient: req.user._id}).sort("timing");
+        return res.redirect("/");
+    }catch(error){
+        console.log('error in listing appointments');
         return;
     }
 }

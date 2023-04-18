@@ -24,7 +24,10 @@ const userSchema = new mongoose.Schema({
     appointments:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Appointment"
-    }]
+    }],
+    is_doctor:{
+        type: Boolean
+    }
 }, {
     timestamps: true
 });

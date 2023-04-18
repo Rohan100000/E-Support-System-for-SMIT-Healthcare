@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "643e04bac012825f44c4a94a"
+  },
+  "email": "rohanshrivastava1000@gmail.com",
+  "password": "123",
+  "username": "Rohan Shrivastava",
+  "age": 33,
+  "gender": "Male",
+  "appointments": [],
+  "is_doctor": true,
+  "createdAt": {
+    "$date": "2023-04-18T02:47:22.232Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-18T02:47:22.232Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e17d4f9f6753cd94e9c79"
+  },
+  "email": "rohanshrivastava10000@gmail.com",
+  "password": "9de098d0cf8c4101ec94ee0e54b00fcbf1222018",
+  "username": "Rohan Shrivastava",
+  "appointments": [],
+  "is_doctor": false,
+  "createdAt": {
+    "$date": "2023-04-18T04:08:52.566Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-18T04:08:52.566Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e186ddf4c6670484ff3f8"
+  },
+  "email": "xerobhau@gmail.com",
+  "password": "123",
+  "username": "Xero",
+  "age": 23,
+  "gender": "Male",
+  "appointments": [],
+  "is_doctor": false,
+  "createdAt": {
+    "$date": "2023-04-18T04:11:25.681Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-18T04:11:25.681Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e3e3c22c07978fb0ab134"
+  },
+  "email": "heckerbhau@gmail.com",
+  "password": "8405c926bacc8b0c7e5f49c2ab349ac86d22e351",
+  "username": "Hecker Bhau",
+  "appointments": [],
+  "is_doctor": false,
+  "createdAt": {
+    "$date": "2023-04-18T06:52:44.123Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-18T06:52:44.123Z"
+  },
+  "__v": 0
+}]
