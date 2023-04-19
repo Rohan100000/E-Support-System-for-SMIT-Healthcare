@@ -15,12 +15,12 @@
       <li><a href="">Contact Us</a></li>
     </ul>
     <ul class="header-icons">
-        <li><a href="/appointment/list-appointments"><i class="material-icons">calendar_month</i></a></li>
+        <li><a onclick="return appointment_button()" href="/users/profile"><i class="material-icons">calendar_month</i></a></li>
         <li><a href=""><i class="material-icons">local_mall</i></a></li>
         <li><a href=""><i class="material-icons">account_circle</i></a>
           <!-- Toggle menu for account_circle -->
           <ul class="toggle-menu">
-                <li><a href="/users/profile"><i class="material-icons">edit</i> Edit Profile</a></li>
+                <li><a onclick="return profile_button()" href="/users/profile" ><i class="material-icons">edit</i> Edit Profile</a></li>
                 <li><a href=""><i class="material-icons">help_outline</i> Help & Support</a></li>
                 <li><a href="/users/sign-out"><i class="material-icons">logout</i> Logout</a></li>
           </ul>
@@ -32,7 +32,6 @@
   // Get the account_circle icon and toggle menu
   var accountIcon = document.querySelector('.header-icons li:last-child a');
   var toggleMenu = document.querySelector('.toggle-menu');
-
   accountIcon.addEventListener('click', function() {
     if (toggleMenu.style.display === 'none') {
       toggleMenu.style.display = 'block';
@@ -40,4 +39,15 @@
       toggleMenu.style.display = 'none';
     }
   });
+  // console.log(document.cookie);
+  function appointment_button(){
+    document.cookie = 'appointment'; 
+    // console.log("run");
+    return true;
+  }
+  function profile_button(){
+    document.cookie = 'profile'; 
+    // console.log("");
+    return true;
+  }
 </script>
