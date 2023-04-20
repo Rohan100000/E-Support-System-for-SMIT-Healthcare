@@ -1,6 +1,7 @@
 const db = require("../config/mongoose");
 const User = require("../models/user");
 const Doctor = require("../models/doctor");
+const Appointment = require("../models/appointment");
 
 // render the sign up page
 module.exports.signup = function (req, res) {
@@ -21,11 +22,33 @@ module.exports.signin = function (req, res) {
   });
 };
 // render the user profile page
-module.exports.profile = function(req,res){
+module.exports.profile = async function(req,res){
     if (req.isAuthenticated()) {
-        return res.render('patient-profile', {
-            title: "Patient Profile"
-        })
+      let doctor = await Doctor.find({});
+      let appointments = await Appointment.find({patient: req.user._id}).sort("timing");
+      let appointment_container = [];
+      for(let appointment of appointments){
+          let time = appointment.timing.toLocaleString(undefined, {timeZone: 'Asia/Kolkata'});
+          for(let i = 0, j ; i < time.length; i++){
+              if(time[i] == ','){
+                  j = i+2;
+                  time = time.substring(j,time.length);
+                  break;
+              }
+          }
+          let curr_doctor = await Doctor.findById(appointment.doctor);
+          appointment_container.push({
+              doctor: curr_doctor.username,
+              day: appointment.timing.toDateString(),
+              time: time
+          });
+      }
+      console.log(appointment_container);
+      return res.render('patient-profile', {
+          title: "Patient Profile",
+          doctors: doctor,
+          appointments: appointment_container
+      })
     }else{
         return res.redirect('/users/sign-in');
     }

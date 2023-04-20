@@ -3,38 +3,18 @@
     <div class="patient-list-div">
         <div class="pl-heading">DOCTORS</div>
         <section id="doc-list">
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Rohan Shrivastava</h1>
-                    <h3 class="doc-type">Problem</h3>
-                </div>
-            </div>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Rimjhim Shrivastava</h1>
-                    <h3 class="doc-type">Neuro Surgeon</h3>
-                </div>
-            </div>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Rajsekhor Saikia</h1>
-                    <h3 class="doc-type">Dentist</h3>
-                </div>
-            </div>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Om Sinkar</h1>
-                    <h3 class="doc-type">Dentist</h3>
-                </div>
-            </div>
+            <% for(let doctor of doctors){ %>
+                <div class="seperation-doc"></div>
+                <a href="/appointment/list-appointments/<%= doctor._id %>">
+                    <div class="doc-id">
+                        <img src="/images/patient-n.png" alt="Doctor " class="image">
+                        <div class="doc-info">
+                            <h1 class="doc-name"><%= doctor.username %></h1>
+                            <h3 class="doc-type"><%= doctor.qualification %></h3>
+                        </div>
+                    </div>
+                </a>
+            <% } %>
         </section>
     </div>
     <div class="patient-detail-div">
@@ -60,25 +40,20 @@
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Name</div>
-                    <div class="patient-content-right">Rohan Shrivastava</div>
+                    <div class="patient-content-right"><%= user.username %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Age</div>
-                    <div class="patient-content-right">30</div>
+                    <div class="patient-content-right"><%= user.age %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Sex</div>
-                    <div class="patient-content-right">Male</div>
+                    <div class="patient-content-right"><%= user.gender %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-heading">Contact Information</div>
-                <div class="seperation-patient-content"></div>
-                <div class="patient-content-part">
-                    <div class="patient-content-left">Address</div>
-                    <div class="patient-content-right">Unavailable</div>
-                </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Contact number</div>
@@ -87,11 +62,35 @@
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">E-mail</div>
-                    <div class="patient-content-right">rohanshrivastava10000@gmail.com</div>
+                    <div class="patient-content-right"><%= user.email %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
             </div>
-            <div id="patient-visits">Visits: Coming soon!</div>
+            <div id="patient-visits">
+                <div class="patient-content-heading">Upcoming Appointments</div>
+                <% var i = 0; %>
+                <% for(let appointment of appointments){ %>
+                    <% i++ %>
+                    <div class="patient-content-heading">Appointment <%=i%></div>
+                    <div class="seperation-patient-content"></div>
+                    <div class="patient-content-part">
+                        <div class="patient-content-left">Doctor</div>
+                        <div class="patient-content-right"><%= appointment.doctor %></div>
+                    </div>
+                    
+                    <div class="seperation-patient-content"></div>
+                    <div class="patient-content-part">
+                        <div class="patient-content-left">Day</div>
+                        <div class="patient-content-right"><%= appointment.day %></div>
+                    </div>
+                    
+                    <div class="seperation-patient-content"></div>
+                    <div class="patient-content-part">
+                        <div class="patient-content-left">Time</div>
+                        <div class="patient-content-right"><%= appointment.time %></div>
+                    </div>
+                <% } %>
+            </div>
             <div id="patient-labs">Labs: Coming soon!</div>
             <div id="patient-prescriptions">Prescriptions: Coming soon!</div>
         </div>
