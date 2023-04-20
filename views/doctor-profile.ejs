@@ -3,6 +3,18 @@
     <div class="patient-list-div">
         <div class="pl-heading">PATIENTS</div>
         <section id="doc-list">
+            <% for(let patient of patient_list){ %>
+                <div class="seperation-doc"></div>
+                <a href="">
+                    <div class="doc-id">
+                        <img src="/images/patient-n.png" alt="Doctor " class="image">
+                        <div class="doc-info">
+                            <h1 class="doc-name"><%= patient.username %></h1>
+                            <h3 class="doc-type"></h3>
+                        </div>
+                    </div>
+                </a>
+            <% } %>
             <div class="seperation-doc"></div>
             <div class="doc-id">
                 <img src="/images/patient-n.png" alt="Doctor " class="image">
@@ -11,30 +23,7 @@
                     <h3 class="doc-type">Problem</h3>
                 </div>
             </div>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Rimjhim Shrivastava</h1>
-                    <h3 class="doc-type">Neuro Surgeon</h3>
-                </div>
-            </div>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Rajsekhor Saikia</h1>
-                    <h3 class="doc-type">Dentist</h3>
-                </div>
-            </div>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Om Sinkar</h1>
-                    <h3 class="doc-type">Dentist</h3>
-                </div>
-            </div>
+            
         </section>
     </div>
     <div class="patient-detail-div">
@@ -54,7 +43,7 @@
                 <div class="vertical-division"></div>
                 <button class="button-profile" id="b4" onclick="changetab(this.value, this.id)"
                     value="patient-prescriptions">Prescriptions</button>
-            </div>
+            </div>  
             <div id="patient-content">
                 <div class="patient-content-heading">General Information</div>
                 <div class="seperation-patient-content"></div>

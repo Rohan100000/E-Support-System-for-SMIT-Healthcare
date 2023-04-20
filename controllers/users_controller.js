@@ -25,7 +25,7 @@ module.exports.signin = function (req, res) {
 module.exports.profile = async function(req,res){
     if (req.isAuthenticated()) {
       let doctor = await Doctor.find({});
-      let appointments = await Appointment.find({patient: req.user._id}).sort("timing");
+      let appointments = await Appointment.find({patient: req.user._id, doctor: doctor[0]}).sort("timing");
       let appointment_container = [];
       for(let appointment of appointments){
           let time = appointment.timing.toLocaleString(undefined, {timeZone: 'Asia/Kolkata'});
