@@ -23,6 +23,7 @@ module.exports.signin = function (req, res) {
 };
 // render the user profile page
 module.exports.profile = async function(req,res){
+  try{
     if (req.isAuthenticated()) {
       let doctor = await Doctor.find({});
       let appointments = await Appointment.find({patient: req.user._id, doctor: doctor[0]}).sort("timing");
@@ -52,6 +53,10 @@ module.exports.profile = async function(req,res){
     }else{
         return res.redirect('/users/sign-in');
     }
+  }catch(error){
+    console.log("error in loading user's profile page: ",error);
+    return;
+  }
 }
 //get the sign up data
 module.exports.create = async function (req, res) {
@@ -70,18 +75,23 @@ module.exports.create = async function (req, res) {
       return res.redirect("back");
     }
   } catch (err) {
-    console.log("error in creating user in signing up");
+    console.log("error in creating user in signing up: ",err);
     return;
   }
 };
 
 //sign in and create session for the user
 module.exports.createSession = async function (req, res) {
-  let user = await User.findOne({ email: req.body.email, is_doctor: true });
-  if (user || req.user.is_doctor) {
-    return res.redirect("/doctor/profile");
+  try{
+    let user = await User.findOne({ email: req.body.email, is_doctor: true });
+    if (user || req.user.is_doctor) {
+      return res.redirect("/doctor/profile");
+    }
+    return res.redirect("/");
+  }catch(error){
+    console.log("error in creating a new session: ",error);
+    return;
   }
-  return res.redirect("/");
 };
 
 module.exports.destroySession = function (req, res) {

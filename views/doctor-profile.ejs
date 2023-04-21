@@ -5,7 +5,7 @@
         <section id="doc-list">
             <% for(let patient of patient_list){ %>
                 <div class="seperation-doc"></div>
-                <a href="">
+                <a href="/doctor/profile_patient/<%= patient._id %>">
                     <div class="doc-id">
                         <img src="/images/patient-n.png" alt="Doctor " class="image">
                         <div class="doc-info">
@@ -15,15 +15,6 @@
                     </div>
                 </a>
             <% } %>
-            <div class="seperation-doc"></div>
-            <div class="doc-id">
-                <img src="/images/patient-n.png" alt="Doctor " class="image">
-                <div class="doc-info">
-                    <h1 class="doc-name">Rohan Shrivastava</h1>
-                    <h3 class="doc-type">Problem</h3>
-                </div>
-            </div>
-            
         </section>
     </div>
     <div class="patient-detail-div">
@@ -48,56 +39,60 @@
                 <div class="patient-content-heading">General Information</div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
-                    <div class="patient-content-left">Date of birth</div>
-                    <div class="patient-content-right">March 9, 1990</div>
+                    <div class="patient-content-left">Name</div>
+                    <div class="patient-content-right"><%= patient.username %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Age</div>
-                    <div class="patient-content-right">30 years old</div>
+                    <div class="patient-content-right"><%= patient.age %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Sex</div>
-                    <div class="patient-content-right">Male</div>
+                    <div class="patient-content-right"><%= patient.gender %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-heading">Contact Information</div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
-                    <div class="patient-content-left">Address</div>
-                    <div class="patient-content-right">434 Santino Oval Suite 205</div>
-                </div>
-                <div class="seperation-patient-content"></div>
-                <div class="patient-content-part">
-                    <div class="patient-content-left">Telephone number</div>
-                    <div class="patient-content-right">+64(33)305 52516</div>
+                    <div class="patient-content-left">Contact number</div>
+                    <div class="patient-content-right">Unavailable</div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">E-mail</div>
-                    <div class="patient-content-right">raymondrogers.rogers@gmail.com</div>
-                </div>
-                <div class="seperation-patient-content"></div>
-                <div class="patient-content-part">
-                    <div class="patient-content-left">Way of communication</div>
-                    <div class="patient-content-right">By chat</div>
-                </div>
-                <div class="seperation-patient-content"></div>
-                <div class="patient-content-part">
-                    <div class="patient-content-left">Emergency contact</div>
-                    <div class="patient-content-right">+64(33)305 52516,Elizabeth</div>
-                </div>
-                <div class="seperation-patient-content"></div>
-                <div class="patient-content-part">
-                    <div class="patient-content-left">Caregiver</div>
-                    <div class="patient-content-right">Victoria Jercey</div>
+                    <div class="patient-content-right"><%= patient.email %></div>
                 </div>
                 <div class="seperation-patient-content"></div>
             </div>
-            <div id="patient-visits">Visits</div>
-            <div id="patient-labs">Labs</div>
-            <div id="patient-prescriptions">Prescription</div>
+            <div id="patient-visits">
+                <div class="patient-content-heading">Upcoming Appointments</div>
+                <% var i = 0; %>
+                <% for(let appointment of appointments){ %>
+                    <% i++ %>
+                    <div class="patient-content-heading">Appointment <%=i%></div>
+                    <div class="seperation-patient-content"></div>
+                    <div class="patient-content-part">
+                        <div class="patient-content-left">Name</div>
+                        <div class="patient-content-right"><%= appointment.patient %></div>
+                    </div>
+                    
+                    <div class="seperation-patient-content"></div>
+                    <div class="patient-content-part">
+                        <div class="patient-content-left">Day</div>
+                        <div class="patient-content-right"><%= appointment.day %></div>
+                    </div>
+                    
+                    <div class="seperation-patient-content"></div>
+                    <div class="patient-content-part">
+                        <div class="patient-content-left">Time</div>
+                        <div class="patient-content-right"><%= appointment.time %></div>
+                    </div>
+                <% } %>
+            </div>
+            <div id="patient-labs">Labs: Coming soon!</div>
+            <div id="patient-prescriptions">Prescriptions: Coming soon!</div>
         </div>
     </div>
 </div>
