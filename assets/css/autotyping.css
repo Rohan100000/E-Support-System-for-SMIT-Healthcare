@@ -17,7 +17,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff4fd;
+  background-color: #ffebcf;
   border-left: 2px solid var(--color-dark-grey);
   animation: animate 7s steps(21) infinite; }
 

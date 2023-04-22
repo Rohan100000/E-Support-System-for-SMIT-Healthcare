@@ -1,10 +1,10 @@
 $color_1: rgb(107, 107, 107);
-$color_2: rgb(231, 3, 144);
+$color_2: #DC8665;
 $color_3: rgb(117, 117, 117);
 $color_4: white;
-$background-color_1: rgb(255, 244, 253);
+$background-color_1: #ffebcf;
 $background-color_2: white;
-$background-color_3: rgb(231, 3, 144);
+$background-color_3: #DC8665;
 $border-color_1: transparent;
 
 /* header */
@@ -84,14 +84,6 @@ body {
 			padding: 0.75rem 2.25rem;
 			border-radius: 2rem;
 			background-color: $background-color_2;
-
-			&:hover {
-				border-color: $border-color_1;
-				padding: 0.75rem 2.25rem;
-				border-radius: 2rem;
-				background-color: $background-color_3;
-				color: $color_4;
-			}
 		}
 	}
 

@@ -9,7 +9,7 @@ body {
   --color-blue: rgb(37, 37, 147); }
 
 #header {
-  background-color: #fff4fd;
+  background-color: #ffebcf;
   margin: 2rem 0px;
   margin-left: 7rem;
   position: relative;
@@ -24,11 +24,11 @@ body {
       position: relative; }
       #header a .logo:hover {
         font-size: 3rem;
-        color: #e70390;
+        color: #DC8665;
         position: relative;
         cursor: pointer; }
   #header span span {
-    color: #e70390; }
+    color: #DC8665; }
 
 .horizontal-list {
   list-style: none;
@@ -42,7 +42,7 @@ body {
       color: #757575;
       text-decoration: none; }
       .horizontal-list li a:hover {
-        color: #e70390;
+        color: #DC8665;
         text-decoration: none; }
 
 /* signin register buttons */
@@ -58,19 +58,19 @@ body {
       border-color: transparent;
       padding: 0.75rem 2.25rem;
       border-radius: 2rem;
-      background-color: #e70390;
+      background-color: #DC8665;
       color: white; }
   .button .reg a {
     padding: 0.75rem 2.25rem;
     border-radius: 2rem;
-    background-color: #e70390;
+    background-color: #DC8665;
     color: white; }
     .button .reg a:hover {
       border: 1px solid #e70390;
       padding: 0.75rem 2.25rem;
       border-radius: 2rem;
       background-color: white;
-      color: #e70390; }
+      color: #DC8665; }
 
 .header-icons {
   list-style: none;
