@@ -14,6 +14,26 @@ const videoContainer = document.querySelector(".video-container")
 const timelineContainer = document.querySelector(".timeline-container")
 const video = document.querySelector("video")
 
+window.addEventListener('load', videoScroll);
+window.addEventListener('scroll', videoScroll);
+
+function videoScroll() {
+  if (document.querySelectorAll('video[autoplay]').length > 0) {
+    var windowHeight = window.innerHeight,
+        videoE = document.querySelectorAll('video[autoplay]');
+    for (var i = 0; i < videoE.length; i++) {
+      var thisVideoE = videoE[i],
+          videoHeight = thisVideoE.clientHeight,
+          videoClientRect = thisVideoE.getBoundingClientRect().top;
+      if ( videoClientRect <=((windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
+        thisVideoE.play();
+      } else {
+        thisVideoE.pause();
+      }
+    }
+  }
+}
+
 document.addEventListener("keydown", e => {
   const tagName = document.activeElement.tagName.toLowerCase()
 
