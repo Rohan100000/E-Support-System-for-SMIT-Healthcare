@@ -175,3 +175,105 @@ body{
     width: 65.5vw;
     visibility: hidden;
 }
+.department-category-field{
+    width:50%;
+    display: inline-block;
+  }
+  
+  .department-category-labels{
+    float: left;
+    margin-bottom:2vh;
+  }
+  
+  .department-category-inputs{
+    float:right;
+    outline: none;
+    border:0;
+    border-bottom: 1px solid rgb(30,30,30);
+    margin-bottom:2vh;
+    padding-bottom: 2px;
+  }
+  
+  #complaint-section{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin-bottom: 2vh;
+  }
+  
+  #complaint{
+    outline: none;
+    padding:5px;
+  }
+  
+  #diagonictic-test-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+  
+  #diagonictic-test-input-field{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  }
+  
+  .diagonictic-test-input-section{
+    width: 33%;
+  }
+  
+  .diagonictic-test-field-labels{
+    margin:5px;
+  }
+  
+  #medicine-details-field{
+    width:100%;
+  }
+  
+  #medicine-details-input{
+    margin-top:2vh;
+    width:100%;
+  }
+  
+  #prescription-drug-name{
+    width:20%;
+  }
+  
+  #prescription-dosage{
+    width:12.5%;
+  }
+  
+  #prescription-frequency{
+    width:12.5%;
+  }
+  
+  #prescription-days{
+    width:12.5%;
+  }
+  
+  #prescription-quantity{
+    width:12.5%;
+  }
+  
+  .medicine-input{
+    margin-left: 3%;
+    outline: none;
+    padding: 5px 0 5px 0.5vw;
+  }
+  
+  .medicine-input:first-of-type, .medicine-input:last-of-type{
+    margin-left: 0;
+  }
+  
+  #prescription-instruction{
+    margin-top: 1vh;
+    width:90%;
+  }
+  
+  #prescription-buttons-section{
+    margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }

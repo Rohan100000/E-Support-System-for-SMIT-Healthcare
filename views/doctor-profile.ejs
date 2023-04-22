@@ -95,31 +95,53 @@
             <div id="patient-prescriptions">
                 <form action="/doctor/create-prescription/<%= patient._id %>" method="POST">
                     
-                    
-                    
-                    <input type="text" name="hostpital_department" placeholder="Hospital Department"><br>
-                    <input type="text" name="category" placeholder="Category"><br>
+                    <div class="department-category-field">
+                        <label for="hostpital_department" class="department-category-labels">Hospital Department</label>
+                        <input type="text" class="department-category-inputs" id="hostpital_department" name="hostpital_department" placeholder="Hospital Department"><br>
+                    </div>
+                    <div class="department-category-field">
+                        <label for="category" class="department-category-labels">Category</label>
+                        <input type="text" class="department-category-inputs" id="category" name="category" placeholder="Category">
+                    </div>
 
+                    <div id="complaint-section">
+                        <label for="complaint">Chief Compaint:</label>
+                        <textarea id="complaint" name="complaint" rows="4" cols="50"></textarea>
+                    </div>
 
-                    <label>Chief Compaint:</label><br>
-                    <textarea name="complaint" rows="2" cols="40"></textarea><br>
+                    <div id="diagonictic-test-field">
+                        <label>Diagonictic Tests:</label>
+                        <div id="diagonictic-test-input-field">
+                            <div class="diagonictic-test-input-section">
+                                <input type="radio" value="MRI" id="MRI" name="test"><label class="diagonictic-test-field-labels" for="MRI">MRI</label>
+                            </div>
+                            <div class="diagonictic-test-input-section">
+                                <input type="radio" value="ultrasound" id="ultrasound" name="test"><label class="diagonictic-test-field-labels" for="ultrasound">Ultrasound</label>  
+                            </div>
+                            <div class="diagonictic-test-input-section">
+                                <input type="radio" value="bloodpressure" id="bloodpressure" name="test"><label class="diagonictic-test-field-labels" for="bloodpressure">Blood Pressure</label>  
+                            </div>
+                        </div>
+                    </div>
 
+                    <div id="medicine-details-field">
+                        <label>Medicines:</label><br>
+                        <div id="medicine-details-input">
+                            <div class="medicine-details-input-section">
+                                <input type="text" id="prescription-drug-name" class="medicine-input" name="med_name1" placeholder="Drug name">
+                                <input type="text" id="prescription-dosage" class="medicine-input" name="med_dosage1" placeholder="Dosage">
+                                <input min="0" type="number" id="prescription-frequency" class="medicine-input" name="med_frequency1" placeholder="Frequency">
+                                <input min="0" type="number" id="prescription-days" class="medicine-input" name="med_days1" placeholder="No. of days">
+                                <input min="0" type="number" id="prescription-quantity" class="medicine-input" name="med_quantity1" placeholder="Quantity">
+                                <input type="text" id="prescription-instruction" class="medicine-input" name="med_instruction1" placeholder="Instruction">
+                            </div>
+                        </div>
+                        <div id="prescription-buttons-section">
+                            <button onclick="addMedicineInputField()" type="button" id="addMedicineInput">+</button>
+                            <input type="submit" value="Submit">
+                        </div>
 
-                    <label>Diagonictic Tests:</label><br>
-                    <input type="radio" value="MRI" name="test">MRI <br>
-                    <input type="radio" value="ultrasound" name="test">Ultrasound <br>
-                    <input type="radio" value="bloodpressure" name="test">Blood Pressure <br>
-
-
-                    
-                    <label>Medicines:</label><br>
-                    <input type="text" name="med_name" placeholder="Drug name">
-                    <input type="text" name="med_dosage" placeholder="Dosage">
-                    <input type="number" name="med_frequency" placeholder="Frequency">
-                    <input type="number" name="med_days" placeholder="No. of days">
-                    <input type="text" name="med_quantity" placeholder="Quantity">
-                    <input type="text" name="med_instruction" placeholder="Instruction"><br>
-                    <input type="submit" value="Submit">
+                    </div>
 
 
 
