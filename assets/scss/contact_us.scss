@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container{
+    background-color: rgb(169, 196, 253);
+    padding: 50px 50px;
+}
+
+.contact-box{
+    display: flex;
+}
+
+.contact-left{
+    background-color: #fff;
+    width: 80%;
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right{
+    background-color: rgb(255, 133, 208);
+    color: #fff;
+    width: 80%;
+    flex-basis: 40%;
+    padding: 40px;
+}
+
+.contact-header{
+    margin-bottom: 10px;
+}
+
+.contact-container .contact-para{
+    margin-bottom: 40px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group{
+    flex-basis: 45%;
+}
