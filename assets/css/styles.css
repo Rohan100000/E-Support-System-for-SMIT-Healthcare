@@ -42,6 +42,9 @@
   height: 20px; }
 
 .abt-text-color {
+  color: #EEB462; }
+
+.abt-color {
   color: #757574; }
 
 #status-color {
@@ -82,25 +85,24 @@
   transition: 0.25s ease-in-out 0.1s;
   padding: 2vh 3vw;
   margin-right: 40px;
-  background-color: #204ea5;
+  background-color: #DC8665;
   border-radius: 15px;
   color: white;
   cursor: pointer;
   justify-content: center;
-  border: 1px solid #204ea5; }
+  border: 1px solid #DC8665; }
   #apt-btn:hover {
     background-color: white;
-    color: #204ea5; }
+    color: #DC8665; }
 
 #abt-btn {
   transition: 0.25s ease-in-out 0.1s;
   cursor: pointer;
-  color: #204ea5;
+  color: #757574;
   padding: 2vh 3vw;
   background-color: white;
-  border: 1px solid #204ea5;
+  border: 1px solid #757574;
   border-radius: 15px; }
   #abt-btn:hover {
-    justify-content: center;
-    background-color: #204ea5;
-    color: white; }
+    color: #DC8665;
+    border: 1px solid #DC8665; }

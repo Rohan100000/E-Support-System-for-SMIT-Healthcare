@@ -4,7 +4,7 @@
 }
 .division-text-container .division-text{
     position: relative;
-    color: var(--color-dark-grey);
+    color: #EEB462;
     // font-size: 30px;
     font-weight: 600;
 }
@@ -18,7 +18,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 244, 253);
+    background-color: #ffebcf;
     border-left: 2px solid var(--color-dark-grey);
     animation: animate 7s steps(21) infinite;
     @keyframes animate{

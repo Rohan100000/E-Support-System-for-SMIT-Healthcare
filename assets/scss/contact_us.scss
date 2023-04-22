@@ -61,7 +61,7 @@ $background-color_3: #EEB462;
 	display: block;
 }
 .contact-button {
-	background: #EEB462;
+	background: $background-color_3;
 	width: 100px;
 	border: none;
 	outline: none;
@@ -72,7 +72,7 @@ $background-color_3: #EEB462;
 	box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
 	cursor: pointer;
 	&:hover {
-		background: #DC8665;
+		background: $background-color_1;
 		box-shadow: 0px 5px 15px 0px rgba(27, 0, 181, 0);
 	}
 }

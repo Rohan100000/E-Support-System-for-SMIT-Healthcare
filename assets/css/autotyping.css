@@ -4,7 +4,7 @@
 
 .division-text-container .division-text {
   position: relative;
-  color: var(--color-dark-grey);
+  color: #EEB462;
   font-weight: 600; }
 
 .division-text-container .division-text.first-text {
@@ -17,7 +17,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff4fd;
+  background-color: #ffebcf;
   border-left: 2px solid var(--color-dark-grey);
   animation: animate 7s steps(21) infinite; }
 
