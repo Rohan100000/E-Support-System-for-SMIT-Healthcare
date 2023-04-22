@@ -6,15 +6,15 @@ beforebutton.style.backgroundColor = "white";
 console.log(document.cookie);
 var cookiedata = document.cookie.split('; ')[0];
 var cookiedata1 = document.cookie.split('; ')[1];
-console.log(cookiedata);
-if(cookiedata == 'appointment'){
+console.log(cookiedata1);
+if(cookiedata1 == 'appointment' || cookiedata == 'appointment'){
     // var before = document.getElementById('patient-content');
     before.style.visibility = "hidden";
     beforebutton.style.backgroundColor = "lightgray";
     before.style.height = 0;
     appointmentbutton.style.backgroundColor = "white";
     currenttab.style.visibility = 'visible';
-    document.cookie='profile';
+    document.cookie='empty';
     // console.log(document.cookie);
 }
 if(cookiedata == 'profile'){
@@ -24,7 +24,7 @@ if(cookiedata == 'profile'){
     appointmentbutton.style.backgroundColor = "lightgrey";
     currenttab.style.visibility = 'hidden';
     currenttab.style.height = 0;
-    document.cookie='appointment';
+    document.cookie='empty';
     // console.log(document.cookie);
 }
 function changetab(tab, tabid){
