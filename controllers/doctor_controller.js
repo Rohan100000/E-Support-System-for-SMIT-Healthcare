@@ -7,7 +7,7 @@ const Appointment = require('../models/appointment');
 module.exports.profile = async function (req, res) {
     try {
         if (req.isAuthenticated()) {
-            let patient_list = await User.find({});
+            let patient_list = await User.find({is_doctor: false});
             let doctor = await User.findById(req.user._id);
             doctor = await Doctor.findOne({ email: doctor.email });
             let appointments = await Appointment.find({ doctor: doctor , patient: patient_list[0] }).sort("timing");
@@ -48,7 +48,7 @@ module.exports.profile = async function (req, res) {
 module.exports.profile_patient = async function (req, res) {
     try {
         if (req.isAuthenticated()) {
-            let patient_list = await User.find({});
+            let patient_list = await User.find({is_doctor: false});
             let doctor = await User.findById(req.user._id);
             doctor = await Doctor.findOne({ email: doctor.email });
             let patient = await User.findById(req.params.id);
