@@ -21,6 +21,12 @@ footer {
   text-align: center;
   color: #737373; }
 
+#copyright a {
+  text-decoration: none;
+  color: #737373; }
+  #copyright a:hover {
+    color: #DC8665; }
+
 #circles {
   margin-top: 50px;
   display: flex;

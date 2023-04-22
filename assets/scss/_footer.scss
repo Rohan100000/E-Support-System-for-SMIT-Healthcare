@@ -1,5 +1,6 @@
 $color_1: #204ea5;
 $color_2: #737373;
+$color_3: #DC8665;
 $font-family_1: 'Roboto', sans-serif;
 $background-color_1: #ffdaed2d;
 $background-color_2: white;
@@ -10,7 +11,6 @@ $background-color_2: white;
 footer {
 	font-size: 16px;
 	margin-bottom: 5vh;
-	// background-color: $background-color_1;
 }
 #footer-heading {
 	text-align: center;
@@ -27,6 +27,14 @@ footer {
 #copyright {
 	text-align: center;
 	color: $color_2;
+}
+#copyright a{
+	text-decoration: none;
+	color: $color_2;
+
+	&:hover{
+		color: $color_3;
+	}
 }
 #circles {
 	margin-top: 50px;
