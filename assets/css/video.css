@@ -8,8 +8,9 @@ body {
 
 .video-section {
   background-color: #a9c4fd;
+  margin-top: 15vh;
   padding-top: 10vh;
-  padding-bottom: 5vh; }
+  padding-bottom: 10vh; }
 
 .text {
   text-align: center;
