@@ -4,6 +4,7 @@ $color_3: white;
 $color_4: #DC8665;
 $color_5: #777;
 $background-color_1: #ffebcf;
+$background-color_2: #EEB462;
 $background-color_3: #DC8665;
 
 *{
@@ -64,10 +65,12 @@ body {
 		font-size: 1.3rem;
 		background-color: $background-color_3;
 		padding: 0.7rem 2rem;
+		border: 1px solid $color_4;
 		border-radius: 1rem;
 		transition: 0.5s ease-in-out;
 		&:hover {
-			box-shadow: 1px 1px 30px #204EA5;
+			color: $color_4;
+			background-color: #fff;
 		}
 	}
 }

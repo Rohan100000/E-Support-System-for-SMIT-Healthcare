@@ -1,5 +1,6 @@
 $color_1: rgb(107, 107, 107);
 $color_2: #DC8665;
+$color_5: #EEB462;
 $color_3: rgb(117, 117, 117);
 $color_4: white;
 $background-color_1: #ffebcf;
@@ -36,7 +37,7 @@ body {
 			// top: 0.3rem;
 			&:hover {
 				font-size: 3rem;
-				color: $color_2;
+				color: $color_5;
 				position: relative;
 				// top: 0.3rem;
 				cursor: pointer;
@@ -66,7 +67,7 @@ body {
 			text-decoration: none;
 
 			&:hover {
-				color: $color_2;
+				color: $color_5;
 				text-decoration: none;
 			}
 		}
@@ -80,24 +81,28 @@ body {
 
 	.sign {
 		a {
-			border: 1px solid rgb(117, 117, 117);
+			border: 1px solid #fff;
 			padding: 0.75rem 2.25rem;
 			border-radius: 2rem;
 			background-color: $background-color_2;
+
+			&:hover{
+				border: 1px solid #DC8665;
+				color: $color_2;
+			}
 		}
 	}
 
 	.reg {
 		a {
 			padding: 0.75rem 2.25rem;
+			border: 1px solid #DC8665;
 			border-radius: 2rem;
 			background-color: $background-color_3;
 			color: $color_4;
 
 			&:hover {
-				border: 1px solid rgb(231, 3, 144);
-				padding: 0.75rem 2.25rem;
-				border-radius: 2rem;
+				border: 1px solid #DC8665;
 				background-color: $background-color_2;
 				color: $color_2;
 			}

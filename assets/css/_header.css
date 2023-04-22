@@ -24,7 +24,7 @@ body {
       position: relative; }
       #header a .logo:hover {
         font-size: 3rem;
-        color: #DC8665;
+        color: #EEB462;
         position: relative;
         cursor: pointer; }
   #header span span {
@@ -42,7 +42,7 @@ body {
       color: #757575;
       text-decoration: none; }
       .horizontal-list li a:hover {
-        color: #DC8665;
+        color: #EEB462;
         text-decoration: none; }
 
 /* signin register buttons */
@@ -50,25 +50,21 @@ body {
   position: relative;
   left: 15vw; }
   .button .sign a {
-    border: 1px solid #757575;
+    border: 1px solid #fff;
     padding: 0.75rem 2.25rem;
     border-radius: 2rem;
     background-color: white; }
     .button .sign a:hover {
-      border-color: transparent;
-      padding: 0.75rem 2.25rem;
-      border-radius: 2rem;
-      background-color: #DC8665;
-      color: white; }
+      border: 1px solid #DC8665;
+      color: #DC8665; }
   .button .reg a {
     padding: 0.75rem 2.25rem;
+    border: 1px solid #DC8665;
     border-radius: 2rem;
     background-color: #DC8665;
     color: white; }
     .button .reg a:hover {
-      border: 1px solid #e70390;
-      padding: 0.75rem 2.25rem;
-      border-radius: 2rem;
+      border: 1px solid #DC8665;
       background-color: white;
       color: #DC8665; }
 

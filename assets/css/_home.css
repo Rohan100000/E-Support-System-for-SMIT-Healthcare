@@ -48,10 +48,12 @@ body {
   font-size: 1.3rem;
   background-color: #DC8665;
   padding: 0.7rem 2rem;
+  border: 1px solid #DC8665;
   border-radius: 1rem;
   transition: 0.5s ease-in-out; }
   .main-content a:hover {
-    box-shadow: 1px 1px 30px #204EA5; }
+    color: #DC8665;
+    background-color: #fff; }
 
 /*Intro Section Ends Here*/
 /*Services Styling Starts Here*/
