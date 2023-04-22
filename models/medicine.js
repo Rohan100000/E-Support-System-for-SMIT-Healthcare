@@ -23,7 +23,6 @@ const medicineSchema = new mongoose.Schema({
     },
     instruction:{
         type:String,
-        required: true
     }
 
 }, {

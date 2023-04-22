@@ -18,7 +18,6 @@ const prescriptionSchema = new mongoose.Schema({
     },
     test:{
         type:String,
-        required:true
     },
     medicine:[{
         type: mongoose.Schema.Types.ObjectId,
