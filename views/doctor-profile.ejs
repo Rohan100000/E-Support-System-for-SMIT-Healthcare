@@ -92,7 +92,40 @@
                 <% } %>
             </div>
             <div id="patient-labs">Labs: Coming soon!</div>
-            <div id="patient-prescriptions">Prescriptions: Coming soon!</div>
+            <div id="patient-prescriptions">
+                <form action="/doctor/create-prescription/<%= patient._id %>" method="POST">
+                    
+                    
+                    
+                    <input type="text" name="hostpital_department" placeholder="Hospital Department"><br>
+                    <input type="text" name="category" placeholder="Category"><br>
+
+
+                    <label>Chief Compaint:</label><br>
+                    <textarea name="complaint" rows="2" cols="40"></textarea><br>
+
+
+                    <label>Diagonictic Tests:</label><br>
+                    <input type="radio" value="MRI" name="test">MRI <br>
+                    <input type="radio" value="ultrasound" name="test">Ultrasound <br>
+                    <input type="radio" value="bloodpressure" name="test">Blood Pressure <br>
+
+
+                    
+                    <label>Medicines:</label><br>
+                    <input type="text" name="med_name" placeholder="Drug name">
+                    <input type="text" name="med_dosage" placeholder="Dosage">
+                    <input type="number" name="med_frequency" placeholder="Frequency">
+                    <input type="number" name="med_days" placeholder="No. of days">
+                    <input type="text" name="med_quantity" placeholder="Quantity">
+                    <input type="text" name="med_instruction" placeholder="Instruction"><br>
+                    <input type="submit" value="Submit">
+
+
+
+
+                </form>
+            </div>
         </div>
     </div>
 </div>
