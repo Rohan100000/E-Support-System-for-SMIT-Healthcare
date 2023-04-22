@@ -80,13 +80,16 @@ body {
     width: 50vw;
     height: 50vh; }
     #content .image-section .div1 .text {
-      padding-top: 65px;
+      padding-top: 100px;
       font-size: 55px;
       font-weight: bold;
       padding-bottom: 50px;
       margin: 0px 0px 20px 0px;
       color: #DC8665;
-      padding-left: 50px; }
+      padding-left: 70px; }
+    #content .image-section .div1 img {
+      padding-left: 70px;
+      width: 50%; }
 
 #btn {
   background-color: #EEB462;
