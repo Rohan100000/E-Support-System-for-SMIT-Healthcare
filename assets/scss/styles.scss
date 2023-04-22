@@ -1,10 +1,11 @@
 $color_1: rgb(117, 117, 116);
 $color_2: black;
 $color_3: white;
-$color_4: rgb(32, 78, 165);
+$color_4: #DC8665;
+$color_5: #EEB462;
 $background-color_1: white;
 $background-color_2: rgb(0, 208, 90);
-$background-color_3: rgb(32, 78, 165);
+$background-color_3: #DC8665;
 
 #abt-us-section {
 	padding-top: 100px;
@@ -52,6 +53,9 @@ $background-color_3: rgb(32, 78, 165);
 	height: 20px;
 }
 .abt-text-color {
+	color: $color_5;
+}
+.abt-color{
 	color: $color_1;
 }
 #status-color {
@@ -98,7 +102,7 @@ $background-color_3: rgb(32, 78, 165);
 	color: $color_3;
 	cursor: pointer;
 	justify-content: center;
-	border: 1px solid rgb(32, 78, 165);
+	border: 1px solid #DC8665;
 	&:hover {
 		background-color: $background-color_1;
 		color: $color_4;
@@ -106,17 +110,17 @@ $background-color_3: rgb(32, 78, 165);
 }
 #abt-btn {
 	transition: 0.25s ease-in-out 0.1s;
-	&:hover {
-		justify-content: center;
-		background-color: $background-color_3;
-		color: $color_3;
-	}
 	cursor: pointer;
-	color: $color_4;
+	color: $color_1;
 	padding: 2vh 3vw;
 	background-color: $background-color_1;
-	border: 1px solid rgb(32, 78, 165);
+	border: 1px solid $color_1;
 	border-radius: 15px;
+
+	&:hover{
+		color:#DC8665;
+		border: 1px solid #DC8665;
+	}
 }
 
 
