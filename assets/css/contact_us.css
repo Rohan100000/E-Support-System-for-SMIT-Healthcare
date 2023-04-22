@@ -5,6 +5,8 @@
 .contact-container {
   background-color: #DC8665;
   padding: 50px 50px; }
+  .contact-container .contact-para {
+    margin-bottom: 40px; }
 
 .contact-box {
   display: flex; }
@@ -25,16 +27,12 @@
 .contact-header {
   margin-bottom: 10px; }
 
-.contact-container .contact-para {
-  margin-bottom: 40px; }
-
 .input-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px; }
-
-.input-row .input-group {
-  flex-basis: 45%; }
+  .input-row .input-group {
+    flex-basis: 45%; }
 
 .input-area {
   width: 100%;
@@ -65,10 +63,9 @@
   margin-top: 20px;
   box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
   cursor: pointer; }
-
-.contact-button:hover {
-  background: #DC8665;
-  box-shadow: 0px 5px 15px 0px rgba(27, 0, 181, 0); }
+  .contact-button:hover {
+    background: #DC8665;
+    box-shadow: 0px 5px 15px 0px rgba(27, 0, 181, 0); }
 
 .contact-left .header-h3 {
   font-weight: 600;
