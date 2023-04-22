@@ -4,7 +4,7 @@
 }
 
 .contact-container{
-    background-color: rgb(169, 196, 253);
+    background-color: #DC8665;
     padding: 50px 50px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .contact-right{
-    background-color: rgb(255, 133, 208);
+    background-color: #EEB462;
     color: #fff;
     width: 80%;
     flex-basis: 40%;
@@ -67,11 +67,11 @@
 }
 
 .contact-button{
-    background: rgb(255, 133, 208);
+    background: #EEB462;
     width: 100px;
     border: none;
     outline: none;
-    color: #fff;
+    color: white;
     height: 35px;
     border-radius: 30px;
     margin-top: 20px;
@@ -80,7 +80,7 @@
 }
 
 .contact-button:hover{
-    background: rgb(169, 196, 253);
+    background: #DC8665;
     box-shadow: 0px 5px 15px 0px rgba(27, 0, 181, 0);
 }
 
