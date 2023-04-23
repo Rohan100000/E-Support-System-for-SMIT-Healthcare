@@ -108,25 +108,11 @@ body {
 #txt-dec-none {
   text-decoration: none; }
 
-input[type='radio']:after {
-  width: 20px;
-  cursor: pointer;
-  height: 20px;
-  border-radius: 50%;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #ffebcf;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 1px solid black; }
-
 input[type='radio']:checked:after {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 30%;
   top: -2px;
   left: -1px;
   position: relative;
@@ -139,6 +125,7 @@ input[type='radio']:checked:after {
 input[type='checkbox']:after {
   width: 20px;
   height: 20px;
+  border-radius: 30%;
   top: -2px;
   left: -1px;
   position: relative;
@@ -151,6 +138,7 @@ input[type='checkbox']:after {
 input[type='checkbox']:checked:after {
   width: 20px;
   height: 20px;
+  border-radius: 30%;
   top: -2px;
   left: -1px;
   position: relative;
