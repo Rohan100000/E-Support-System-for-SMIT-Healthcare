@@ -2,7 +2,7 @@ const db = require("../config/mongoose");
 const User = require("../models/user");
 const Doctor = require("../models/doctor");
 const Appointment = require("../models/appointment");
-
+const Prescription = require("../models/prescription");
 // render the sign up page
 module.exports.signup = function (req, res) {
   if (req.isAuthenticated()) {
@@ -45,10 +45,15 @@ module.exports.profile = async function(req,res){
           });
       }
       console.log(appointment_container);
+      //fetching prescription related to the patient
+      let prescription_list = await Prescription.find({patient: req.user._id}).populate('medicine').populate('doctor').populate('patient').sort({"createdAt":-1});
+      console.log(prescription_list);
+
       return res.render('patient-profile', {
           title: "Patient Profile",
           doctors: doctor,
-          appointments: appointment_container
+          appointments: appointment_container,
+          prescription_list: prescription_list
       })
     }else{
         return res.redirect('/users/sign-in');

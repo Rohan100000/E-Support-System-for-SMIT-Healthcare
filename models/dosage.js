@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const medicineSchema = new mongoose.Schema({
+const dosageSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -23,12 +23,13 @@ const medicineSchema = new mongoose.Schema({
     },
     instruction:{
         type:String,
+        required: true
     }
 
 }, {
     timestamps: true
 });
 
-const Medicine = mongoose.model('Medicine', medicineSchema);
+const Dosage = mongoose.model('Dosage', dosageSchema);
 
-module.exports = Medicine;
+module.exports = Dosage;
