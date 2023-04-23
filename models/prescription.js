@@ -4,7 +4,7 @@ const prescriptionSchema = new mongoose.Schema({
     date:{
         type:Date
     },
-    hostpital_department:{
+    hospital_department:{
         type:String,
         required:true
     },
@@ -16,12 +16,12 @@ const prescriptionSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    test:{
-        type:String,
-    },
+    test:[{
+        type:String
+    }],
     medicine:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Medicine",
+        ref: "Dosage",
         required: true
     }],
     doctor:{
@@ -31,7 +31,7 @@ const prescriptionSchema = new mongoose.Schema({
     },
     patient:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Patient",
+        ref: "User",
         required: true
     }
 
