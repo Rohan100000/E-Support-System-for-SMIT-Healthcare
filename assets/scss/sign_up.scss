@@ -146,7 +146,7 @@ input[type='radio'] {
 		width: 20px;
 		cursor: pointer;
 		height: 20px;
-		border-radius: 50%;
+		border-radius: 30%;
 		top: -2px;
 		left: -1px;
 		position: relative;
@@ -161,7 +161,7 @@ input[type='radio'] {
 			width: 20px;
 			height: 20px;
 			cursor: pointer;
-			border-radius: 50%;
+			border-radius: 30%;
 			top: -2px;
 			left: -1px;
 			position: relative;
@@ -177,7 +177,7 @@ input[type='checkbox'] {
 	&:after {
 		width: 20px;
 		height: 20px;
-		// border-radius: 50%;
+		border-radius: 30%;
 		top: -2px;
 		left: -1px;
 		position: relative;
@@ -185,13 +185,13 @@ input[type='checkbox'] {
 		content: '';
 		display: inline-block;
 		visibility: visible;
-		border: 1px solid black;
+		border: 0.5px solid black;
 	}
 	&:checked {
 		&:after {
 			width: 20px;
 			height: 20px;
-			// border-radius: 50%;
+			border-radius: 30%;
 			top: -2px;
 			left: -1px;
 			position: relative;
@@ -200,7 +200,7 @@ input[type='checkbox'] {
 			content: '';
 			display: inline-block;
 			visibility: visible;
-			border: 1px solid rgb(0, 0, 0);
+			border: 0.5px solid rgb(0, 0, 0);
 		}
 	}
 }
