@@ -92,7 +92,37 @@
                 <% } %>
             </div>
             <div id="patient-labs">Labs: Coming soon!</div>
-            <div id="patient-prescriptions">Prescriptions: Coming soon!</div>
+
+            <!-- patient prescription section -->
+            <div id="patient-prescriptions">
+                <% for( let prescription of prescription_list){ %>
+                    <div style="margin-bottom: 2rem;">
+                    <h4>SMIT Prescription</h4>
+                        Date: <%= prescription.createdAt.getDate() %>-<%= prescription.createdAt.getMonth()+1 %>-<%= prescription.createdAt.getFullYear() %><br>
+                        Patient Name: <%= prescription.patient.username %><br>
+                        Patient Age: <%= prescription.patient.age %><br>
+                        Patient Gender: <%= prescription.patient.gender %><br>
+                        Hospital Department: <%= prescription.hospital_department %><br>
+                        Category: <%= prescription.category %><br>
+                        Complaint: <%= prescription.complaint %><br>
+                        Tests Recommended:<% if(prescription.test == []){ %> None <%} for(let test of prescription.test){ %> <%= test %>, <% } %><br>
+                        Medicines:
+                        <ul>
+                        <%for(let med of prescription.medicine){ %>
+                            <li>
+                                Medicine Name: <%= med.name %><br>
+                                Dosage: <%= med.dosage %><br>
+                                Frequency: <%= med.frequency %><br>
+                                Number of days: <%= med.days %><br>
+                                Quantity: <%= med.quantity %><br>
+                                Instruction: <%= med.instruction %><br>
+                            </li>
+                        <% } %>
+                        </ul>
+                        Doctor Name: <%= prescription.doctor.username %><br>
+                    </div>
+                <%}%>
+            </div>
         </div>
     </div>
 </div>

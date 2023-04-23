@@ -3,7 +3,7 @@ const User = require('../models/user');
 const Doctor = require('../models/doctor');
 const Appointment = require('../models/appointment');
 const Prescription = require('../models/prescription');
-const Medicine = require('../models/medicine');
+const Dosage = require('../models/dosage');
 
 
 
@@ -102,22 +102,33 @@ module.exports.createPrescription = async function (req, res) {
         let patient = await User.findById(req.params.id);
         //check if doctor patient exist
         if (doctor && patient) {
-            //create medicine
-            let medicine = await Medicine.create({
-                name: req.body.med_name,
-                dosage: req.body.med_dosage,
-                frequency: req.body.med_frequency,
-                days: req.body.med_days,
-                quantity: req.body.med_quantity,
-                instruction: req.body.med_instruction
-            });
+            //create medicine array
+            var medicine = [];
+            var obj = req.body;
+            var key = Object.keys(obj);
+            var len = key.length;
+            for(let i=0; i < len; i++){
+                if(key[i].substring(0,8) == "med_name"){
+                    //create new medicine object
+                    medicine.push(await Dosage.create({
+                        name:req.body[key[i]],
+                        dosage:req.body[key[i+1]],
+                        frequency:req.body[key[i+2]],
+                        days:req.body[key[i+3]],
+                        quantity:req.body[key[i+4]],
+                        instruction:req.body[key[i+5]]
+                    }))
+                    i=i+5;
+                }
+            }
+            console.log(medicine);
             //create prescription
             let prescription = await Prescription.create({
-                hostpital_department: req.body.hostpital_department,
+                hospital_department: req.body.hospital_department,
                 category: req.body.category,
                 complaint: req.body.complaint,
                 test: req.body.test,
-                medicine: [medicine],
+                medicine: medicine,
                 doctor: doctor,
                 patient: patient
             })

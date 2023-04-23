@@ -41,3 +41,18 @@ function changetab(tab, tabid){
     before = after;
     beforebutton = afterid;
 }
+
+let count=2
+
+const addMedicineInputField = () =>{
+    let div=document.createElement('div');
+    div.classList.add('medicine-details-input-section');
+    div.innerHTML='<input type="text" id="prescription-drug-name" class="medicine-input" name="med_name'+count+'" placeholder="Drug name">'+
+    '<input type="text" id="prescription-dosage" class="medicine-input" name="med_dosage'+count+'" placeholder="Dosage">'+
+    '<input min="0" type="number" id="prescription-frequency" class="medicine-input" name="med_frequency'+count+'" placeholder="Frequency">'+
+    '<input min="0" type="number" id="prescription-days" class="medicine-input" name="med_days'+count+'" placeholder="No. of days">'+
+    '<input type="text" id="prescription-quantity" class="medicine-input" name="med_quantity'+count+'" placeholder="Quantity">'+
+    '<input type="text" id="prescription-instruction" class="medicine-input" name="med_instruction'+count+'" placeholder="Instruction">';
+    document.getElementById('medicine-details-input').appendChild(div);
+    count++;
+}
