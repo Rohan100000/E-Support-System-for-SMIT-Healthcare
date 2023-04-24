@@ -2,25 +2,26 @@ const db = require('../config/mongoose');
 const User = require('../models/user');
 const Appointment = require('../models/appointment');
 const Doctor = require('../models/doctor');
+const Prescription = require('../models/prescription');
 
-module.exports.book_appointment = function(req,res){
+module.exports.book_appointment = function (req, res) {
     return res.render('appointment', {
         title: "Appointment"
     })
 }
 
-module.exports.create_appointment = async function(req,res){
-    try{
-        let doc = await Doctor.findOne({username: req.body.doctor});
+module.exports.create_appointment = async function (req, res) {
+    try {
+        let doc = await Doctor.findOne({ username: req.body.doctor });
         // check if the doctor are both legit in the database
-        if(!doc){
+        if (!doc) {
             console.log("Doctor does not exist in the database.");
             return res.redirect('back');
         }
 
         let timing = new Date(req.body.timing).toISOString();
         timing = new Date(timing);
-        console.log(typeof(timing));
+        console.log(typeof (timing));
 
         let newAppointment = {
             doctor: doc._id,
@@ -31,11 +32,11 @@ module.exports.create_appointment = async function(req,res){
 
         let appointment = await Appointment.findOne(newAppointment);
         // find the appointment, if found, return else continue.
-        if(!appointment){
-            let user = await User.findById(req.user._id).populate({path: "appointments"})
+        if (!appointment) {
+            let user = await User.findById(req.user._id).populate({ path: "appointments" })
             // in the appointments array of the user find if there exists an appointment with the same timing
-            for(let ap of user.appointments){
-                if(ap.timing == newAppointment.timing){
+            for (let ap of user.appointments) {
+                if (ap.timing == newAppointment.timing) {
                     console.log("The user already has an appointment booked at this particular slot");
                     return res.redirect("back");
                 }
@@ -48,24 +49,24 @@ module.exports.create_appointment = async function(req,res){
             doc.save();
             return res.redirect("/");
         }
-        
-    }catch(error){
+
+    } catch (error) {
         console.log('error in booking an appointment');
         return;
     }
 }
 
-module.exports.list_appointments = async function(req,res){
-    try{
-        let appointments = await Appointment.find({patient: req.user._id, doctor: req.params.id}).sort("timing");
+module.exports.list_appointments = async function (req, res) {
+    try {
+        let appointments = await Appointment.find({ patient: req.user._id, doctor: req.params.id }).sort("timing");
         let doctor = await Doctor.find({});
         let appointment_container = [];
-        for(let appointment of appointments){
-            let time = appointment.timing.toLocaleString(undefined, {timeZone: 'Asia/Kolkata'});
-            for(let i = 0, j ; i < time.length; i++){
-                if(time[i] == ','){
-                    j = i+2;
-                    time = time.substring(j,time.length);
+        for (let appointment of appointments) {
+            let time = appointment.timing.toLocaleString(undefined, { timeZone: 'Asia/Kolkata' });
+            for (let i = 0, j; i < time.length; i++) {
+                if (time[i] == ',') {
+                    j = i + 2;
+                    time = time.substring(j, time.length);
                     break;
                 }
             }
@@ -77,12 +78,16 @@ module.exports.list_appointments = async function(req,res){
             });
         }
         console.log(appointment_container);
+        //fetching prescription related to the patient
+        let prescription_list = await Prescription.find({ patient: req.user._id, doctor: req.params.id }).populate('medicine').populate('doctor').populate('patient').sort({ "createdAt": -1 });
+        console.log(prescription_list);
         return res.render('patient-profile', {
             title: "Patient Profile",
             appointments: appointment_container,
-            doctors: doctor
+            doctors: doctor,
+            prescription_list:prescription_list
         })
-    }catch(error){
+    } catch (error) {
         console.log('error in listing appointments');
         return;
     }
