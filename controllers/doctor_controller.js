@@ -97,7 +97,8 @@ module.exports.profile_patient = async function (req, res) {
 module.exports.createPrescription = async function (req, res) {
     try {
         //find legitmate doctor
-        let doctor = await User.findById(req.user.id);
+        let user = await User.findById(req.user.id);
+        let doctor = await Doctor.findOne({email: user.email});
         //find legitmate patient
         let patient = await User.findById(req.params.id);
         //check if doctor patient exist

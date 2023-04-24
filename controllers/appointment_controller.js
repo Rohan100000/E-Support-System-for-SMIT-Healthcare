@@ -78,7 +78,7 @@ module.exports.list_appointments = async function (req, res) {
             });
         }
         console.log(appointment_container);
-        //fetching prescription related to the patient
+        //fetching prescription related to the patient specific doctor
         let prescription_list = await Prescription.find({ patient: req.user._id, doctor: req.params.id }).populate('medicine').populate('doctor').populate('patient').sort({ "createdAt": -1 });
         console.log(prescription_list);
         return res.render('patient-profile', {

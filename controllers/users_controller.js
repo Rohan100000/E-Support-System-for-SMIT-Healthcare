@@ -46,7 +46,7 @@ module.exports.profile = async function(req,res){
       }
       console.log(appointment_container);
       //fetching prescription related to the patient
-      let prescription_list = await Prescription.find({patient: req.user._id}).populate('medicine').populate('doctor').populate('patient').sort({"createdAt":-1});
+      let prescription_list = await Prescription.find({patient: req.user._id, doctor: doctor[0]}).populate('medicine').populate('doctor').populate('patient').sort({"createdAt":-1});
       console.log(prescription_list);
 
       return res.render('patient-profile', {
