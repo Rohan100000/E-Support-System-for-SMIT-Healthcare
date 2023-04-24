@@ -4,9 +4,12 @@ const Appointment = require('../models/appointment');
 const Doctor = require('../models/doctor');
 const Prescription = require('../models/prescription');
 
-module.exports.book_appointment = function (req, res) {
+module.exports.book_appointment = async function (req, res) {
+    //fetch doctors 
+    let doctors = await Doctor.find({});
     return res.render('appointment', {
-        title: "Appointment"
+        title: "Appointment",
+        doctor_list: doctors
     })
 }
 
@@ -23,14 +26,22 @@ module.exports.create_appointment = async function (req, res) {
         timing = new Date(timing);
         console.log(typeof (timing));
 
+        //check the number of appointments at given timing !(>=10)
+        console.log("APPOINTMENTS AT TIMING:")
+        let appointments_at_time = await Appointment.find({timing: timing});
+        if(appointments_at_time.length >= 10){
+            return res.redirect('back');
+        }
+
+        //create new appointment object
         let newAppointment = {
             doctor: doc._id,
             patient: req.user._id,
             timing: timing,
         }
         console.log(newAppointment);
-
         let appointment = await Appointment.findOne(newAppointment);
+
         // find the appointment, if found, return else continue.
         if (!appointment) {
             let user = await User.findById(req.user._id).populate({ path: "appointments" })
@@ -49,7 +60,7 @@ module.exports.create_appointment = async function (req, res) {
             doc.save();
             return res.redirect("/");
         }
-
+        return res.redirect('back');
     } catch (error) {
         console.log('error in booking an appointment');
         return;
