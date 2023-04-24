@@ -113,7 +113,22 @@
 
             <!-- prescription section -->
             <div id="patient-prescriptions">
-                <form action="/doctor/create-prescription/<%= patient._id %>" method="POST">
+                <div class="patient-content-heading">Prescriptions General Entry</div>
+                <div class="seperation-patient-content"></div>
+                <form id="prescription-form" action="/doctor/create-prescription/<%= patient._id %>" method="POST">
+
+                    <div class="prescription-patient-field">
+                        <div class="prescription-patient-label">Name</div>
+                        <div ><%= patient.username %></div>
+                    </div>
+                    <div class="prescription-patient-field">
+                        <div class="prescription-patient-label">Age</div>
+                        <div ><%= patient.age %></div>
+                    </div>
+                    <div class="prescription-patient-field">
+                        <div class="prescription-patient-label">Sex</div>
+                        <div ><%= patient.gender %></div>
+                    </div>
 
                     <div class="department-category-field">
                         <label for="hospital_department" class="department-category-labels">Hospital Department</label>
@@ -127,12 +142,13 @@
                     </div>
 
                     <div id="complaint-section">
-                        <label for="complaint">Chief Compaint:</label>
-                        <textarea id="complaint" name="complaint" rows="4" cols="50"></textarea>
+                        <label class="prescription-margin-adjustment" for="complaint">Chief Compaint:</label>
+                        <textarea id="complaint" name="complaint" rows="4" cols="75"></textarea>
                     </div>
 
                     <div id="diagonictic-test-field">
-                        <label>Diagonictic Tests:</label>
+                        <div class="patient-content-heading">Diagonictic Tests</div>
+                            <div class="seperation-patient-content"></div>
                         <div id="diagonictic-test-input-field">
                             <div class="diagonictic-test-input-section">
                                 <input type="checkbox" value="MRI" id="MRI" name="test"><label
@@ -154,26 +170,46 @@
                     </div>
 
                     <div id="medicine-details-field">
-                        <label>Medicines:</label><br>
+                        <div class="patient-content-heading">Medicines</div>
+                            <div class="seperation-patient-content"></div>
                         <div id="medicine-details-input">
                             <div class="medicine-details-input-section">
-                                <input type="text" id="prescription-drug-name" class="medicine-input" name="med_name1"
+                                <h3 class="medicine-id">Medicine 1</h2>
+                                <div class="medicine-field-inputs">
+                                    <label for="prescription-drug-name" class="medicine-field-labels">Drug Name :</label>
+                                    <input type="text" id="prescription-drug-name" class="medicine-input" name="med_name1"
                                     placeholder="Drug name">
-                                <input type="text" id="prescription-dosage" class="medicine-input" name="med_dosage1"
+                                </div>
+                                <div class="medicine-field-inputs">
+                                    <label for="prescription-dosage" class="medicine-field-labels">Dosage :</label>
+                                    <input type="text" id="prescription-dosage" class="medicine-input" name="med_dosage1"
                                     placeholder="Dosage">
-                                <input min="0" type="number" id="prescription-frequency" class="medicine-input"
+                                </div>
+                                <div class="medicine-field-inputs">
+                                    <label for="" class="medicine-field-labels">Frequency :</label>
+                                    <input min="0" type="number" id="prescription-frequency" class="medicine-input"
                                     name="med_frequency1" placeholder="Frequency">
-                                <input min="0" type="number" id="prescription-days" class="medicine-input"
+                                </div>
+                                <div class="medicine-field-inputs">
+                                    <label for="prescription-days" class="medicine-field-labels">Number of Days :</label>
+                                    <input min="0" type="number" id="prescription-days" class="medicine-input"
                                     name="med_days1" placeholder="No. of days">
-                                <input type="text" id="prescription-quantity" class="medicine-input"
+                                </div>
+                                <div class="medicine-field-inputs">
+                                    <label for="prescription-quantity" class="medicine-field-labels">Quantity :</label>
+                                    <input min="0" type="number" id="prescription-quantity" class="medicine-input"
                                     name="med_quantity1" placeholder="Quantity">
-                                <input type="text" id="prescription-instruction" class="medicine-input"
+                                </div>
+                                <div class="medicine-field-inputs">
+                                    <label for="prescription-instruction" class="medicine-field-labels">Instruction :</label>
+                                    <input type="text" id="prescription-instruction" class="medicine-input"
                                     name="med_instruction1" placeholder="Instruction">
+                                </div>
                             </div>
                         </div>
                         <div id="prescription-buttons-section">
                             <button onclick="addMedicineInputField()" type="button" id="addMedicineInput">+</button>
-                            <input type="submit" value="Submit">
+                            <input id="prescription-submit-btn" type="submit" value="Submit">
                         </div>
 
                     </div>
