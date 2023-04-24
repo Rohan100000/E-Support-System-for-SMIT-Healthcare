@@ -14,7 +14,7 @@
     <section id="doc-list">
       <% for (let doctor of doctor_list){ %>
         <div class="doc-id">
-          <input type="radio" name="doctor" class="doc-select" value="Rohan Shrivastava" />
+          <input type="radio" name="doctor" class="doc-select" value="<%= doctor.username %>" />
           <img src="/images/doc-5.png" alt="Doctor " class="image">
           <div class="doc-info">
             <h1 class="doc-name"><%= doctor.username %></h1>
