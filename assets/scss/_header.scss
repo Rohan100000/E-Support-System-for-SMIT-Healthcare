@@ -21,11 +21,11 @@ body {
 
 #header {
 	background-color: $background-color_1;
-	margin: 2rem 0px;
-	margin-left: 7rem;
+	width: 87vw;
+	margin: 2rem 3rem 2rem 7rem;
 	position: relative;
 	display: flex;
-
+	justify-content: space-between;
 	a{
 		transition: 0.25s ease-in-out 0.1s;
 		text-decoration: none;
@@ -51,7 +51,15 @@ body {
 		}
 	}
 }
-
+.left-div{
+	display: flex;
+	flex-direction: row;
+}
+.right-div{
+	// margin-left: auto;
+	text-align: right;
+	width:auto;
+}
 .horizontal-list {
 	list-style: none;
 	font-size: 1.3rem;
@@ -76,8 +84,8 @@ body {
 
 /* signin register buttons */
 .button {
-	position: relative;
-	left: 15vw;
+	// position: relative;
+	// left: 15vw;
 
 	.sign {
 		a {
@@ -114,7 +122,11 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    margin-left: 28vw;
+	height: 100%;
+	margin: auto;
+    // margin-left: 33vw;
+
+	
 }
   
 .header-icons li {

@@ -20,7 +20,11 @@
 </head>
 
 <body>
-    <% if(locals.user){ %>
+    <% var u = locals.user; %>
+        
+    <% if(locals.user && locals.user !="NULL" && locals.user.is_doctor){ %>
+    <%- include('_header3'); %>
+    <% }else if(locals.user && locals.user !="NULL" && !locals.user.is_doctor){ %>
     <%- include('_header2'); %>
     <% }else if(!(title == "Sign up" || title == "Sign in")){ %>
     <%- include('_header'); %>
