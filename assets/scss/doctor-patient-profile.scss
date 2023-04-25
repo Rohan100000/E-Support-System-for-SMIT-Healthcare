@@ -100,6 +100,7 @@ a{
     padding-top: 10px;
     /* padding-left: 20px; */
     width: 130px;
+    // position: relative;
 }
 
 .button-profile-set{
@@ -150,7 +151,7 @@ a{
 	min-height: 4px;
 	width: 100%;
 	margin: 1.5vh 0;
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .patient-content-part{
     display: flex;
@@ -169,15 +170,19 @@ a{
     text-align: right;
 }
 #patient-visits{
-    width: 65.5vw;
+    // width: 65.5vw;
     visibility: hidden;
+    // padding-left: 45px;
+    // padding-right: 45px;
+    
 }
 #patient-labs{
-    width: 65.5vw;
+    // width: 65.5vw;
     visibility: hidden;
+
 }
 #patient-prescriptions{
-    width: 65.5vw;
+    // width: 65.5vw;
     visibility: hidden;
 }
 .department-category-field{
