@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/doctor-patient-profile.css">
+<link rel="stylesheet" href="/css/chat_box.css">
 <div class="main-div">
     <div class="patient-list-div">
         <div class="pl-heading">DOCTORS</div>
@@ -26,6 +27,7 @@
             <div class="profile-heading">
                 <img src="/images/patient-n.png" alt="Doctor " class="profile-heading-image">
             </div>
+            <span><a href="/chat/video-chat-with-doctor">Video Chat</a></span>
             <div class="button-profile-set">
                 <button class="button-profile" id="b1" onclick="changetab(this.value, this.id)"
                     value="patient-content">Text Chat</button>
@@ -40,8 +42,6 @@
                     value="patient-prescriptions">Prescriptions</button>
             </div>
             <div id="patient-content">
-                <link rel="stylesheet" href="/css/chat_box.css">
-
                 <% if(locals.user){ %>
                     <div id="user-chat-box">
                         <ul id="chat-messages-list">
@@ -64,7 +64,7 @@
                     <% } %>
             </div>
             <div id="patient-visits">
-                Video Chat coming Soon !
+                Visits!
             </div>
             <div id="patient-labs">Labs: Coming soon!</div>
 
@@ -76,6 +76,9 @@
     </div>
 </div>
 
+<script>
+    window.locals = <%- JSON.stringify(locals) %>;
+</script>
 <script src="/javascript/doctor-patient-profile.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js" integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/javascript/chat_engine.js"></script>
@@ -84,6 +87,3 @@
   new ChatEngine("user-chat-box","<%= locals.user.email %>");
 </script>
 <% } %>
-<script>
-    window.locals = <%- JSON.stringify(locals) %>;
-</script>

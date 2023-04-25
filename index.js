@@ -20,6 +20,23 @@ const chatSockets = require("./config/chat_sockets").chatSockets(chatServer);
 chatServer.listen(5000);
 console.log("chat server is listening on port 5000");
 
+// setup the video chat server to be used with socket.io and peer.js
+const videoChatServer = require("http").Server(app);
+const videoChatSockets = require("./config/video_chat_sockets").videoChatSockets(videoChatServer);
+videoChatServer.listen(3000);
+console.log("video chat server is listening on port 3000");
+
+
+const { v4: uuidV4 } = require('uuid');
+const userS = [], userI = [];
+const { ExpressPeerServer } = require('peer');
+const peerServer = ExpressPeerServer(videoChatServer, {
+    debug: true
+});
+app.use('/peerjs', peerServer);
+
+app.set("layout room", false);
+
 //sass setup
 app.use(sassMiddleware({
     src: './assets/scss',
@@ -54,12 +71,12 @@ app.use(session({
     saveUninitialized: false,
     resave: false,
     cookie: {
-        maxAge:(1000*60*100)
+        maxAge: (1000 * 60 * 100)
     },
     store: MongoStore.create({
         mongoUrl: 'mongodb://127.0.0.1/e_healthcare_smit',
         autoRemove: 'disabled'
-    }, function(err){console.log(err || 'connect-mongodb setup ok');})
+    }, function (err) { console.log(err || 'connect-mongodb setup ok'); })
 }
 ));
 

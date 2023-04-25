@@ -13,7 +13,7 @@ class ChatEngine {
   connectionHandler() {
     let self = this;
     this.socket.on("connect", function () {
-      console.log("connection established using sockets...!");
+      console.log("connection established using sockets for text chat...!");
       self.socket.emit("join_room", {
         user_email: self.userEmail,
         chatroom: window.locals.chatting_key
@@ -21,7 +21,7 @@ class ChatEngine {
       console.log("chatkey:", window.locals.chatting_key);
       console.log(window.locals);
       self.socket.on("user_joined", function (data) {
-        console.log("a user joined: ", data);
+        console.log("a user joined text chat: ", data);
       });
     });
 

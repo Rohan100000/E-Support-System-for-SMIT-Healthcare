@@ -1,19 +1,21 @@
 <link rel="stylesheet" href="/css/doctor-patient-profile.css">
-<link rel="stylesheet" href="/css/chat_box.css">
+<link rel="stylesheet" href="/css/peer.css">
 <div class="main-div">
     <div class="patient-list-div">
-        <div class="pl-heading">PATIENTS</div>
+        <div class="pl-heading">DOCTORS</div>
         <section id="doc-list">
-            <% for(let patient of patient_list){ %>
+            <% for(let doctor of doctors){ %>
                 <div class="seperation-doc"></div>
-                <a href="/chat/chat-with-patient-id/<%= patient._id %>">
+                <a href="/chat/video-chat-with-doctor-id/<%= doctor._id %>">
                     <div class="doc-id">
                         <img src="/images/patient-n.png" alt="Doctor " class="image">
                         <div class="doc-info">
                             <h1 class="doc-name">
-                                <%= patient.username %>
+                                <%= doctor.username %>
                             </h1>
-                            <h3 class="doc-type"></h3>
+                            <h3 class="doc-type">
+                                <%= doctor.qualification %>
+                            </h3>
                         </div>
                     </div>
                 </a>
@@ -25,10 +27,10 @@
             <div class="profile-heading">
                 <img src="/images/patient-n.png" alt="Doctor " class="profile-heading-image">
             </div>
-            <span><a href="/chat/video-chat-with-patient">Video Chat</a></span>
+            <span><a href="/chat/chat-with-doctor">Text Chat</a></span>
             <div class="button-profile-set">
                 <button class="button-profile" id="b1" onclick="changetab(this.value, this.id)"
-                    value="patient-content">Text Chat</button>
+                    value="patient-content">Video Chat</button>
                 <div class="vertical-division"></div>
                 <button class="button-profile" id="b2" onclick="changetab(this.value, this.id)"
                     value="patient-visits">Video Chat</button>
@@ -40,35 +42,19 @@
                     value="patient-prescriptions">Prescriptions</button>
             </div>
             <div id="patient-content">
-                <% if(locals.user){ %>
-                    <div id="user-chat-box">
-                        <ul id="chat-messages-list">
-                            <li class="other-message">
-                                <span>
-                                    Other Message
-                                </span>
-                            </li>
-                            <li class="self-message">
-                                <span>
-                                    Self Message
-                                </span>
-                            </li>
-                        </ul>
-                        <div id="chat-message-input-container">
-                            <input id="chat-message-input" placeholder="Type message here">
-                            <button id="send-message">Send</button>
-                        </div>
-                    </div>
-                    <% } %>
+                <div id="video-grid">
+
+                </div>
+                <a href="/<%= chatting_key %>">Video Chat Now!</a>
             </div>
             <div id="patient-visits">
-                Visits!
+                visits!
             </div>
             <div id="patient-labs">Labs: Coming soon!</div>
 
-            <!-- prescription section -->
+            <!-- patient prescription section -->
             <div id="patient-prescriptions">
-                Prescriptions
+                Patient prescription coming soon.
             </div>
         </div>
     </div>
@@ -77,11 +63,7 @@
 <script>
     window.locals = <%- JSON.stringify(locals) %>;
 </script>
+<script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
 <script src="/javascript/doctor-patient-profile.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js" integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/javascript/chat_engine.js"></script>
-<% if(locals.user){ %>
-<script>
-  new ChatEngine("user-chat-box","<%= locals.user.email %>");
-</script>
-<% } %>
+<script src="/javascript/video_chat_engine.js" defer></script>
