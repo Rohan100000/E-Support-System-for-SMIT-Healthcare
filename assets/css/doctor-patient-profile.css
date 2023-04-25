@@ -7,6 +7,9 @@ body {
   padding: 0;
   background-color: #fff4fd; }
 
+a {
+  text-decoration: none; }
+
 .main-div {
   display: flex; }
 
@@ -175,19 +178,20 @@ body {
 
 .department-category-field {
   width: 50%;
-  display: inline-block; }
+  display: flex;
+  flex-direction: row; }
 
 .department-category-labels {
-  float: left;
+  width: 60%;
   margin-bottom: 2vh; }
 
 .department-category-inputs {
-  float: right;
   outline: none;
   border: 0;
   border-bottom: 1px solid #1e1e1e;
   margin-bottom: 2vh;
-  padding-bottom: 2px; }
+  padding-bottom: 2px;
+  padding-left: 2px; }
 
 #complaint-section {
   display: flex;
@@ -206,12 +210,13 @@ body {
   margin-bottom: 2vh; }
 
 #diagonictic-test-input-field {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%; }
 
 .diagonictic-test-input-section {
-  width: 33%; }
+  width: 33%;
+  margin-bottom: 10px; }
 
 .diagonictic-test-field-labels {
   margin: 5px; }
@@ -223,35 +228,82 @@ body {
   margin-top: 2vh;
   width: 100%; }
 
-#prescription-drug-name {
-  width: 20%; }
-
-#prescription-dosage {
-  width: 12.5%; }
-
-#prescription-frequency {
-  width: 12.5%; }
-
-#prescription-days {
-  width: 12.5%; }
-
-#prescription-quantity {
-  width: 12.5%; }
-
 .medicine-input {
-  margin-left: 3%;
   outline: none;
-  padding: 5px 0 5px 0.5vw; }
-
-.medicine-input:first-of-type, .medicine-input:last-of-type {
-  margin-left: 0; }
-
-#prescription-instruction {
-  margin-top: 1vh;
-  width: 90%; }
+  padding: 5px 0 5px 0.5vw;
+  width: 50%;
+  border: 0;
+  border-bottom: 1px solid black; }
 
 #prescription-buttons-section {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
   width: 90%; }
+
+#prescription-form {
+  margin-left: 10px; }
+
+#prescription-margin-adjustment {
+  margin-bottom: 10px; }
+
+.medicine-field-inputs {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; }
+
+#addMedicineInput, #prescription-submit-btn {
+  border: 0;
+  box-shadow: 0px 0px 20px 5px rgba(80, 80, 80, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer; }
+
+#addMedicineInput {
+  width: 10%;
+  margin: 10px auto 10px 0;
+  border-radius: 2px; }
+
+#prescription-submit-btn {
+  width: 15%;
+  margin: 10px auto 10px auto;
+  border-radius: 4px;
+  padding: 5px 0; }
+
+#prescription-submit-btn:hover, #addMedicineInput:hover {
+  box-shadow: 0px 0px 12px 7.5px rgba(80, 80, 80, 0.5); }
+
+.medicine-id {
+  margin-bottom: 15px;
+  font-size: 1.05rem; }
+
+.doc-name {
+  color: black;
+  transition: color 0.2s ease-in-out; }
+
+.doc-name:hover {
+  color: #dc8665; }
+
+.prescription-patient-field {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vh; }
+
+.prescription-patient-label {
+  width: 60%; }
+
+#prescription-patient-details {
+  width: 65.5vw; }
+
+.prescription-patient-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vh; }
+
+.prescription-patient-detail-left {
+  width: 50%; }
+
+.patient-medicine-details {
+  margin-left: 25px; }

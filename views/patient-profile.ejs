@@ -9,12 +9,16 @@
                     <div class="doc-id">
                         <img src="/images/patient-n.png" alt="Doctor " class="image">
                         <div class="doc-info">
-                            <h1 class="doc-name"><%= doctor.username %></h1>
-                            <h3 class="doc-type"><%= doctor.qualification %></h3>
+                            <h1 class="doc-name">
+                                <%= doctor.username %>
+                            </h1>
+                            <h3 class="doc-type">
+                                <%= doctor.qualification %>
+                            </h3>
                         </div>
                     </div>
                 </a>
-            <% } %>
+                <% } %>
         </section>
     </div>
     <div class="patient-detail-div">
@@ -23,7 +27,8 @@
                 <img src="/images/patient-n.png" alt="Doctor " class="profile-heading-image">
             </div>
             <div class="button-profile-set">
-                <button class="button-profile" id="b1" onclick="changetab(this.value, this.id)" value="patient-content">User
+                <button class="button-profile" id="b1" onclick="changetab(this.value, this.id)"
+                    value="patient-content">User
                     Info</button>
                 <div class="vertical-division"></div>
                 <button class="button-profile" id="b2" onclick="changetab(this.value, this.id)"
@@ -40,17 +45,23 @@
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Name</div>
-                    <div class="patient-content-right"><%= user.username %></div>
+                    <div class="patient-content-right">
+                        <%= user.username %>
+                    </div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Age</div>
-                    <div class="patient-content-right"><%= user.age %></div>
+                    <div class="patient-content-right">
+                        <%= user.age %>
+                    </div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">Sex</div>
-                    <div class="patient-content-right"><%= user.gender %></div>
+                    <div class="patient-content-right">
+                        <%= user.gender %>
+                    </div>
                 </div>
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-heading">Contact Information</div>
@@ -62,66 +73,158 @@
                 <div class="seperation-patient-content"></div>
                 <div class="patient-content-part">
                     <div class="patient-content-left">E-mail</div>
-                    <div class="patient-content-right"><%= user.email %></div>
+                    <div class="patient-content-right">
+                        <%= user.email %>
+                    </div>
                 </div>
                 <div class="seperation-patient-content"></div>
             </div>
             <div id="patient-visits">
                 <div class="patient-content-heading">Upcoming Appointments</div>
-                <% var i = 0; %>
-                <% for(let appointment of appointments){ %>
-                    <% i++ %>
-                    <div class="patient-content-heading">Appointment <%=i%></div>
-                    <div class="seperation-patient-content"></div>
-                    <div class="patient-content-part">
-                        <div class="patient-content-left">Doctor</div>
-                        <div class="patient-content-right"><%= appointment.doctor %></div>
-                    </div>
-                    
-                    <div class="seperation-patient-content"></div>
-                    <div class="patient-content-part">
-                        <div class="patient-content-left">Day</div>
-                        <div class="patient-content-right"><%= appointment.day %></div>
-                    </div>
-                    
-                    <div class="seperation-patient-content"></div>
-                    <div class="patient-content-part">
-                        <div class="patient-content-left">Time</div>
-                        <div class="patient-content-right"><%= appointment.time %></div>
-                    </div>
-                <% } %>
+                <% var i=0; %>
+                    <% for(let appointment of appointments){ %>
+                        <% i++ %>
+                            <div class="patient-content-heading">Appointment <%=i%>
+                            </div>
+                            <div class="seperation-patient-content"></div>
+                            <div class="patient-content-part">
+                                <div class="patient-content-left">Doctor</div>
+                                <div class="patient-content-right">
+                                    <%= appointment.doctor %>
+                                </div>
+                            </div>
+
+                            <div class="seperation-patient-content"></div>
+                            <div class="patient-content-part">
+                                <div class="patient-content-left">Day</div>
+                                <div class="patient-content-right">
+                                    <%= appointment.day %>
+                                </div>
+                            </div>
+
+                            <div class="seperation-patient-content"></div>
+                            <div class="patient-content-part">
+                                <div class="patient-content-left">Time</div>
+                                <div class="patient-content-right">
+                                    <%= appointment.time %>
+                                </div>
+                            </div>
+                            <% } %>
             </div>
             <div id="patient-labs">Labs: Coming soon!</div>
 
             <!-- patient prescription section -->
+
             <div id="patient-prescriptions">
+                <%var j=1%>
                 <% for( let prescription of prescription_list){ %>
-                    <div style="margin-bottom: 2rem;">
-                    <h4>SMIT Prescription</h4>
-                        Date: <%= prescription.createdAt.getDate() %>-<%= prescription.createdAt.getMonth()+1 %>-<%= prescription.createdAt.getFullYear() %><br>
-                        Patient Name: <%= prescription.patient.username %><br>
-                        Patient Age: <%= prescription.patient.age %><br>
-                        Patient Gender: <%= prescription.patient.gender %><br>
-                        Hospital Department: <%= prescription.hospital_department %><br>
-                        Category: <%= prescription.category %><br>
-                        Complaint: <%= prescription.complaint %><br>
-                        Tests Recommended:<% if(prescription.test == []){ %> None <%} for(let test of prescription.test){ %> <%= test %>, <% } %><br>
-                        Medicines:
-                        <ul>
-                        <%for(let med of prescription.medicine){ %>
-                            <li>
-                                Medicine Name: <%= med.name %><br>
-                                Dosage: <%= med.dosage %><br>
-                                Frequency: <%= med.frequency %><br>
-                                Number of days: <%= med.days %><br>
-                                Quantity: <%= med.quantity %><br>
-                                Instruction: <%= med.instruction %><br>
-                            </li>
-                        <% } %>
-                        </ul>
-                        Doctor Name: <%= prescription.doctor.username %><br>
+                    <div class="patient-content-heading">Prescription No. <%=j%></div>
+                    <%j++%>
+                    <div class="seperation-patient-content"></div>
+                    <div id="prescription-patient-details">
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Doctor :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.doctor.username %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Date :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.createdAt.getDate() %>-<%= prescription.createdAt.getMonth()+1 %>-<%=
+                                            prescription.createdAt.getFullYear() %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Patient Name :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.patient.username %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Patient Age :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.patient.age %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Patient Gender :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.patient.gender %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Hospital Department :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.hospital_department %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Category :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.category %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Chief Complaint :</div>
+                            <div class="prescription-patient-detail-right">
+                                <%= prescription.complaint %>
+                            </div>
+                        </div>
+                        <div class="prescription-patient-detail">
+                            <div class="prescription-patient-detail-left">Test Tecommended :</div>
+                            <div class="prescription-patient-detail-right">
+                                <% if(prescription.test==[]){ %> None <%} for(let test of prescription.test){ %>
+                                        <%= test %>, <% } %>
+                            </div>
+                        </div>
+                        <ol>
+                            <div class="patient-content-heading">Medicine Details</div>
+                            <div class="seperation-patient-content"></div>
+                            <%for(let med of prescription.medicine){ %>
+                                <li class="patient-medicine-details">
+                                    <div class="prescription-patient-detail">
+                                        <div class="prescription-patient-detail-left">Medicine Name :</div>
+                                        <div class="prescription-patient-detail-right">
+                                            <%= med.name %>
+                                        </div>
+                                    </div>
+                                    <div class="prescription-patient-detail">
+                                        <div class="prescription-patient-detail-left">Dosage :</div>
+                                        <div class="prescription-patient-detail-right">
+                                            <%= med.dosage %>
+                                        </div>
+                                    </div>
+                                    <div class="prescription-patient-detail">
+                                        <div class="prescription-patient-detail-left">Frequency :</div>
+                                        <div class="prescription-patient-detail-right">
+                                            <%= med.frequency %>
+                                        </div>
+                                    </div>
+                                    <div class="prescription-patient-detail">
+                                        <div class="prescription-patient-detail-left">Number of Days :</div>
+                                        <div class="prescription-patient-detail-right">
+                                            <%= med.days %>
+                                        </div>
+                                    </div>
+                                    <div class="prescription-patient-detail">
+                                        <div class="prescription-patient-detail-left">Quantity :</div>
+                                        <div class="prescription-patient-detail-right">
+                                            <%= med.quantity %>
+                                        </div>
+                                    </div>
+                                    <div class="prescription-patient-detail">
+                                        <div class="prescription-patient-detail-left">Instruction :</div>
+                                        <div class="prescription-patient-detail-right">
+                                            <%= med.instruction %>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="seperation-patient-content"></div>
+                                <% } %>
+                        </ol>
                     </div>
-                <%}%>
+                    <% } %>
             </div>
         </div>
     </div>
