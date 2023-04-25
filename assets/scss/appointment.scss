@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 244, 253);
+    background-color: #ffebcf;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,7 +12,7 @@ body{
 }
 
 #calendar{
-    color: rgb(218,35,127);
+    color: #DC8665;;
     margin: 30px 0px;
 }
 
@@ -47,7 +47,7 @@ body{
 }
 
 .time:hover{
-    background-color: rgb(218,35,127);
+    background-color: #EEB462;
     color: rgb(255,255,255);
 }
 
@@ -59,7 +59,7 @@ body{
 }
 .book-appointment-submit{
     color: white;
-    background-color: #204ea5;
+    background-color: #EEB462;
     width: 17vw;
     height: 7.5vh;
     border-radius: 10px;
@@ -69,7 +69,7 @@ body{
     cursor: pointer;
 
     &:hover{
-        box-shadow: 0px 0px 10px 4px #204ea5;
+        box-shadow: 0px 0px 10px 4px #EEB462;
     }
 }
 .hidden-date-object{
