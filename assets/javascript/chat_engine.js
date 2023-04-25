@@ -16,9 +16,10 @@ class ChatEngine {
       console.log("connection established using sockets...!");
       self.socket.emit("join_room", {
         user_email: self.userEmail,
-        chatroom: "e-health",
+        chatroom: window.locals.chatting_key
       });
-
+      console.log("chatkey:", window.locals.chatting_key);
+      console.log(window.locals);
       self.socket.on("user_joined", function (data) {
         console.log("a user joined: ", data);
       });
@@ -31,7 +32,7 @@ class ChatEngine {
         self.socket.emit("send_message", {
           message: msg,
           user_email: self.userEmail,
-          chatroom: "e-health",
+          chatroom: `${window.locals.chatting_key}`,
         });
       }
     });
