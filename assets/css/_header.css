@@ -90,7 +90,7 @@ body {
   color: var(--color-light-grey); }
 
 .material-icons:hover {
-  color: var(--color-pink); }
+  color: #EEB462; }
 
 /* Hide the toggle menu by default */
 .toggle-menu {

@@ -1,5 +1,5 @@
 body {
-  background-color: #fff4fd;
+  background-color: #ffebcf;
   font-family: Arial, Helvetica, sans-serif; }
 
 .time-select ul {
@@ -10,7 +10,7 @@ body {
   list-style: none; }
 
 #calendar {
-  color: #da237f;
+  color: #DC8665;
   margin: 30px 0px; }
 
 .slot_picker {
@@ -40,7 +40,7 @@ body {
   margin: 20px 0px; }
 
 .time:hover {
-  background-color: #da237f;
+  background-color: #EEB462;
   color: white; }
 
 .book-appointment-button {
@@ -48,7 +48,7 @@ body {
 
 .book-appointment-submit {
   color: white;
-  background-color: #204ea5;
+  background-color: #EEB462;
   width: 17vw;
   height: 7.5vh;
   border-radius: 10px;
@@ -57,7 +57,7 @@ body {
   font-size: large;
   cursor: pointer; }
   .book-appointment-submit:hover {
-    box-shadow: 0px 0px 10px 4px #204ea5; }
+    box-shadow: 0px 0px 10px 4px #EEB462; }
 
 .hidden-date-object {
   visibility: hidden; }
