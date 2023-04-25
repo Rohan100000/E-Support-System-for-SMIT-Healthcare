@@ -165,15 +165,12 @@ a {
   text-align: right; }
 
 #patient-visits {
-  width: 65.5vw;
   visibility: hidden; }
 
 #patient-labs {
-  width: 65.5vw;
   visibility: hidden; }
 
 #patient-prescriptions {
-  width: 65.5vw;
   visibility: hidden; }
 
 .department-category-field {
