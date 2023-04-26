@@ -19,6 +19,7 @@ module.exports.create_appointment = async function (req, res) {
         // check if the doctor are both legit in the database
         if (!doc) {
             console.log("Doctor does not exist in the database.");
+            req.flash('error', 'Failed! Doctor does not exist.')
             return res.redirect('back');
         }
 
@@ -27,9 +28,9 @@ module.exports.create_appointment = async function (req, res) {
         console.log(typeof (timing));
 
         //check the number of appointments at given timing !(>=10)
-        console.log("APPOINTMENTS AT TIMING:")
         let appointments_at_time = await Appointment.find({timing: timing});
         if(appointments_at_time.length >= 10){
+            req.flash('error', 'Failed! Time slot full. Please choose another time slot.')
             return res.redirect('back');
         }
 
@@ -39,30 +40,35 @@ module.exports.create_appointment = async function (req, res) {
             patient: req.user._id,
             timing: timing,
         }
-        console.log(newAppointment);
         let appointment = await Appointment.findOne(newAppointment);
 
         // find the appointment, if found, return else continue.
         if (!appointment) {
-            let user = await User.findById(req.user._id).populate({ path: "appointments" })
+            let user = await User.findById(req.user._id).populate('appointments')
             // in the appointments array of the user find if there exists an appointment with the same timing
             for (let ap of user.appointments) {
-                if (ap.timing == newAppointment.timing) {
+                let t1= ap.timing.toISOString(), t2 = newAppointment.timing.toISOString();
+                if (t1==t2) {
                     console.log("The user already has an appointment booked at this particular slot");
+                    req.flash('error','Failed! You already have an appointment booked at the chosen time slot.')
                     return res.redirect("back");
                 }
             }
             let appointment = await new Appointment(newAppointment);
             Appointment.create(appointment);
+            console.log(appointment);
             user.appointments.push(appointment);
             user.save();
             doc.appointments.push(appointment);
             doc.save();
+            req.flash('success', 'Appointment booked Successfully!')
             return res.redirect("/");
         }
+        req.flash('error','Failed! You already have an appointment booked at the chosen time slot.')
         return res.redirect('back');
     } catch (error) {
         console.log('error in booking an appointment');
+        req.flash('error', 'Failed to book the appointment.')
         return;
     }
 }

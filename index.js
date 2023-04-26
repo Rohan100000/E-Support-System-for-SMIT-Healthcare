@@ -13,6 +13,9 @@ const passportlocal = require('./config/passport-local-strategy');
 const passportGoogle = require("./config/passport-google-oauth2-strategy");
 const MongoStore = require('connect-mongo');
 const sassMiddleware = require('node-sass-middleware');
+const flash = require('connect-flash');
+const customMware = require('./config/middleware');
+
 
 // setup the chat server to be used with socket.io
 const chatServer = require("http").Server(app);
@@ -83,6 +86,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
+
+
+
+app.use(flash());
+app.use(customMware.setFlash);
+
+
 
 //use express router 
 app.use('/', require('./routes'));
