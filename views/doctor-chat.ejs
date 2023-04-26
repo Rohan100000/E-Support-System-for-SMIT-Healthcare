@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/doctor-patient-profile.css">
+<link rel="stylesheet" href="/css/doctor-patient-vc.css">
 <link rel="stylesheet" href="/css/chat_box.css">
 <div class="main-div">
     <div class="patient-list-div">
@@ -32,43 +32,25 @@
                 <div class="vertical-division"></div>
                 <button class="button-profile" id="b2" onclick="changetab(this.value, this.id)"
                     value="patient-visits">Video Chat</button>
-                <div class="vertical-division"></div>
-                <button class="button-profile" id="b3" onclick="changetab(this.value, this.id)"
-                    value="patient-labs">Labs</button>
-                <div class="vertical-division"></div>
-                <button class="button-profile" id="b4" onclick="changetab(this.value, this.id)"
-                    value="patient-prescriptions">Prescriptions</button>
             </div>
             <div id="patient-content">
                 <% if(locals.user){ %>
                     <div id="user-chat-box">
                         <ul id="chat-messages-list">
                             <li class="other-message">
-                                <span>
-                                    Other Message
-                                </span>
                             </li>
                             <li class="self-message">
-                                <span>
-                                    Self Message
-                                </span>
                             </li>
                         </ul>
                         <div id="chat-message-input-container">
                             <input id="chat-message-input" placeholder="Type message here">
-                            <button id="send-message">Send</button>
+                            <button id="send-message"><img src="/images/send.png"></button>
                         </div>
                     </div>
                     <% } %>
             </div>
             <div id="patient-visits">
                 Visits!
-            </div>
-            <div id="patient-labs">Labs: Coming soon!</div>
-
-            <!-- prescription section -->
-            <div id="patient-prescriptions">
-                Prescriptions
             </div>
         </div>
     </div>
