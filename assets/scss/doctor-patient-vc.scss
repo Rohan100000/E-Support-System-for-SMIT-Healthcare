@@ -1,0 +1,345 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffebcf;
+}
+
+a{
+  text-decoration: none;
+}
+
+.main-div{
+    display: flex;
+
+}
+.main-div .patient-list-div{
+    width: 32vw;
+    height: 100vh;
+    padding-left: 3vw;
+    margin-right: 1vw;
+    /* background-color: red; */
+}
+.main-div .patient-detail-div{
+    width: 65.5vw;
+    /* height: 91vh; */
+    background-color: white;
+    border-radius: 75px 0px 0px 75px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    box-shadow: 0 0 20px 5px rgb(180, 180, 180);
+    /* height: 100vh; */
+}
+.main-div .patient-detail-div .patient-detail-div-content{
+    height: 91vh;
+    /* overflow-y: hidden; */
+    overflow: auto;
+    overflow-x: hidden;
+    padding-left: 45px;
+    padding-right: 45px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}   
+.main-div .patient-detail-div .patient-detail-div-content::-webkit-scrollbar{
+    display: none;
+}
+.main-div .patient-list-div .pl-heading{
+    padding-left:4.5vw;
+    padding-top:9.5vh;
+    font-size: medium;
+    padding-bottom: 1.5vh;
+}
+.seperation-doc {
+	background-color: rgb(229, 229, 229);
+	min-height: 4px;
+	width: 100%;
+	margin: 3vh 0;
+}
+#doc-list{
+    overflow: auto;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    height: 80vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#doc-list::-webkit-scrollbar{
+    display: none;
+}
+.doc-id {
+	display: flex;
+	flex-direction: row;
+    padding-left: 3vw;
+}
+.doc-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	font-size: 15px;
+	margin-left: 1vw;
+}
+.doc-type{
+	font-size: 16px;
+    font-weight: 500;
+}
+.image {
+	border-radius: 50%;
+	width: 75px;
+	height: 75px; 
+}
+.profile-heading{
+    margin-bottom: 35px;
+    padding-left: 40px;
+    margin-top:30px;
+}
+.profile-heading-image{
+    padding-top: 10px;
+    /* padding-left: 20px; */
+    width: 130px;
+    // position: relative;
+}
+
+.button-profile-set{
+    width: 54.5vw;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-bottom: 35px;
+}
+.button-profile-box{
+    border: 0px 3px 0px 0px;
+    border-color: black;
+    /* background-color: blue; */
+    /* margin-left: 5px; */
+}
+.button-profile{
+    width: 49%;
+    height: 40px;
+    /* margin-right: 5px; */
+    /* margin-left: 5px; */
+    border-radius: 10px;
+    border:0;
+    background-color: lightgray;
+    box-shadow: none;
+}
+.vertical-division{
+    border:0.25px solid rgba(80,80,80,0.5);
+    height:80%;
+    margin:auto 4px;
+}
+.button-profile:hover{
+    background-color: white;
+}
+.seperation-vertical{
+    width: 1px;
+    background-color: black;
+    /* margin: 0 5px; */
+}
+#patient-content{
+    margin-top: 70px;
+}
+.seperation-patient-content {
+	background-color: rgb(229, 229, 229);
+	min-height: 4px;
+	width: 100%;
+	margin: 1.5vh 0;
+  margin-left: 10px;
+}
+.patient-content-part{
+    display: flex;
+    padding-left: 10px;
+}
+.patient-content-heading{
+    font-size: 30px;
+    font-weight: bold;
+}
+.patient-content-left{
+    width: 50%;
+    text-align: left;
+}
+.patient-content-right{
+    width: 50%;
+    text-align: right;
+}
+#patient-visits{
+    // width: 65.5vw;
+    visibility: hidden;
+    // padding-left: 45px;
+    // padding-right: 45px;
+    
+}
+#patient-labs{
+    // width: 65.5vw;
+    visibility: hidden;
+}
+#patient-prescriptions{
+    // width: 65.5vw;
+    visibility: hidden;
+}
+.department-category-field{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .department-category-labels{
+    width:60%;
+    margin-bottom:2vh;
+  }
+  
+  .department-category-inputs{
+    outline: none;
+    border:0;
+    border-bottom: 1px solid rgb(30,30,30);
+    margin-bottom:2vh;
+    padding-bottom: 2px;
+    padding-left:2px;
+  }
+  
+  #complaint-section{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    margin-bottom: 2vh;
+  }
+  
+  #complaint{
+    outline: none;
+    padding:5px;
+  }
+  
+  #diagonictic-test-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+  
+  #diagonictic-test-input-field{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width:100%;
+  }
+  
+  .diagonictic-test-input-section{
+    width: 33%;
+    margin-bottom: 10px;
+  }
+  
+  .diagonictic-test-field-labels{
+    margin:5px;
+  }
+  
+  #medicine-details-field{
+    width:100%;
+  }
+  
+  #medicine-details-input{
+    margin-top:2vh;
+    width:100%;
+  }
+  
+  .medicine-input{
+    outline: none;
+    padding: 5px 0 5px 0.5vw;
+    width:50%;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+  
+  
+  #prescription-buttons-section{
+    margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+#prescription-form{
+  margin-left:10px;
+}
+
+#prescription-margin-adjustment{
+  margin-bottom:10px;
+}
+
+.medicine-field-inputs{
+  width:60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#addMedicineInput, #prescription-submit-btn{
+  border: 0;
+  box-shadow: 0px 0px 20px 5px rgba(80,80,80,0.5);
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#addMedicineInput{
+  width:10%;
+  margin: 10px auto 10px 0;
+  border-radius: 2px;
+}
+
+#prescription-submit-btn{
+  width:15%;
+  margin: 10px auto 10px auto;
+  border-radius: 4px;
+  padding:5px 0;
+}
+
+#prescription-submit-btn:hover, #addMedicineInput:hover{
+  box-shadow: 0px 0px 12px 7.5px rgba(80,80,80,0.5);
+}
+
+.medicine-id{
+  margin-bottom:15px;
+  font-size: 1.05rem;
+}
+
+.doc-name{
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.doc-name:hover{
+  color:rgb(220, 134, 101);
+}
+.prescription-patient-field{
+  width:50%;
+  display:flex;
+  flex-direction: row;
+  margin-bottom:2vh;
+}
+
+.prescription-patient-label{
+  width: 60%;
+}
+
+#prescription-patient-details{
+  width: 65.5vw;
+}
+
+.prescription-patient-detail{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vh;
+}
+.prescription-patient-detail-left{
+  width:50%;
+}
+
+.patient-medicine-details{
+  margin-left:25px;
+}
