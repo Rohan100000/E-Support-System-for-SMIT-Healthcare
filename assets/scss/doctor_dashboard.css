@@ -1,0 +1,420 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff6f0022;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: none;
+}
+/* navbar section */
+aside{
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+.navsection{
+    padding: 1rem 2rem;
+}
+.logo{
+    font-size: 2.5rem;
+    color: #e92f0095;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+.navbar-set{
+    padding: 1rem 0rem 1rem 1rem;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+.navbar-set img{
+    height: 2rem;
+    
+}
+.nav-footer{
+    margin: auto;
+    margin-top: 21rem;
+    color: #e92f0095;
+}
+/* main section */
+main{
+    width: auto;
+}
+.heading{
+    margin: 2rem 2rem;
+    width: 100%;
+}
+.serachbarcontainer{
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+}
+.serachbarcontainer input{
+    width: 12rem;
+    height: 25px;
+    border: 0px;
+}
+.serachbarcontainer img{
+    height: 30px;
+    vertical-align: middle;
+    margin: auto;
+    color: white;
+    border-radius: 5px;
+    background-color: blue;
+}
+.today-date-container{
+    margin: 0 1rem;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+.heading-row1{
+    display: flex;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+.right-icon-div{
+    display: flex;
+    margin: auto;
+    margin-right: 0.1rem;
+}
+.right-icon-div img{
+    width: 25px;
+    margin: auto;
+    margin: 0 0.5rem;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+    vertical-align: middle;
+}
+.heading-row2{
+    font-size: 1.25rem;
+    display: flex;
+    width: 33rem;
+}
+.heading-row2 img{
+    margin: auto 1rem;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.heading-row2 span{
+    vertical-align: middle;
+    margin: auto 0.1rem;
+}
+/* Cards Section */
+.card-row1{
+    display: flex;
+    padding: 0rem 2rem;
+}
+.card-row2{
+    display: flex;
+    padding: 2rem 2rem;
+}
+.card{
+    border-radius: 15px;
+}
+.card1{
+    background-color: white;
+    height: 20rem;
+    width: 30rem;
+    margin: 0 1.5rem 0 0;
+    display: flex;
+}
+.card2{
+    background-color: white;
+    height: 20rem;
+    width: 22rem;
+    margin: 0 1.5rem 0 0;
+}
+.card3{
+    background-color: white;
+    height: 20rem;
+    width: 20rem;
+}
+.card4{
+    background-color: white;
+    height: 15rem;
+    width: 53.5rem;
+    margin: 0 1.5rem 0 0
+}
+.card5{
+    background-color: white;
+    height: 15rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-heading{
+    margin: 1.5rem 1.5rem 1rem 1.5rem;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+.card-heading img{
+    width: 20px;
+    margin: auto 0 auto auto;
+    padding: 5px;
+    vertical-align: middle;
+}
+/* Card1 section */
+.left-div{
+    margin: 1.5rem;
+    width: 50%;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right-div{
+    width: 50%;
+    margin: 1.5rem 1rem;
+    
+}
+.right-row{
+    display: flex;
+    text-align: left;
+    margin: 0.75rem 0;
+}
+.left-div img{
+    width: 60px;
+    border-radius: 50%;
+    margin: auto;
+}
+.card1-heading1{
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0.5rem auto;
+}
+.card1-email{
+    margin: auto;
+    color: rgb(110, 110, 110);
+    font-size: 0.85rem;
+}
+.card1-heading2{
+    margin: 10px auto;
+    color: rgb(0, 0, 0);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+.card1-appointment-set{
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.part-appointment-set{
+    margin: 10px auto;
+    width: 50%;
+}
+.send-button{
+    margin: 1rem 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    border: 0px;
+}
+/* Card2 section */
+.card2 .card-heading span{
+    margin: auto 0.01rem auto auto;
+    vertical-align: middle;
+    color: blue;
+}
+.note-content{
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 15px;
+}
+.note-content textarea{
+    width: 100%;
+    height: 6.5rem;
+    margin: auto;
+    border: 0px;
+    background-color: lightgray;
+}
+.note-content button{
+    margin: auto 0 auto auto;
+    height: 2rem;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    border: 0px;
+}
+.note-doc{
+    margin: 0 1.5rem;
+}
+.note-doc div{
+    display: flex;
+    margin: auto;
+}
+.note-doc img{
+    width: 15px;
+    margin: auto;
+}
+
+/* Card3 section */
+.card3 .card-heading span{
+    margin: auto 0.01rem auto 0;
+    vertical-align: middle;
+    color: blue;
+}
+.document-set{
+    padding: 5px;
+    margin: 0 1.5rem 0.5rem 1.5rem;
+    background-color: white;
+    border: 1px solid black;
+    width: 17rem;
+    height: 2.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center; 
+}
+.document-list{
+    overflow-y: auto;
+    height: 14rem;
+}
+.document-list::-webkit-scrollbar{
+    display: none;
+}
+.document-set img{
+    width: 15px;
+    margin: auto 5px;
+}
+.document-set span{
+    text-align: right;
+    margin: auto 0 auto 7rem;
+}
+/* Card4 section */
+.tab-set{
+    display: flex;
+    background: lightgray;
+    width: 30rem;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+.tab-element{
+    border: 0px;
+    width: 10rem;
+    height: 2rem;
+    margin: 0 5px;
+    border-radius: 10px;
+
+}
+.tab-element:hover{
+    background-color: white;
+}
+.add-appointment-button{
+    height: 2rem;
+    padding: 5px 20px;
+    margin: auto;
+    margin-right: 0;
+    color: white;
+    background-color: blue;
+    border: 0px;
+    border-radius: 10px;
+}
+.card4-heading{
+    display: flex;
+    margin: 1.5rem;
+}
+.appointment-list{
+    margin: 0 1.5rem;
+    background-color: lightgray;
+    width: auto;
+    height: 6rem;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-y: auto;
+}
+.appointment-list::-webkit-scrollbar{
+    display: none;
+}
+.appointment-set{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.appointment-detail{
+    height: 3rem;
+    width: auto;
+    display: flex;
+    background-color: white;
+}
+.appointment-part{
+    background-color: white;
+    width: 9.25rem;
+    height: 3rem;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    /* padding: 5px; */
+}
+.vertical-line{
+    width: 1px;
+    background-color: lightgray;
+    height: 2.5rem;
+    vertical-align: middle;
+    margin: auto;
+}
+.app-head1{
+    margin: auto;
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+.app-head2{
+    margin: auto;
+    color: rgb(110, 110, 110);
+    font-size: 0.85rem;
+}
+.app-bold{
+    font-weight: 800;
+    color: black;
+}
+.appointment-part img{
+    width: 20px;
+    vertical-align: middle;
+    margin: auto;
+}
+/* Card5 section */
+.card-heading2{
+    font-size: 0.85rem;
+    margin: 0 1.5rem;
+    display: flex;
+}
+.card-heading2 span{
+    margin: auto;
+    margin-right: 2rem;
+}
+.payment_list{
+    height: 7.5rem;
+    overflow-y: auto; 
+}
+.payment_list::-webkit-scrollbar{
+    display: none;
+}
+.payment-set{
+    display: flex;
+    margin: 1rem 1.5rem;
+    font-size: 0.85rem;
+    align-items: center;
+}
+.circle-div{
+    border-radius: 50%;
+    background-color: green;
+    height: 15px;
+    width: 15px;
+    margin-right: 0.5rem;
+}
+.payment-set span{
+    margin: auto;
+    margin-right: 3.5rem;
+}
+
