@@ -19,3 +19,7 @@ function profile_button(){
   // console.log("");
   return true;
 }
+function prescription_button(){
+  document.cookie = 'prescription'; 
+  return true;
+}

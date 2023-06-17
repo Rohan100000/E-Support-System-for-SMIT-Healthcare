@@ -10,10 +10,11 @@ body {
 
 #header {
   background-color: #ffebcf;
-  margin: 2rem 0px;
-  margin-left: 7rem;
+  width: 87vw;
+  margin: 2rem 3rem 2rem 7rem;
   position: relative;
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
   #header a {
     transition: 0.25s ease-in-out 0.1s;
     text-decoration: none; }
@@ -29,6 +30,14 @@ body {
         cursor: pointer; }
   #header span span {
     color: #DC8665; }
+
+.left-div {
+  display: flex;
+  flex-direction: row; }
+
+.right-div {
+  text-align: right;
+  width: auto; }
 
 .horizontal-list {
   list-style: none;
@@ -46,33 +55,32 @@ body {
         text-decoration: none; }
 
 /* signin register buttons */
-.button {
-  position: relative;
-  left: 15vw; }
-  .button .sign a {
-    border: 1px solid #fff;
-    padding: 0.75rem 2.25rem;
-    border-radius: 2rem;
-    background-color: white; }
-    .button .sign a:hover {
-      border: 1px solid #DC8665;
-      color: #DC8665; }
-  .button .reg a {
-    padding: 0.75rem 2.25rem;
+.button .sign a {
+  border: 1px solid #fff;
+  padding: 0.75rem 2.25rem;
+  border-radius: 2rem;
+  background-color: white; }
+  .button .sign a:hover {
     border: 1px solid #DC8665;
-    border-radius: 2rem;
-    background-color: #DC8665;
-    color: white; }
-    .button .reg a:hover {
-      border: 1px solid #DC8665;
-      background-color: white;
-      color: #DC8665; }
+    color: #DC8665; }
+
+.button .reg a {
+  padding: 0.75rem 2.25rem;
+  border: 1px solid #DC8665;
+  border-radius: 2rem;
+  background-color: #DC8665;
+  color: white; }
+  .button .reg a:hover {
+    border: 1px solid #DC8665;
+    background-color: white;
+    color: #DC8665; }
 
 .header-icons {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-left: 28vw; }
+  height: 100%;
+  margin: auto; }
 
 .header-icons li {
   margin-left: 1.5rem; }
@@ -82,7 +90,7 @@ body {
   color: var(--color-light-grey); }
 
 .material-icons:hover {
-  color: var(--color-pink); }
+  color: #EEB462; }
 
 /* Hide the toggle menu by default */
 .toggle-menu {

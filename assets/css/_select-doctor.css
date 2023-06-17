@@ -57,7 +57,7 @@ h3 {
   margin-top: 5vh; }
 
 #show-more-doc-text {
-  color: #dd368a; }
+  color: #DC8665; }
 
 input[type='radio']:after {
   width: 15px;
@@ -79,7 +79,7 @@ input[type='radio']:checked:after {
   top: -2px;
   left: -1px;
   position: relative;
-  background-color: #da237f;
+  background-color: #DC8665;
   content: '';
   display: inline-block;
   visibility: visible;

@@ -6,14 +6,14 @@ module.exports.chatSockets = function (socketServer) {
   });
 
   io.sockets.on("connection", function (socket) {
-    console.log("new connection received", socket.id);
-
+    console.log("new connection received for text chat: ", socket.id);
+ 
     socket.on("disconnect", function () {
-      console.log("socket disconnected!");
+      console.log("socket disconnected for text chat!");
     });
 
     socket.on("join_room", function (data) {
-      console.log("joining request rec.", data);
+      console.log("joining request rec. for text chat", data);
       socket.join(data.chatroom);
       io.in(data.chatroom).emit("user_joined", data);
     });

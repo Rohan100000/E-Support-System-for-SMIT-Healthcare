@@ -93,7 +93,6 @@ module.exports.profile_patient = async function (req, res) {
 
 
 //prescription form submission
-
 module.exports.createPrescription = async function (req, res) {
     try {
         //find legitmate doctor
