@@ -1,74 +1,79 @@
-[{
-  "_id": {
-    "$oid": "642ff259a57c2a4ec1d64a97"
-  },
-  "email": "rohanshrivastava1000@gmail.com",
-  "password": "12345",
-  "username": "Rohan Shrivastava",
-  "age": "38",
-  "gender": "Male",
-  "qualification": "MBBS",
-  "appointments": [],
-  "__v": 7,
-  "updatedAt": {
-    "$date": {
-      "$numberLong": "1680881672082"
-    }
-  }
-},{
-  "_id": {
-    "$oid": "643036bd1ee143909e5912bf"
-  },
-  "email": "rimjhimshrivastava10@gmail.com",
-  "password": "12345",
-  "username": "Rimjhim Shrivastava",
-  "age": "25",
-  "gender": "Female",
-  "qualification": "MD (Neuro Surgeon)",
-  "appointments": [
-    {
-      "$oid": "643045de020db802394900fb"
+[
+  {
+    "_id": {
+      "$oid": "642ff259a57c2a4ec1d64a97"
     },
-    {
-      "$oid": "643045f7020db80239490108"
+    "email": "rohanshrivastava1000@gmail.com",
+    "password": "12345",
+    "username": "Rohan Shrivastava",
+    "age": "38",
+    "gender": "Male",
+    "qualification": "MBBS",
+    "appointments": [],
+    "__v": 7,
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1680881672082"
+      }
     }
-  ],
-  "__v": 3,
-  "updatedAt": {
-    "$date": {
-      "$numberLong": "1680885239735"
+  },
+  {
+    "_id": {
+      "$oid": "643036bd1ee143909e5912bf"
+    },
+    "email": "rimjhimshrivastava10@gmail.com",
+    "password": "12345",
+    "username": "Rimjhim Shrivastava",
+    "age": "25",
+    "gender": "Female",
+    "qualification": "MD (Neuro Surgeon)",
+    "appointments": [
+      {
+        "$oid": "643045de020db802394900fb"
+      },
+      {
+        "$oid": "643045f7020db80239490108"
+      }
+    ],
+    "__v": 3,
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1680885239735"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6433aa3c1d61b63d7ab26ac0"
+    },
+    "email": "omsinkar03@gmail.com",
+    "password": "12345",
+    "username": "Om Sinkar",
+    "age": "32",
+    "gender": "Male",
+    "qualification": "MBBS",
+    "appointments": []
+  },
+  {
+    "_id": {
+      "$oid": "6433ab6b1d61b63d7ab26ac1"
+    },
+    "email": "rajsekhor.contact@gmail.com",
+    "password": "12345",
+    "username": "Rajsekhor Saikia",
+    "age": "33",
+    "gender": "Male",
+    "qualification": "MD (Physician)",
+    "appointments": [
+      {
+        "$oid": "6433adbf5bf6bbc86443a435"
+      }
+    ],
+    "__v": 1,
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1681108415436"
+      }
     }
   }
-},{
-  "_id": {
-    "$oid": "6433aa3c1d61b63d7ab26ac0"
-  },
-  "email": "omsinkar03@gmail.com",
-  "password": "12345",
-  "username": "Om Sinkar",
-  "age": "32",
-  "gender": "Male",
-  "qualification": "MBBS",
-  "appointments": []
-},{
-  "_id": {
-    "$oid": "6433ab6b1d61b63d7ab26ac1"
-  },
-  "email": "rajsekhor.contact@gmail.com",
-  "password": "12345",
-  "username": "Rajsekhor Saikia",
-  "age": "33",
-  "gender": "Male",
-  "qualification": "MD (Physician)",
-  "appointments": [
-    {
-      "$oid": "6433adbf5bf6bbc86443a435"
-    }
-  ],
-  "__v": 1,
-  "updatedAt": {
-    "$date": {
-      "$numberLong": "1681108415436"
-    }
-  }
-}]
+]
