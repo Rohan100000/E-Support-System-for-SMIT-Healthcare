@@ -1,45 +1,71 @@
+:root{
+    --main-color : #ffebcf;
+    --dark-color : #DC8665;
+    --light-color : #EEB462;
+    --white-color : #fff;
+    --dark-background : #DC8665;
+    --main-background : #ffebcf;
+    --light-background : #EEB462;
+    --white-background : #fff;
+}
+
 body{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: #ff6f0022;
+    background-color: var(--main-background);
     margin: 0;
     padding: 0;
     display: flex;
     overflow: none;
 }
+
 /* navbar section */
 aside{
     width: auto;
     height: auto;
-    background-color: white;
+    background-color: var(--white-background);
 }
+
 .navsection{
     padding: 1rem 2rem;
 }
+
 .logo{
-    font-size: 2.5rem;
-    color: #e92f0095;
+    font-size: 35px;
+    color: var(--dark-background);
     text-align: center;
     padding: 1rem 0rem;
 }
+
 .navbar-set{
-    padding: 1rem 0rem 1rem 1rem;
-    font-size: 1.5rem;
-    margin: auto;
     display: flex;
     text-align: left;
     align-items: center;
 }
-.navbar-set img{
-    height: 2rem;
-    
+
+.navbar-set span{
+    font-size: 1.7rem;
+    cursor: pointer;
 }
+
+.navbar-set p{
+    font-size: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.navbar-set:hover{
+    color: var(--dark-color);
+}
+
 .nav-footer{
     margin: auto;
-    margin-top: 21rem;
-    color: #e92f0095;
+    margin-top: 13rem;
+    color: var(--dark-color);
 }
+
 /* main section */
+
 main{
     width: auto;
 }
