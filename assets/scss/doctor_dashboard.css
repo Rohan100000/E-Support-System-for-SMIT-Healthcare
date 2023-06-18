@@ -37,6 +37,11 @@ aside{
     padding: 1rem 0rem;
 }
 
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar-set{
     display: flex;
     text-align: left;
@@ -60,8 +65,22 @@ aside{
 
 .nav-footer{
     margin: auto;
-    margin-top: 13rem;
+    margin-bottom: 1rem;
     color: var(--dark-color);
+}
+
+/* Medium devices (laptops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar{
+        height: 85vh;
+    }
+}
+
+/* Large devices (laptops, 1900px and up) */
+@media (min-width: 1900px) {
+    .navbar{
+        height: 100vh;
+    }
 }
 
 /* main section */
