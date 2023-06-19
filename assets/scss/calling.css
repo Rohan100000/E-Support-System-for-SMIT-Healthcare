@@ -1,0 +1,72 @@
+body {
+    background-color: #2a2a36;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.call {
+    display: flex;
+    height: 3rem;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#call-head {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#call-head img {
+    height: 2.5rem;
+}
+
+#call-nam {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.call-device {
+    font-size: 14px;
+}
+
+#rem {
+    text-align: center;
+    padding-left: 80%;
+}
+
+.user {
+    height: 40rem;
+    background: #383850;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user img {
+    filter: invert(100%);
+}
+
+.c img {
+    padding: 0 0.5rem;
+    width: 2.5rem;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#call-ctr {
+    display: flex;
+    padding-left: 43rem;
+}
+
+#call-ctr-i {
+    display: flex;
+    padding-left: 35rem;
+}
