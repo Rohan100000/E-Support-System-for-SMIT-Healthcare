@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/chat-room-styles.css" />
+    <script src="/javascript/searchbar.js"></script>
+  </head>
+  <body>
+    <div id="chat-room-container">
+      <aside id="chat-room-sidebar">
+        <div class="chat-room-sidebar-optionset-1">
+          <a href="#"><p id="chat-room-sidebar-icon">e</p></a>
+          <a href="#"
+            ><i class="fa fa-search sidebar-options" aria-hidden="true"></i
+          ></a>
+          <a href="#"
+            ><i class="fa fa-users sidebar-options" aria-hidden="true"></i
+          ></a>
+          <a href="#"
+            ><i class="fa fa-star-o sidebar-options" aria-hidden="true"></i
+          ></a>
+          <a href="#"
+            ><i class="fa fa-briefcase sidebar-options" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="chat-room-sidebar-optionset-2">
+          <a href="#"
+            ><i class="fa fa-pencil sidebar-options" aria-hidden="true"></i
+          ></a>
+          <a href="#"
+            ><i class="fa fa-sliders sidebar-options" aria-hidden="true"></i
+          ></a>
+          <a href="#"
+            ><i class="fa fa-sign-out sidebar-options" aria-hidden="true"></i
+          ></a>
+        </div>
+      </aside>
+      <section id="chat-room-chat-options">
+        <header id="chat-room-chat-options-heading">
+          <h1 id="chat-room-chat-options-heading-text">Chats</h1>
+          <div id="chat-room-chat-options-heading-icons">
+            <a href="#"
+              ><i
+                class="fa fa-user-plus chat-room-chat-options-heading-icon"
+                aria-hidden="true"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa fa-sliders chat-room-chat-options-heading-icon"
+                aria-hidden="true"
+              ></i
+            ></a>
+          </div>
+        </header>
+        <div class="search-wrapper">
+          <input type="search" id="search" data-search placeholder="Search" />
+        </div>
+        <div class="user-cards" data-user-cards-container></div>
+        <template data-user-template>
+          <a href="#" onclick="changeChatDisplay()"
+            ><div class="card">
+              <img src="/images/doc-1.jpg" class="contact-bar-images" />
+              <h1 class="header" data-header></h1></div
+          ></a>
+        </template>
+      </section>
+      <section id="main-chatting-section">
+        <div id="chat-room-not-selected">
+          <h1>Select a person to Chat</h1>
+        </div>
+        <div id="chat-room-selected">
+          <header id="chat-room-user-header">
+            <div id="chat-room-user-all-info">
+              <img src="/images/doc-1.jpg" id="chat-room-user-image" />
+              <div id="chat-room-user-info">
+                <h1>Rajesh Chaturvedi</h1>
+                <h3>typing...</h3>
+              </div>
+            </div>
+            <div id="chat-room-user-icons">
+              <a href="#"
+                ><i
+                  style="background-color: rgb(89, 174, 112)"
+                  class="fa fa-phone chat-room-chat-options-heading-icon"
+                  aria-hidden="true"
+                ></i
+              ></a>
+              <a href="#"
+                ><i
+                  class="fa fa-video-camera chat-room-chat-options-heading-icon"
+                  aria-hidden="true"
+                ></i
+              ></a>
+              <a href="#"
+                ><i
+                  class="fa fa-ellipsis-h chat-room-chat-options-heading-icon"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </div>
+          </header>
+          <section id="main-user-chat-section">
+            <section id="chatting-area">
+              <article class="other-chat">
+                <img src="/images/doc-1.jpg" class="chat-room-user-image" />
+                <div class="other-chat-content">
+                  <h1>Rajesh Chaturvedi</h1>
+                  <div class="other-chat-time">
+                    <p>10:00 AM</p>
+                    <p>tt</p>
+                  </div>
+                  <div class="other-chat-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magni, sit.
+                  </div>
+                </div>
+              </article>
+              <article class="self-chat">
+                <div class="self-chat-content">
+                  <h1>Rajesh Chaturvedi</h1>
+                  <div class="self-chat-time">
+                    <p>10:00 AM</p>
+                    <p>tt</p>
+                  </div>
+                  <div class="self-chat-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magni, sit.
+                  </div>
+                </div>
+                <img src="/images/doc-1.jpg" class="chat-room-user-image"  />
+              </article>
+            </section>
+            <section id="chat-input-section">
+              <form action="" method="" id="chatting-area-form">
+                <a href=""><i class="fa fa-smile-o chatting-area-input-icons" aria-hidden="true"></i></a>
+                <input type="text" id="chatting-area-input" name="chat">
+                <a href=""><i class="fa fa-paperclip chatting-area-input-icons" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-paper-plane-o chatting-area-input-icons" id="chat-send-icon" aria-hidden="true"></i></a>
+              </form>
+            </section>
+          </section>
+        </div>
+      </section>
+    </div>
+    <script>
+      let changeChatDisplay = () => {
+        let ChatNotActive = document.getElementById("chat-room-not-selected");
+        let ChatActive = document.getElementById("chat-room-selected");
+        ChatNotActive.style.display = "none";
+        ChatActive.style.display = "flex";
+      };
+    </script>
+  </body>
+</html>
