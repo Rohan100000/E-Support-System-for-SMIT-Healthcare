@@ -198,3 +198,14 @@ module.exports.video_chat_with_patient_id = async function (req, res) {
         return;
     }
 }
+
+module.exports.chatRoom=async (req,res)=>{
+    try{
+        console.log("Running Test");
+        res.render('chat-room',{
+            title:"Chat Room"
+        })
+    }catch(err){
+        console.log("Error: ",err)
+    }
+}

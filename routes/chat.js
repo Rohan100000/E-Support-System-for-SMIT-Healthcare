@@ -12,5 +12,6 @@ router.get('/video-chat-with-doctor', passport.checkAuthentication, chatControll
 router.get('/video-chat-with-patient', passport.checkAuthentication, chatController.video_chat_with_patient);
 router.get('/video-chat-with-doctor-id/:id', passport.checkAuthentication, chatController.video_chat_with_doctor_id);
 router.get('/video-chat-with-patient-id/:id', passport.checkAuthentication, chatController.video_chat_with_patient_id);
+router.get('/chatRoom',chatController.chatRoom)
 
 module.exports = router;
